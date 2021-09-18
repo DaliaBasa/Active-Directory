@@ -27,9 +27,10 @@
 ## Windows Server Fundamentals
 ???
 
-## Active Directory Domain Services Fundamentals
-### The Active Directory system can operate in two distinct modes: as Active Directory Lightweight Directory Services (AD LDS) and as Active Directory Domain Services (AD DS).
-Directory Services (AD LDS) and as Active Directory Domain Services (AD DS).
+## Active Directory
+#### The Active Directory system can operate in two distinct modes: as Active Directory Lightweight Directory Services (AD LDS) and as Active Directory Domain Services (AD DS).
+The most significant difference between between AD LDS and AD DS is that AD LDS does not host domain naming contexts. A server can host multiple AD LDS DCs. Each DC is an independent AD LDS instance, with it's own independent state. AD LDS can be run as an operating system DS or as a directory service provided by a standalone application (ADAM).
+
 Active Directory is a directory service made by Microsoft to give a solution to the IT infrastructure complexity within the growing numbers of users/devices in networks. 
 
 Directory services allows an easy and quick storage, search and managment of resources within a network. The Active Directory works in a hierarchical way and allows the arrangement of resources based on DCs (Domain Controllers - databases), it is also a secutiry solution to vast networks.
@@ -43,7 +44,9 @@ Administrators/IT are enjoying the benefits of implementing group policies, havi
 
 ### Active Directory Lightweight Directory Services (AD LDS)
 
+Active Directory Lightweight Directory Services (AD LDS) is an independent mode of Active Directory, minus infrastructure features, that provides directory services for applications. AD LDS consists of a directory service that is accessible via the Lightweight Directory Access Protocol (LDAP). AD LDS is primarily intended for use by application software as a storage mechanism.
 
+### Active Directory Domain Services (AD DS)
 
 ### Basics
 - Azure - Microsoft's cloud, which can also run AD (was not used in the demonstrations in this repository) </br>
