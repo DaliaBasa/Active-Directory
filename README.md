@@ -44,11 +44,14 @@ Administrators/IT are enjoying the benefits of implementing group policies, havi
 
 ### Active Directory Lightweight Directory Services (AD LDS)
 
-Active Directory Lightweight Directory Services (AD LDS) is an independent mode of Active Directory, minus infrastructure features, that provides directory services for applications. AD LDS consists of a directory service that is accessible via the Lightweight Directory Access Protocol (LDAP). AD LDS is primarily intended for use by application software as a storage mechanism.
+Active Directory Lightweight Directory Services (AD LDS) is an independent mode of Active Directory, minus infrastructure features, that provides directory services for applications. AD LDS consists of a directory service that is accessible via the Lightweight Directory Access Protocol (LDAP). AD LDS is primarily intended for use by application software as a storage mechanism. </br>
+AD LDS provides dedicated directory services for applications. It provides a data store and services for accessing the data store. It uses standard application programming interfaces (APIs) for accessing the application data. The APIs include those of Active Directory, Active Directory Service Interfaces, Lightweight Data Access Protocol, and System.DirectoryServices. AD LDS operates independently of Active Directory and independently of Active Directory domains or forests. It operates either as a standalone data store, or it operates with replication. Its independence enables local control and autonomy of directory services for specific applications. It also facilitates independent, flexible schemas, and naming contexts
+
 
 ### Active Directory Domain Services (AD DS)
 
 ### Basics
+- Active Directory Application Mode (ADAM) - A Lightweight Directory Access Protocol (LDAP) - compliant directory service used for building directory-enabled applications. </br>
 - Azure - Microsoft's cloud, which can also run AD (was not used in the demonstrations in this repository) </br>
 - DN - Distinguished Name. A string that uniquely identifies an object in Active Directory. </br>
 - DIT - Directory Information Tree. </br> 
@@ -108,3 +111,4 @@ https://docs.microsoft.com/en-us/ </br>
 https://social.technet.microsoft.com/wiki/ </br>
 https://en.wikipedia.org/wiki/Active_Directory </br>
 https://ldapwiki.com/wiki/Partial%20Attribute%20Set </br>
+https://www.techopedia.com/ </br>
