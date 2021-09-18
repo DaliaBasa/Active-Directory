@@ -9,7 +9,10 @@
 - Basics
   - Domain, Tree, Forest
     - Trusts
+    - Forest Trusts
   - Domain Controller
+    - Read Only Domain Controller (RODC)
+    - Global Catalog (GC)
   - FSMO Explanation
 			
 - DNS
@@ -17,7 +20,8 @@
 - LDAP
   - Directory Service
 - Kerberos
-  						
+ 
+10. Bibliography
 
 ## Windows Server Fundamentals
 
@@ -36,11 +40,13 @@ Administrators/IT are enjoying the benefits of implementing group policies, havi
 
 
 ### Basics
-Azure - Microsoft's cloud, which can also run AD (was not used in the demonstrations in this repository) </br>
-DN - Distinguished Name. </br>
-DIT - Directory Information Tree. </br> 
-Namespace (NS) - Unique naming based on hierarchy and logic. </br>
-SID - Security Identifires </br>
+- Azure - Microsoft's cloud, which can also run AD (was not used in the demonstrations in this repository) </br>
+- DN - Distinguished Name. A string that uniquely identifies an object in Active Directory. </br>
+- DIT - Directory Information Tree. </br> 
+- Line of Business (LOB) - a general term which refers to a product or a set of related products that serve a particular customer transaction or business need. One of the set of critical computer applications perceived as vital to running an enterprise. 
+- Namespace (NS) - Unique naming based on hierarchy and logic. </br>
+- SID - Security Identifires. </br>
+- SYSVOL - A folder which resides on each and every domain controller within the domain. It contains the domains public files that need to be accessed by clients and kept synchronised between domain controllers. Also keeps inside all files related to group policies and any startup scripts, logon scripts that were created and added to group policies. </br>
 #### Domain, Tree, Forest
 - An AD (Active Directory) domain is a group of users, devices that are part of the network (PC, printers, etc..), applications and other AD objects. They are all part of the domain, and are controlled by the DC (Domain Controller). An AD tree is a group of domains with a trust between them a parent-child relation and they share the same domain namespace.
 Each domain is given a DNS name that identifies the domain.
@@ -55,6 +61,8 @@ A trust relationship is a logical relationship between two domains/forests which
 This secure channel can be extended to other Active Directory domains by creating trust relationships between multiple domains or multiple forests. There are 2 different trust relationships:
 - One-way trusts relationships are valid in one direction.
 - Two-way trusts relationships are valid in both directions.
+- Explicit trust is a trust that's created manually by the system administrator.
+- External trust is a trust between domains that belong to different forests.
 
 This relationships can be either transitive or non-transitive.
 - Transitive trusts, as long as there is trust between the domains a user can access these trust paths.</br>  _Example: if domain A trusts domain B, and domain B trusts domain C, when transitivity is enabled, users of domain A can access both domain B and C._
@@ -64,8 +72,22 @@ This relationships can be either transitive or non-transitive.
 An Active Directory (AD) Forest is the security and administrative boundary for objects and entities. Due to some business need, if we want to establish a bridge between two AD Forests, we need to configure Forest Trust between those forests. Forest Trusts are created between Forest Root Domains, and it is valid for all Domains  within the entire Forest.
 
 Forests can be linked in either one way trust or two way trust, but they are bound to be non-transitive.</br> _Example: if forest A and forest B are connected, and forest B is connected to forest C, forest A could not access forest C. The only way for forest A to access forest C and overcome the non-transitive trust is to make a trust between them._
-There are conditions as to 
 
 
-### Domain Controller
-Domain controllers authenticate all users and computers in a domain. Therefore, it's critical to ensure the optimal number and placement of domain controllers in any AD DS environment, especially in larger, distributed environments.
+### Domain Controller (DC)
+##### A server with Active Directory installed. A domain controller (DC) is authoritative for the domain to which the server is joined. It contains the Active Directory database for the domain namespace, plus the Configuration and Schema namespaces for the forest.
+Domain controllers authenticate all users and computers in a domain, which is a primary security function in a network infrastructure. The DC is a server that contains a complete copy of the AD configuration of the domain in which it's located, as well as the SYSVOL system folder.
+It's critical to ensure the optimal number and placement of domain controllers in any AD DS environment, especially in larger, distributed environments.
+
+If the DC there will be no way for the users to authenticate themselves and access any of the domain's resources. Everything that require AD authentication will be inaccessible.
+
+#### Read-Only Domain Controller (RODC)
+##### Inadequate physical security is the most common reason to consider deploying an RODC. An RODC provides a way to deploy a domain controller more securely in locations that require fast and reliable authentication services but cannot ensure physical security for a writable domain controller.
+ Read-Only Domain Controlelr is the same as DC except that it contains a read only copy of the AD configuration of the domain in which it's located, it's mainly used to improve security (since the copy is a read-only and cannot be modified), to speed up session openings and to improve access to network resources. Could be used in a LOB application, it provides a more secure mechanism for deploying a domain controller in this scenario. It's possible to grant a non-administrative domain user the right to log on to an RODC while minimizing the security risk to the Active Directory forest.
+It is mostly common in branches with: relatively few users/ poor physical security/ relatively poor network bandwidth to a hub site/ little knowledge of IT.
+#### Global Catalog (GC)
+##### If the domain controller is configured as a global catalog, this domain controller contains a partial read-only copy of the attributes of all objects in the forest. What is also called "PAS" for Partial Attribute Set.
+Global catalos are useful for reducing access times to an AD infrastructure. This is only necessary in a few cases such as: an application requires the presence of global catalog. T
+
+## Bibliography
+(https://us.informatiweb-pro.net/)
