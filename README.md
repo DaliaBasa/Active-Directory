@@ -6,6 +6,7 @@
 ## Introduction
 1. Windows Server Fundamentals
 2. Active Directory Fundamentals
+- Active Directory Lightweight Directory Services (AD LDS)
 - Basics
   - Domain, Tree, Forest
     - Trusts
@@ -24,9 +25,11 @@
 10. Bibliography
 
 ## Windows Server Fundamentals
-
+???
 
 ## Active Directory Domain Services Fundamentals
+### The Active Directory system can operate in two distinct modes: as Active Directory Lightweight Directory Services (AD LDS) and as Active Directory Domain Services (AD DS).
+Directory Services (AD LDS) and as Active Directory Domain Services (AD DS).
 Active Directory is a directory service made by Microsoft to give a solution to the IT infrastructure complexity within the growing numbers of users/devices in networks. 
 
 Directory services allows an easy and quick storage, search and managment of resources within a network. The Active Directory works in a hierarchical way and allows the arrangement of resources based on DCs (Domain Controllers - databases), it is also a secutiry solution to vast networks.
@@ -38,6 +41,9 @@ Users only need to login once and their files are stored in a repository which i
 
 Administrators/IT are enjoying the benefits of implementing group policies, having to make changes one time and push it for every computer in the domain, the same could be applied to security configurations. Storing vital information about the users in databases. The ability to make changes and apply them to domains are what makes Active Directory so keen.
 
+### Active Directory Lightweight Directory Services (AD LDS)
+
+
 
 ### Basics
 - Azure - Microsoft's cloud, which can also run AD (was not used in the demonstrations in this repository) </br>
@@ -45,7 +51,7 @@ Administrators/IT are enjoying the benefits of implementing group policies, havi
 - DIT - Directory Information Tree. </br> 
 - Line of Business (LOB) - a general term which refers to a product or a set of related products that serve a particular customer transaction or business need. One of the set of critical computer applications perceived as vital to running an enterprise. 
 - Namespace (NS) - Unique naming based on hierarchy and logic. </br>
-- SID - Security Identifires. </br>
+- SID - Security Identifires. An identifier for security principals that is used to identify an account or a group. Conceptually, the SID is composed of an account authority portion (typically a domain) and a smaller integer representing an identity relative to the account authority, termed the relative identifier (RID).</br>
 - SYSVOL - A folder which resides on each and every domain controller within the domain. It contains the domains public files that need to be accessed by clients and kept synchronised between domain controllers. Also keeps inside all files related to group policies and any startup scripts, logon scripts that were created and added to group policies. </br>
 #### Domain, Tree, Forest
 - An AD (Active Directory) domain is a group of users, devices that are part of the network (PC, printers, etc..), applications and other AD objects. They are all part of the domain, and are controlled by the DC (Domain Controller). An AD tree is a group of domains with a trust between them a parent-child relation and they share the same domain namespace.
@@ -86,8 +92,16 @@ If the DC there will be no way for the users to authenticate themselves and acce
  Read-Only Domain Controlelr is the same as DC except that it contains a read only copy of the AD configuration of the domain in which it's located, it's mainly used to improve security (since the copy is a read-only and cannot be modified), to speed up session openings and to improve access to network resources. Could be used in a LOB application, it provides a more secure mechanism for deploying a domain controller in this scenario. It's possible to grant a non-administrative domain user the right to log on to an RODC while minimizing the security risk to the Active Directory forest.
 It is mostly common in branches with: relatively few users/ poor physical security/ relatively poor network bandwidth to a hub site/ little knowledge of IT.
 #### Global Catalog (GC)
-##### If the domain controller is configured as a global catalog, this domain controller contains a partial read-only copy of the attributes of all objects in the forest. What is also called "PAS" for Partial Attribute Set.
-Global catalos are useful for reducing access times to an AD infrastructure. This is only necessary in a few cases such as: an application requires the presence of global catalog. T
+##### If the domain controller is configured as a global catalog, this domain controller contains a partial read-only copy of the attributes of all objects in the forest. What is also called PAS for Partial Attribute Set.
+Global catalos are useful for reducing access times to an AD infrastructure. This is only necessary in a few cases such as: 
+- An application requires the presence of global catalog. This is particularly the case for Microsoft Exchange and Microsoft Message Queuing (MSMQ).
+- There are more than 100 users, used to reduce the use of WAN bandwidth.
+- The logon is slow on the client workstations.
+
 
 ## Bibliography
-(https://us.informatiweb-pro.net/)
+https://us.informatiweb-pro.net/ </br>
+https://docs.microsoft.com/en-us/ </br>
+https://social.technet.microsoft.com/wiki/ </br>
+https://en.wikipedia.org/wiki/Active_Directory </br>
+https://ldapwiki.com/wiki/Partial%20Attribute%20Set </br>
