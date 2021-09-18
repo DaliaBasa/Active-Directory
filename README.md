@@ -57,11 +57,15 @@ This secure channel can be extended to other Active Directory domains by creatin
 - Two-way trusts relationships are valid in both directions.
 
 This relationships can be either transitive or non-transitive.
-- Transitive trusts, as long as there is trust between the domains a user can access these trust paths.</br>  _For example: if domain A trusts domain B, and domain B trusts domain C, when transitivity is enabled, users of domain A can access both domain B and C._
-- Non-transitive trusts, even if there is trust between all of the domains, but they are non-transitive, then they could only access their nearest trust points.</br> _For example: if domain A trusts domain B, and domain B trusts domain C. User from domain A could only access domain B._
+- Transitive trusts, as long as there is trust between the domains a user can access these trust paths.</br>  _Example: if domain A trusts domain B, and domain B trusts domain C, when transitivity is enabled, users of domain A can access both domain B and C._
+- Non-transitive trusts, even if there is trust between all of the domains, but they are non-transitive, then they could only access their nearest trust points.</br> _Example: if domain A trusts domain B, and domain B trusts domain C. User from domain A could only access domain B._
 
 ##### Forest Trusts
+An Active Directory (AD) Forest is the security and administrative boundary for objects and entities. Due to some business need, if we want to establish a bridge between two AD Forests, we need to configure Forest Trust between those forests. Forest Trusts are created between Forest Root Domains, and it is valid for all Domains  within the entire Forest.
+
 Forests can be linked in either one way trust or two way trust, but they are bound to be non-transitive.</br> _Example: if forest A and forest B are connected, and forest B is connected to forest C, forest A could not access forest C. The only way for forest A to access forest C and overcome the non-transitive trust is to make a trust between them._
+There are conditions as to 
+
 
 ### Domain Controller
 Domain controllers authenticate all users and computers in a domain. Therefore, it's critical to ensure the optimal number and placement of domain controllers in any AD DS environment, especially in larger, distributed environments.
