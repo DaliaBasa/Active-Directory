@@ -60,7 +60,7 @@ AD LDS provides dedicated directory services for applications. It provides a dat
 - Namespace (NS) - Unique naming based on hierarchy and logic. </br>
 - Naming Context (NC) - A set of objects organized as a tree.
 - Naming Context Replica - A variable containing a tree of objects whose root object is identified by some naming context (NC).
-- Open Database Connectivity (ODBC) - 
+- Microsoft's Open Database Connectivity (ODBC) - The interface that makes it possible for applications to access data from a variety of database managment systems (DBMS). ODBC is a low-level, high-performance interface that is designed specifically for relational data stores.
 - Security Identifires (SID) - An identifier for security principals that is used to identify an account or a group. Conceptually, the SID is composed of an account authority portion (typically a domain) and a smaller integer representing an identity relative to the account authority, termed the relative identifier (RID).</br>
 - SYSVOL - A folder which resides on each and every domain controller within the domain. It contains the domains public files that need to be accessed by clients and kept synchronised between domain controllers. Also keeps inside all files related to group policies and any startup scripts, logon scripts that were created and added to group policies. </br>
 
