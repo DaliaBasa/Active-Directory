@@ -7,6 +7,7 @@
 1. Windows Server Fundamentals
 2. Active Directory Fundamentals
 - Active Directory Lightweight Directory Services (AD LDS)
+- Active Directory Domain Services (AD DS)
 - Basics
   - Domain, Tree, Forest
     - Trusts
@@ -15,6 +16,7 @@
     - Read Only Domain Controller (RODC)
     - Global Catalog (GC)
   - FSMO Explanation
+  
 			
 - DNS
 - Group policy
@@ -27,7 +29,7 @@
 ## Windows Server Fundamentals
 ???
 
-## Active Directory
+## Active Directory, Active Directory Domain Services (AD DS)
 #### The Active Directory system can operate in two distinct modes: as Active Directory Lightweight Directory Services (AD LDS) and as Active Directory Domain Services (AD DS).
 The most significant difference between between AD LDS and AD DS is that AD LDS does not host domain naming contexts. A server can host multiple AD LDS DCs. Each DC is an independent AD LDS instance, with it's own independent state. AD LDS can be run as an operating system DS or as a directory service provided by a standalone application (ADAM).
 
@@ -47,18 +49,21 @@ Administrators/IT are enjoying the benefits of implementing group policies, havi
 Active Directory Lightweight Directory Services (AD LDS) is an independent mode of Active Directory, minus infrastructure features, that provides directory services for applications. AD LDS consists of a directory service that is accessible via the Lightweight Directory Access Protocol (LDAP). AD LDS is primarily intended for use by application software as a storage mechanism. </br>
 AD LDS provides dedicated directory services for applications. It provides a data store and services for accessing the data store. It uses standard application programming interfaces (APIs) for accessing the application data. The APIs include those of Active Directory, Active Directory Service Interfaces, Lightweight Data Access Protocol, and System.DirectoryServices. AD LDS operates independently of Active Directory and independently of Active Directory domains or forests. It operates either as a standalone data store, or it operates with replication. Its independence enables local control and autonomy of directory services for specific applications. It also facilitates independent, flexible schemas, and naming contexts
 
-
-### Active Directory Domain Services (AD DS)
-
 ### Basics
 - Active Directory Application Mode (ADAM) - A Lightweight Directory Access Protocol (LDAP) - compliant directory service used for building directory-enabled applications. </br>
 - Azure - Microsoft's cloud, which can also run AD (was not used in the demonstrations in this repository) </br>
-- DN - Distinguished Name. A string that uniquely identifies an object in Active Directory. </br>
-- DIT - Directory Information Tree. </br> 
+- Distinguished Name (DN) - A string that uniquely identifies an object in Active Directory. </br>
+- Directory Information Tree (DIT) - </br> 
+- Direectory System Agent (DSA) - A collection of services and processes that run on each domain controller and provide access to the data store. The data store is the physical store of directory data located on a hard disk. </br>
+- Data Source Name (DSN) - A symbolic name that applications use to request a connection to an ODBC Data Source, it represents the ODBC connection. DSN stores the connection details when making connection to the ODBC.
 - Line of Business (LOB) - a general term which refers to a product or a set of related products that serve a particular customer transaction or business need. One of the set of critical computer applications perceived as vital to running an enterprise. 
 - Namespace (NS) - Unique naming based on hierarchy and logic. </br>
-- SID - Security Identifires. An identifier for security principals that is used to identify an account or a group. Conceptually, the SID is composed of an account authority portion (typically a domain) and a smaller integer representing an identity relative to the account authority, termed the relative identifier (RID).</br>
+- Naming Context (NC) - A set of objects organized as a tree.
+- Naming Context Replica - A variable containing a tree of objects whose root object is identified by some naming context (NC).
+- Open Database Connectivity (ODBC) - 
+- Security Identifires (SID) - An identifier for security principals that is used to identify an account or a group. Conceptually, the SID is composed of an account authority portion (typically a domain) and a smaller integer representing an identity relative to the account authority, termed the relative identifier (RID).</br>
 - SYSVOL - A folder which resides on each and every domain controller within the domain. It contains the domains public files that need to be accessed by clients and kept synchronised between domain controllers. Also keeps inside all files related to group policies and any startup scripts, logon scripts that were created and added to group policies. </br>
+
 #### Domain, Tree, Forest
 - An AD (Active Directory) domain is a group of users, devices that are part of the network (PC, printers, etc..), applications and other AD objects. They are all part of the domain, and are controlled by the DC (Domain Controller). An AD tree is a group of domains with a trust between them a parent-child relation and they share the same domain namespace.
 Each domain is given a DNS name that identifies the domain.
@@ -98,8 +103,9 @@ If the DC there will be no way for the users to authenticate themselves and acce
  Read-Only Domain Controlelr is the same as DC except that it contains a read only copy of the AD configuration of the domain in which it's located, it's mainly used to improve security (since the copy is a read-only and cannot be modified), to speed up session openings and to improve access to network resources. Could be used in a LOB application, it provides a more secure mechanism for deploying a domain controller in this scenario. It's possible to grant a non-administrative domain user the right to log on to an RODC while minimizing the security risk to the Active Directory forest.
 It is mostly common in branches with: relatively few users/ poor physical security/ relatively poor network bandwidth to a hub site/ little knowledge of IT.
 #### Global Catalog (GC)
-##### If the domain controller is configured as a global catalog, this domain controller contains a partial read-only copy of the attributes of all objects in the forest. What is also called PAS for Partial Attribute Set.
-Global catalos are useful for reducing access times to an AD infrastructure. This is only necessary in a few cases such as: 
+##### A domain controller (DC) that contains a naming context (NC) replica (one full, the rest partial) for each domain naming context in the forest.
+A Global Catalog server contains basic (but incomplete) set of attributes for each forest object in each domain
+GCs are useful for reducing access times to an AD infrastructure. This is only necessary in a few cases such as: 
 - An application requires the presence of global catalog. This is particularly the case for Microsoft Exchange and Microsoft Message Queuing (MSMQ).
 - There are more than 100 users, used to reduce the use of WAN bandwidth.
 - The logon is slow on the client workstations.
