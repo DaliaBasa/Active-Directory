@@ -16,6 +16,7 @@
     - Read Only Domain Controller (RODC)
     - Global Catalog (GC)
   - FSMO Explanation
+  - Organizatinal unit
   
 			
 - DNS
@@ -30,10 +31,8 @@
 ???
 
 ## Active Directory, Active Directory Domain Services (AD DS)
-#### The Active Directory system can operate in two distinct modes: as Active Directory Lightweight Directory Services (AD LDS) and as Active Directory Domain Services (AD DS).
+#### The Active Directory system can operate in two distinct modes: as Active Directory Lightweight Directory Services (AD LDS) and as Active Directory Domain Services (AD DS). The Active Directory system encompasses both AD DS and AD LDS.
 The most significant difference between between AD LDS and AD DS is that AD LDS does not host domain naming contexts. A server can host multiple AD LDS DCs. Each DC is an independent AD LDS instance, with it's own independent state. AD LDS can be run as an operating system DS or as a directory service provided by a standalone application (ADAM).
-
-Active Directory is a directory service made by Microsoft to give a solution to the IT infrastructure complexity within the growing numbers of users/devices in networks. 
 
 Directory services allows an easy and quick storage, search and managment of resources within a network. The Active Directory works in a hierarchical way and allows the arrangement of resources based on DCs (Domain Controllers - databases), it is also a secutiry solution to vast networks.
 Unlike Peer to Peer Network which is used in small networks, Active Directory is a centralised network managment, which uses databases that attain each user/device configuration.
@@ -58,7 +57,7 @@ AD LDS provides dedicated directory services for applications. It provides a dat
 - Data Source Name (DSN) - A symbolic name that applications use to request a connection to an ODBC Data Source, it represents the ODBC connection. DSN stores the connection details when making connection to the ODBC.
 - Line of Business (LOB) - a general term which refers to a product or a set of related products that serve a particular customer transaction or business need. One of the set of critical computer applications perceived as vital to running an enterprise. 
 - Namespace (NS) - Unique naming based on hierarchy and logic. </br>
-- Naming Context (NC) - A set of objects organized as a tree.
+- Naming Context (NC) - A set of objects organized as a tree, a contiguous Active Directory subtree that is replicated on one or more domain controllers in a forest (Directory Partition)
 - Naming Context Replica - A variable containing a tree of objects whose root object is identified by some naming context (NC).
 - Microsoft's Open Database Connectivity (ODBC) - The interface that makes it possible for applications to access data from a variety of database managment systems (DBMS). ODBC is a low-level, high-performance interface that is designed specifically for relational data stores.
 - Security Identifires (SID) - An identifier for security principals that is used to identify an account or a group. Conceptually, the SID is composed of an account authority portion (typically a domain) and a smaller integer representing an identity relative to the account authority, termed the relative identifier (RID).</br>
