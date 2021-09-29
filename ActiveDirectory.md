@@ -56,9 +56,15 @@ AD LDS provides dedicated directory services for applications. It provides a dat
 - Data Source Name (DSN) - A symbolic name that applications use to request a connection to an ODBC Data Source, it represents the ODBC connection. DSN stores the connection details when making connection to the ODBC.
 - Line of Business (LOB) - a general term which refers to a product or a set of related products that serve a particular customer transaction or business need. One of the set of critical computer applications perceived as vital to running an enterprise. 
 - Namespace (NS) - Unique naming based on hierarchy and logic. </br>
-- Naming Context (NC) - A set of objects organized as a tree, a contiguous Active Directory subtree that is replicated on one or more domain controllers in a forest (Directory Partition)
+- Naming Context (NC) - A set of objects organized as a tree, referenced by a DSName. A contiguous Active Directory subtree that is replicated on one or more domain controllers in a forest (Directory Partition).
 - Naming Context Replica - A variable containing a tree of objects whose root object is identified by some naming context (NC).
+- NetBIOS - A particular network transport that is part of the LAN Manager protocol suite. NetBIOS uses a broadcast communication style that was applicable to early segmented local area networks. A protocol family including name resolution, datagram, and connection services. </br>
 - Microsoft's Open Database Connectivity (ODBC) - The interface that makes it possible for applications to access data from a variety of database managment systems (DBMS). ODBC is a low-level, high-performance interface that is designed specifically for relational data stores.
+- Remote Procedure Call (RPC) - A communication protocol used primarily between client and server. The term has three definitions that are often used interchangeably:
+  1. A runtime environment providing for communication facilities between computers (the RPC runtime)
+  2. A set of request-and-response message exchanges between computers (the RPC exchange)
+  3. And the single message from an RPC exchange (the RPC message).
+- Security Account Manager (SAM) - Windows stores and manages the local user and group accounts in a database file called Security Account Manager (SAM). It authenticates local user logons. This allows a domain-joined computer to make local logon.
 - Security Identifires (SID) - An identifier for security principals that is used to identify an account or a group. Conceptually, the SID is composed of an account authority portion (typically a domain) and a smaller integer representing an identity relative to the account authority, termed the relative identifier (RID).</br>
 - SYSVOL - A folder which resides on each and every domain controller within the domain. It contains the domains public files that need to be accessed by clients and kept synchronised between domain controllers. Also keeps inside all files related to group policies and any startup scripts, logon scripts that were created and added to group policies. </br>
 
@@ -121,12 +127,7 @@ https://www.techopedia.com/ </br>
 
 
 Many network-related operations depend on domains in order to complete various tasks. This document describes some of these tasks, including:
- Locating a domain controller using DNS and NetBIOS.
- Joining a domain by creating an account via the Security Account Manager remote procedure call (RPC) protocol [MS-SAMR].
  Joining a domain by creating an account via LDAP.
- Removing a domain member.
-
-
 
 When a change is made to an object in a directory partition, the value of the changed attribute or attributes is updated on all domain controllers that store a replica of the same directory partition. Domain controllers communicate data updates automatically through Active Directory replication. Their communication about updates is always specific to a single directory partition at a time.
 
