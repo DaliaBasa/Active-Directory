@@ -7,15 +7,15 @@
 - [Windows Server Fundamentals](#windows-server-fundamentals)
 - [Active Directory Fundamentals](#active-directory-fundamentals)
   - [Active Directory Lightweight Directory Services (AD LDS)](#Active-Directory-Lightweight-Directory-Services-(AD-LDS))
-    - Basics
+   - Basics
       - Domain, Tree, Forest
       - Trusts
       - Forest Trusts
-    - Domain Controller
+   - Domain Controller
       - Read Only Domain Controller (RODC)
       - Global Catalog (GC)
-    - FSMO Explanation
-    - Organizatinal unit
+   - FSMO Explanation
+   - Organizatinal unit
   
 			
 - DNS
@@ -55,6 +55,7 @@ AD LDS provides dedicated directory services for applications. It provides a dat
 - Direectory System Agent (DSA) - A collection of services and processes that run on each domain controller and provide access to the data store. The data store is the physical store of directory data located on a hard disk. </br>
 - Data Source Name (DSN) - A symbolic name that applications use to request a connection to an ODBC Data Source, it represents the ODBC connection. DSN stores the connection details when making connection to the ODBC.
 - Line of Business (LOB) - a general term which refers to a product or a set of related products that serve a particular customer transaction or business need. One of the set of critical computer applications perceived as vital to running an enterprise. 
+- The Local Security Authority (Domain Policy) Remote Protocol (LSAD) - Used to manage various machine and domain security policies. All versions of Windows NT operating system–based products, in all configurations, implement and listen on the server side of this protocol. However, not all operations are meaningful in all configurations. </br>
 - Namespace (NS) - Unique naming based on hierarchy and logic. </br>
 - Naming Context (NC) - A set of objects organized as a tree, referenced by a DSName. A contiguous Active Directory subtree that is replicated on one or more domain controllers in a forest (Directory Partition).
 - Naming Context Replica - A variable containing a tree of objects whose root object is identified by some naming context (NC).
@@ -103,10 +104,8 @@ Forests can be linked in either one way trust or two way trust, but they are bou
 Domain controllers authenticate all users and computers in a domain, which is a primary security function in a network infrastructure. The DC is a server that contains a complete copy of the AD configuration of the domain in which it's located, as well as the SYSVOL system folder.
 It's critical to ensure the optimal number and placement of domain controllers in any AD DS environment, especially in larger, distributed environments.
 
-
-If the DC is down there will be no way for the users to authenticate themselves and access any of the domain's resources. Everything that require AD authentication will be inaccessible.
-
 When a change is made to an object in a directory partition, the value of the changed attribute or attributes is updated on all domain controllers that store a replica of the same directory partition. Domain controllers communicate data updates automatically through Active Directory replication. Their communication about updates is always specific to a single directory partition at a time. It's importatnt to know that when a change occurs on a source domain controller, it notifies its destination replication partner, prompting the destination domain controller to request the changes from the source domain controller. The source domain controller either responds to the change request with a replication operation or places the request in a queue if requests are already pending. Each domain controller has a queue of pending replication operations that are processed one at a time.
+If the DC is down there will be no way for the users to authenticate themselves and access any of the domain's resources. Everything that require AD authentication will be inaccessible.
 
 #### Read-Only Domain Controller (RODC)
 ##### Inadequate physical security is the most common reason to consider deploying an RODC. An RODC provides a way to deploy a domain controller more securely in locations that require fast and reliable authentication services but cannot ensure physical security for a writable domain controller.
@@ -135,15 +134,8 @@ https://www.techopedia.com/ </br>
 Many network-related operations depend on domains in order to complete various tasks. This document describes some of these tasks, including:
  Joining a domain by creating an account via LDAP.
 
-When a change is made to an object in a directory partition, the value of the changed attribute or attributes is updated on all domain controllers that store a replica of the same directory partition. Domain controllers communicate data updates automatically through Active Directory replication. Their communication about updates is always specific to a single directory partition at a time.
-
-
-When a change occurs on a source domain controller, it notifies its destination replication partner, prompting the destination domain controller to request the changes from the source domain controller. The source domain controller either responds to the change request with a replication operation or places the request in a queue if requests are already pending. Each domain controller has a queue of pending replication operations that are processed one at a time
-
 Knowledge Consistency Checker (KCC)
 A domain controller that runs Active Directory is part of a distributed system that performs replication. The KCC is a component that reduces the administrative burden of maintaining a functioning replication topology. The KCC ensures that a replication path exists between the same NCs that are present in different DCs. The KCC is explained in [MS-ADTS] sections 3.1.1.1.13 and 6.2. The KCC helps administrators build a replication topology that incurs minimal cost. This cost is defined by the administrator as explained in [MS-ADTS] section 3.1.1.1.13.
-
-LSAD
 
 trusted domain object (TDO): A collection of properties that define a trust relationship with another domain, such as direction (outbound, inbound, or both), trust attributes, name, and security identifier of the other domain. For more information, see [MS-ADTS].
 
