@@ -78,10 +78,7 @@ Each domain is given a DNS name that identifies the domain.
 ![forest pic](https://user-images.githubusercontent.com/90955504/133885246-7cfb043e-f0bd-49f7-831f-93cb99b803e5.png)
 
 #### Trusts
-Active Directory domains rarely exist in isolation. Many Active Directory deployments in customer sites consist of two or more domains that represent boundaries between different geographical, managerial, organizational, or administrative layouts. For example, when company "A" acquires company "B", it quickly becomes necessary for preexisting domains to start trusting each other. Alternatively, in some deployments, servers that have a specific role (such as a mail server) can be members of a "resource domain", easing the management burden by combining like roles under one administrative domain. Communication between disparate domains, especially secure communication that involves authentication and authorization, requires that some stateful knowledge is shared between the peer domains in order for them to trust one another. Some of this knowledge is sensitive, forming the cryptographic basis of trust mechanisms used in protocols such as Kerberos and Netlogon RPC. Other state is public knowledge, such as the NetBIOS name of a peer domain, or which security identifiers are owned by the peer domain. Information like this plays a crucial role when performing name lookups, which are essential for authorization, locating user accounts, or simply displaying information in some type of user interface.
-
-#### A trust relationship is a logical relationship between two domains/forests which allows authentication. By default, a secure channel is used to check security information, including security identifiers (SIDs) of users and groups.
-
+A trust relationship is a logical relationship between two domains/forests which allows authentication. By default, a secure channel is used to check security information, including security identifiers (SIDs) of users and groups.
 This secure channel can be extended to other Active Directory domains by creating trust relationships between multiple domains or multiple forests. There are 2 different trust relationships:
 - One-way trusts relationships are valid in one direction.
 - Two-way trusts relationships are valid in both directions.
@@ -103,10 +100,7 @@ Forests can be linked in either one way trust or two way trust, but they are bou
 Domain controllers authenticate all users and computers in a domain, which is a primary security function in a network infrastructure. The DC is a server that contains a complete copy of the AD configuration of the domain in which it's located, as well as the SYSVOL system folder.
 It's critical to ensure the optimal number and placement of domain controllers in any AD DS environment, especially in larger, distributed environments.
 
-
-If the DC is down there will be no way for the users to authenticate themselves and access any of the domain's resources. Everything that require AD authentication will be inaccessible.
-
-When a change is made to an object in a directory partition, the value of the changed attribute or attributes is updated on all domain controllers that store a replica of the same directory partition. Domain controllers communicate data updates automatically through Active Directory replication. Their communication about updates is always specific to a single directory partition at a time. It's importatnt to know that when a change occurs on a source domain controller, it notifies its destination replication partner, prompting the destination domain controller to request the changes from the source domain controller. The source domain controller either responds to the change request with a replication operation or places the request in a queue if requests are already pending. Each domain controller has a queue of pending replication operations that are processed one at a time.
+If the DC there will be no way for the users to authenticate themselves and access any of the domain's resources. Everything that require AD authentication will be inaccessible.
 
 #### Read-Only Domain Controller (RODC)
 ##### Inadequate physical security is the most common reason to consider deploying an RODC. An RODC provides a way to deploy a domain controller more securely in locations that require fast and reliable authentication services but cannot ensure physical security for a writable domain controller.
@@ -135,16 +129,8 @@ https://www.techopedia.com/ </br>
 Many network-related operations depend on domains in order to complete various tasks. This document describes some of these tasks, including:
  Joining a domain by creating an account via LDAP.
 
-When a change is made to an object in a directory partition, the value of the changed attribute or attributes is updated on all domain controllers that store a replica of the same directory partition. Domain controllers communicate data updates automatically through Active Directory replication. Their communication about updates is always specific to a single directory partition at a time.
-
-
-When a change occurs on a source domain controller, it notifies its destination replication partner, prompting the destination domain controller to request the changes from the source domain controller. The source domain controller either responds to the change request with a replication operation or places the request in a queue if requests are already pending. Each domain controller has a queue of pending replication operations that are processed one at a time
-
-Knowledge Consistency Checker (KCC)
+Knowledge Consistency Checker (KCC) LDAP
 A domain controller that runs Active Directory is part of a distributed system that performs replication. The KCC is a component that reduces the administrative burden of maintaining a functioning replication topology. The KCC ensures that a replication path exists between the same NCs that are present in different DCs. The KCC is explained in [MS-ADTS] sections 3.1.1.1.13 and 6.2. The KCC helps administrators build a replication topology that incurs minimal cost. This cost is defined by the administrator as explained in [MS-ADTS] section 3.1.1.1.13.
-
-Active Directory Trust Management
-Active Directory domains rarely exist in isolation. Many Active Directory deployments in customer sites consist of two or more domains that represent boundaries between different geographical, managerial, organizational, or administrative layouts. For example, when company "A" acquires company "B", it quickly becomes necessary for preexisting domains to start trusting each other. Alternatively, in some deployments, servers that have a specific role (such as a mail server) can be members of a "resource domain", easing the management burden by combining like roles under one administrative domain. Communication between disparate domains, especially secure communication that involves authentication and authorization, requires that some stateful knowledge is shared between the peer domains in order for them to trust one another. Some of this knowledge is sensitive, forming the cryptographic basis of trust mechanisms used in protocols such as Kerberos and Netlogon RPC. Other state is public knowledge, such as the NetBIOS name of a peer domain, or which security identifiers are owned by the peer domain. Information like this plays a crucial role when performing name lookups, which are essential for authorization, locating user accounts, or simply displaying information in some type of user interface.
 
 LSAD
 
