@@ -4,19 +4,18 @@
 
 
 ## Introduction
-1. Windows Server Fundamentals
-2. Active Directory Fundamentals
-- Active Directory Lightweight Directory Services (AD LDS)
-- Active Directory Domain Services (AD DS)
-- Basics
-  - Domain, Tree, Forest
-    - Trusts
-    - Forest Trusts
-  - Domain Controller
-    - Read Only Domain Controller (RODC)
-    - Global Catalog (GC)
-  - FSMO Explanation
-  - Organizatinal unit
+- [Windows Server Fundamentals](#windows-server-fundamentals)
+- [Active Directory Fundamentals](#active-directory-fundamentals)
+  - [Active Directory Lightweight Directory Services (AD LDS)](#Active-Directory-Lightweight-Directory-Services-(AD-LDS))
+    - Basics
+      - Domain, Tree, Forest
+      - Trusts
+      - Forest Trusts
+    - Domain Controller
+      - Read Only Domain Controller (RODC)
+      - Global Catalog (GC)
+    - FSMO Explanation
+    - Organizatinal unit
   
 			
 - DNS
@@ -181,3 +180,7 @@ role: The domain role quantifies the relationship between a computer and a domai
 security descriptor: A data structure containing the security information associated with a securable object. A security descriptor identifies an object's owner by its security identifier (SID). If access control is configured for the object, its security descriptor contains a discretionary access control list (DACL) with SIDs for the security principals who are allowed or denied access. Applications use this structure to set and query an object's security status. The security descriptor is used to guard access to an object as well as to control which type of auditing takes place when the object is accessed. The security descriptor format is specified in [MS-DTYP] section 2.4.6; a string representation of security descriptors, called SDDL, is specified in [MS-DTYP] section 2.5.1.
 
 server: A domain controller. Used as a synonym for domain controller.
+
+Windows NT 4.0-style domain: A domain that is created from Windows NT 4.0 operating system servers with an account database that includes all the information in the domain. Windows NT 4.0-style domains do not implement Active Directory, LDAP directories, or Kerberos authentication.
+
+writable naming context (NC) replica: A naming context (NC) replica that accepts originating updates. A writable NC replica is always full, but a full NC replica is not always writable. Partial replicas are not writable. See also read-only full NC replica.
