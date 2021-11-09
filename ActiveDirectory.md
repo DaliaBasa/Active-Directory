@@ -1,30 +1,53 @@
 # Active-Directory-Attacks
 ##### A simple guide to show different attacks on Microsoft Active Directory.
-##### The Active Directory was installed on a Microsoft Windows Server 2019 (CLI).
+##### The Active Directory was installed on a Microsoft Windows Server 2019 (GUI).
 
 
 ## Introduction
-- [Windows Server Fundamentals](#windows-server-fundamentals)
-- [Active Directory Fundamentals](#active-directory-fundamentals)
-  - [Active Directory Lightweight Directory Services (AD LDS)](#Active-Directory-Lightweight-Directory-Services-(AD-LDS))
-   - Basics
-      - Domain, Tree, Forest
+- Windows Server
+   - Dynamic Host Configuration Protocol (DHCP)
+   - Domain Name System (DNS)
+   - Preboot Execution Environment (PXE)
+   - Remote Access
+   - Internet Information Services (IIS)
+- Active Directory
+   - Fundamentals
+      - Domain
+      - Domain Trees
+      - Forests
+        - Forest Structure
+        - Single Forest
+        - Multiple Forest
       - Trusts
       - Forest Trusts
    - Domain Controller
-      - Read Only Domain Controller (RODC)
       - Global Catalog (GC)
-   - FSMO Explanation
-   - Organizatinal unit
-  
-			
-- DNS
-- Group policy
-- LDAP
-  - Directory Service
+      - Read Only Domain Controller (RODC)
+      - Failover Clustering
+   - Organizatinal Units
+   - Containers
+   - FSMO
+     - Forest Level
+       - Schema Operations Master
+       - Domain Naming Master
+     - Domain Level
+       - Primary Domain Controller (PDC)
+       - Relative Identifier (RID)
+       - Infrastructure Master			
+- Domain Name System (DNS)
+- Group Policy
+- Active Directory Planning
+- Managing Active Directory Objects
+  - Managing Users
+  - Managing Computers
+- Active Directory Lightweight Directory Services (AD LDS)
+  - Lightweight Directory Access Protocol (LDAP)
+- Active Directory Federation Services (AD FS)
+- Active Directory Rights Management Services (AD RMS)
+- Active Directory Certificate Services (AD CS)
 - Kerberos
  
-10. Bibliography
+- Bibliography
 
 ## Windows Server Fundamentals
 ???
