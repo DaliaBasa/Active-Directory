@@ -11,6 +11,7 @@
    - Remote Access
    - Internet Information Services (IIS)
 - Active Directory
+- Lightweight Directory Access Protocol (LDAP)
    - Fundamentals
       - Domain
       - Domain Trees
@@ -41,7 +42,6 @@
   - Managing Users
   - Managing Computers
 - Active Directory Lightweight Directory Services (AD LDS)
-  - Lightweight Directory Access Protocol (LDAP)
 - Active Directory Federation Services (AD FS)
 - Active Directory Rights Management Services (AD RMS)
 - Active Directory Certificate Services (AD CS)
@@ -52,7 +52,7 @@
 ## Windows Server Fundamentals
 ???
 
-## Active Directory, Active Directory Domain Services (AD DS)
+## Active Directory
 #### The Windows implementation of a general-purpose directory service, which uses LDAP as its primary access protocol. Active Directory stores information about a variety of objects in the network such as user accounts, computer accounts, groups, and all related credential information used by Kerberos. Active Directory is either deployed as Active Directory Domain Services (AD DS) or Active Directory Lightweight Directory Services (AD LDS).
 
 The most significant difference between between AD LDS and AD DS is that AD LDS does not host domain naming contexts. A server can host multiple AD LDS DCs. Each DC is an independent AD LDS instance, with it's own independent state. AD LDS can be run as an operating system DS or as a directory service provided by a standalone application (ADAM).
