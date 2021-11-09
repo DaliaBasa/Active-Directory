@@ -10,8 +10,9 @@
    - Preboot Execution Environment (PXE)
    - Remote Access
    - Internet Information Services (IIS)
-- Active Directory
 - Lightweight Directory Access Protocol (LDAP)
+- Kerberos
+- Active Directory
    - Fundamentals
       - Domain
       - Domain Trees
@@ -45,7 +46,6 @@
 - Active Directory Federation Services (AD FS)
 - Active Directory Rights Management Services (AD RMS)
 - Active Directory Certificate Services (AD CS)
-- Kerberos
  
 - Bibliography
 
