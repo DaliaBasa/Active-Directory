@@ -95,58 +95,92 @@ Single Sign-On as implied, requires the user to log in with a single user-ID and
 
 ## Auditing
 
-### Security
+## Security
 
 
-## Active Directory Fundamentals
-  
-### Domain
-
-### Domain Trees
-
-### Forests
-
-#### Forest Structure
-
-#### Single Forest
-
-#### Multiple Forest
-
-### Trusts
-
-### Forest Trusts
-
-### Domain Controller
-
-#### Global Catalog (GC)
-
-#### Read Only Domain Controller (RODC)
-
-#### Replication and Failover Clustering
-
-### Organizatinal Units
-
-### Containers
-
-### FSMO
-#### Forest Level
-#### Schema Operations Master
-#### Domain Naming Master
-     Domain Level
-       - Primary Domain Controller (PDC)
-       - Relative Identifier (RID)
-       - Infrastructure Master
-     - Failover		
-- Domain Name System (DNS)
-- Group Policy
-- Active Directory Planning
-- Managing Active Directory Objects
-  - Managing Users
-  - Managing Computers
-- Active Directory Lightweight Directory Services (AD LDS)
-- Active Directory Federation Services (AD FS)
-- Active Directory Rights Management Services (AD RMS)
-- Active Directory Certificate Services (AD CS)
+# Active Directory Fundamentals
  
-- Bibliography
+ 
+## Domain
+
+## Domain Trees
+
+## Forests
+
+### Forest Structure
+
+### Single Forest
+
+### Multiple Forest
+
+
+## Trusts
+
+## Forest Trusts
+
+
+## Domain Controller
+
+### Global Catalog (GC)
+
+### Read Only Domain Controller (RODC)
+
+### Replication and Failover Clustering
+
+
+## Organizatinal Units
+
+## Containers
+
+
+## Flexible Single Master Operation (FSMO)
+
+## Forest Level Roles
+These roles are unique to each forest, hence only one of each in the forest
+
+### Schema Operations Master
+
+### Domain Naming Master
+
+## Domain Level Roles
+These roles exist in every domain, every Domain Controller maintains these FSMO roles.
+
+### Primary Domain Controller (PDC)
+
+### Relative Identifier (RID)
+
+### Infrastructure Master
+
+### Failover		
+
+
+## Domain Name System (DNS)
+
+
+## Group Policy
+
+
+## Active Directory Planning
+
+
+## Managing Active Directory Objects
+
+## Managing Users
+
+## Managing Computers
+
+
+## Active Directory Lightweight Directory Services (AD LDS)
+
+
+## Active Directory Federation Services (AD FS)
+
+
+## Active Directory Rights Management Services (AD RMS)
+
+
+## Active Directory Certificate Services (AD CS)
+
+ 
+# Bibliography
 
