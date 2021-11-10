@@ -1,9 +1,9 @@
-# Active-Directory-Attacks
+# Active-Directory
 ##### A simple guide to show different attacks on Microsoft Active Directory.
 ##### The Active Directory was installed on a Microsoft Windows Server 2019 (GUI).
 
 
-## Introduction
+# Introduction
 - Windows Server Fundamentals
    - Dynamic Host Configuration Protocol (DHCP)
    - Domain Name System (DNS)
@@ -56,7 +56,7 @@
  
 - Bibliography
 
-## Windows Server Fundamentals
+# Windows Server Fundamentals
 
 ### Dynamic Host Configuration Protocol (DHCP)
 
@@ -69,13 +69,13 @@
 ### Internet Information Services (IIS)
 
 
-## Lightweight Directory Access Protocol (LDAP)
+# Lightweight Directory Access Protocol (LDAP)
 
-## Kerberos
+# Kerberos
 
-## Directory Services
+# Directory Services
 
-## Active Directory
+# Active Directory
 Active Directory is the leading directory service solution made by Microsoft. It was first introduced in Windows 2000 Server edition as an implementation of X.500 directory.
 Active Directory uses LDAP as its primary access protocol. Active Directory stores information about a variety of objects in the network such as user accounts, computer accounts, groups, and all related credential information used by Kerberos. 
 Active Directory can be deployed in one of five forms: Active Directory Domain Services (AD DS), Active Directory Lightweight Directory Services (AD LDS), Active Directory Federation Services (AD FS), Active Directory Rights Management Services (AD RMS), Active Directory Certificate Services (AD CS).
