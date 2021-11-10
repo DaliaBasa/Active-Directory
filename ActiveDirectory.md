@@ -1,5 +1,4 @@
 # Active-Directory
-##### A simple guide to show different attacks on Microsoft Active Directory.
 ##### The Active Directory was installed on a Microsoft Windows Server 2019 (GUI).
 
 
@@ -83,7 +82,6 @@ Active Directory can be deployed in one of five forms: Active Directory Domain S
 This repository will focus on AD DS as it’s the most common product of Active Directory.
 
 # Active Directory Features
-
 ## Single Sign-On (SSO)
 There are many applications that require authentications from the user, sometimes different authentication methods. This can be both time consuming for user and I.T and a security problem, a common security problem is having users writing down their passwords on notes around the office due to one too many passwords to remember for each application. </br>
 Single Sign-On as implied, requires the user to log in with a single user-ID and password for the whole session, Active Directory will provide the credentials needed for any further logins. Hence, the user won’t need to keep typing his credentials to get access.
@@ -101,7 +99,6 @@ Auditing could be used in forensic analysis and in detecting anomalous behavior.
 Active Directory stores in its databases vast amounts of information about the organization’s employees, this calls for protection. </br>
 Active Directory supports various authentication methods, group policies and practices to use against threats, these solutions should be implemented by administrators, but must be followed by the employees. Administrators need to recruit the users for the task, while maintaining the group policies as well as updating the system.
 
-
 # Active Directory Fundamentals 
 ## Domain
 Domain refers to a collection of logical objects (users/computers/printers), each object has a unique identity, and a set of privileges that are administrated to follow the rules posed by the administrator. The domain can be viewed as a security boundary for the objects inside it, using different policies to maintain the organization’s security.
@@ -110,9 +107,9 @@ Microsoft is well known for its backward compatibility, *for instance, Windows 1
 *Example: a forest functional level is 2016, the administrators have not yet upgraded to the newest functional level. In order for the administrators to add a domain, it must be at the same functional level as the forest, hence they could install a Windows Server 2022 and the Active Directory would support the functional level of Active Directory 2016.* </br>
 This is an important aspect to different organization that don’t have the resources or the need for new features. With that being said, Microsoft ends their support for legacy servers/Active Directory as years pass.
 
-
 ## Domain Trees
-
+A domain tree is a collection of domains, this can be viewed as a parent-child relationship whereas the domain tree is the parent, and the domain is the child. Just like a family, domains inside the domain tree share a contiguous namespace, but there can be only one parent domain in a domain tree.</br>
+*Example: poletek.com is the forest domain name, the domain tree name is  ronen.poletek.com and the fully qualified domain name is matanel.ronen.poletek* 
 
 ## Forests
 
