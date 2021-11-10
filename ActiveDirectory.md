@@ -83,17 +83,17 @@ The repository will focus on AD DS as it’s the most common product of Active D
 
 Administrators/IT are enjoying the benefits of implementing group policies, having to make changes one time and push it for every computer in the domain, the same could be applied to security configurations. Storing vital information about the users in databases. The ability to make changes and apply them to domains are what makes Active Directory so keen.
 
-## Active Directory Features
+# Active Directory Features
 
-### Single Sign-On (SSO)
+## Single Sign-On (SSO)
 There are many applications that require authentications from the user, sometimes different authentication methods. This can be both time consuming for user and I.T and a security problem, a common security problem is having users writing down their passwords on notes around the office due to one too many passwords to remember for each application.
 Single Sign-On as implied, requires the user to log in with a single user-ID and password for the whole session, Active Directory will provide the credentials needed for any further logins. Hence, the user won’t need to keep typing his credentials to get access.
 
-### Replication
+## Replication
 
-### Availability
+## Availability
 
-### Auditing
+## Auditing
 
 ### Security
 
