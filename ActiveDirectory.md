@@ -98,7 +98,8 @@ Auditing helps to maintain regulatory compliance and the organization’s securi
 Auditing could be used in forensic analysis and in detecting anomalous behavior.
 
 ## Security
-
+Active Directory stores in its databases vast amounts of information about the organization’s employees, this calls for protection. </br>
+Active Directory supports various authentication methods, group policies and practices to use against threats, these solutions should be implemented by administrators, but must be followed by the employees. Administrators need to recruit the users for the task, while maintaining the group policies as well as updating the system.
 
 # Active Directory Fundamentals
  
