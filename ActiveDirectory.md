@@ -105,9 +105,14 @@ Active Directory supports various authentication methods, group policies and pra
 # Active Directory Fundamentals 
 ## Domain
 Domain refers to a collection of logical objects (users/computers/printers), each object has a unique identity, and a set of privileges that are administrated to follow the rules posed by the administrator. The domain can be viewed as a security boundary for the objects inside it, using different policies to maintain the organization’s security.
-Domains differ from one to another by the domain identifiers (name, IP, physical hardware).
+Domains differ from one to another by the domain identifiers (name, IP, physical hardware). </br>
+Microsoft is well known for its backward compatibility, *for instance, Windows 10 still doesn’t allow for users to make a folder named “CON”.*  Active Directory supports backward compatibility as well, it’s called functional levels and allows for administrators to add domains with the same functional level as the forest, but a newer Windows Server edition. </br>
+*Example: a forest functional level is 2016, the administrators have not yet upgraded to the newest functional level. In order for the administrators to add a domain, it must be at the same functional level as the forest, hence they could install a Windows Server 2022 and the Active Directory would support the functional level of Active Directory 2016.* </br>
+This is an important aspect to different organization that don’t have the resources or the need for new features. With that being said, Microsoft ends their support for legacy servers/Active Directory as years pass.
+
 
 ## Domain Trees
+
 
 ## Forests
 
