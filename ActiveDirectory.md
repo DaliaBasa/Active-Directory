@@ -94,6 +94,8 @@ The replication is managed by the Knowledge Consistency Checker (KCC), a process
 Identifying the organization’s needs and making an effective topology is crucial for the network’s performance.
 
 ## Auditing
+Auditing helps to maintain regulatory compliance and the organization’s security. Auditing in Active Directory uses policies to store events, as with many Active Directory aspects this too can be a two-edges sword as the administrators would have to prioritize some events over others, policies cannot be too broad or too narrow. </br>
+Auditing could be used in forensic analysis and in detecting anomalous behavior.
 
 ## Security
 
