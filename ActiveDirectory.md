@@ -16,7 +16,6 @@
 - Active Directory Features
   - Single Sign-On (SSO)
   - Replication
-  - Availability
   - Auditing
   - Security
 - Active Directory Fundamentals
@@ -76,6 +75,7 @@
 
 # Directory Services
 
+
 # Active Directory
 Active Directory is the leading directory service solution made by Microsoft. It was first introduced in Windows 2000 Server edition as an implementation of X.500 directory.
 Active Directory uses LDAP as its primary access protocol. Active Directory stores information about a variety of objects in the network such as user accounts, computer accounts, groups, and all related credential information used by Kerberos. </br>
@@ -89,11 +89,9 @@ There are many applications that require authentications from the user, sometime
 Single Sign-On as implied, requires the user to log in with a single user-ID and password for the whole session, Active Directory will provide the credentials needed for any further logins. Hence, the user won’t need to keep typing his credentials to get access.
 
 ## Replication
-Active Directory could be implemented in small/centered organizations as well as vast organizations with many sites. The more complex organizations require multiple Domain Controllers, therefore it’s important for the Domain Controllers to maintain updated data throughout the sites. </br>
-The connection between each Domain Controller is made available by the Knowledge Consistency Checker (KCC), a process that runs on the Domain Controllers and generates replication topology for the Active Directory forest. </br>
+Active Directory could be implemented in small/centered organizations as well as vast organizations with many sites. The more complex organizations require multiple Domain Controllers, therefore it’s important for the Domain Controllers to maintain updated data throughout the sites. Active Directory maps the IP addresses of each site, this is done using the Subnet Mask. </br>
+The replication is managed by the Knowledge Consistency Checker (KCC), a process that runs on the Domain Controllers and generates replication topology for the Active Directory forest. </br>
 Identifying the organization’s needs and making an effective topology is crucial for the network’s performance.
-
-## Availability
 
 ## Auditing
 
