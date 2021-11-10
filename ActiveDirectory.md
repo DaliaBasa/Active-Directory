@@ -13,20 +13,21 @@
 - Lightweight Directory Access Protocol (LDAP)
 - Kerberos
 - Directory Services
-- Active Directory
-   - Fundamentals
-      - Domain
-      - Domain Trees
-      - Forests
-        - Forest Structure
-        - Single Forest
-        - Multiple Forest
-      - Trusts
-      - Forest Trusts
+- Active Directory Features
+  - Single Sign-On (SSO)
+- Active Directory Fundamentals
+  - Domain
+  - Domain Trees
+  - Forests
+    - Forest Structure
+    - Single Forest
+    - Multiple Forest
+   - Trusts
+   - Forest Trusts
    - Domain Controller
-      - Global Catalog (GC)
-      - Read Only Domain Controller (RODC)
-      - Failover Clustering
+     - Global Catalog (GC)
+     - Read Only Domain Controller (RODC)
+     - Failover Clustering
    - Organizatinal Units
    - Containers
    - FSMO
@@ -54,18 +55,14 @@
 ???
 
 ## Active Directory
-#### The Windows implementation of a general-purpose directory service, which uses LDAP as its primary access protocol. Active Directory stores information about a variety of objects in the network such as user accounts, computer accounts, groups, and all related credential information used by Kerberos. Active Directory is either deployed as Active Directory Domain Services (AD DS) or Active Directory Lightweight Directory Services (AD LDS).
 
-The most significant difference between between AD LDS and AD DS is that AD LDS does not host domain naming contexts. A server can host multiple AD LDS DCs. Each DC is an independent AD LDS instance, with it's own independent state. AD LDS can be run as an operating system DS or as a directory service provided by a standalone application (ADAM).
+Active Directory is the leading directory service solution made by Microsoft. It was first introduced in Windows 2000 Server edition as an implementation of X.500 directory.
+Active Directory uses LDAP as its primary access protocol. Active Directory stores information about a variety of objects in the network such as user accounts, computer accounts, groups, and all related credential information used by Kerberos. 
+Active Directory can be deployed in one of five forms: Active Directory Domain Services (AD DS), Active Directory Lightweight Directory Services (AD LDS), Active Directory Federation Services (AD FS), Active Directory Rights Management Services (AD RMS), Active Directory Certificate Services (AD CS).
+The repository will focus on AD DS as it’s the most common product of Active Directory.
 
-Directory services allows an easy and quick storage, search and managment of resources within a network. The Active Directory works in a hierarchical way and allows the arrangement of resources based on DCs (Domain Controllers - databases), it is also a secutiry solution to vast networks.
-Unlike Peer to Peer Network which is used in small networks, Active Directory is a centralised network managment, which uses databases that attain each user/device configuration.
-
-Active Directory helps both IT/administrators and end users.
-Users only need to login once and their files are stored in a repository which is accessible to other users from different domains/trees/forests.
 Administrators/IT are enjoying the benefits of implementing group policies, having to make changes one time and push it for every computer in the domain, the same could be applied to security configurations. Storing vital information about the users in databases. The ability to make changes and apply them to domains are what makes Active Directory so keen.
 
-Active Directory Web Services (ADWS) Provides a web service interface to Active Directory Domain Services (AD DS) and Active Directory Lightweight Directory Services (AD LDS) instances.
 ### Active Directory Lightweight Directory Services (AD LDS)
 
 Active Directory Lightweight Directory Services (AD LDS) is an independent mode of Active Directory, minus infrastructure features, that provides directory services for applications. AD LDS consists of a directory service that is accessible via the Lightweight Directory Access Protocol (LDAP). AD LDS is primarily intended for use by application software as a storage mechanism. </br>
