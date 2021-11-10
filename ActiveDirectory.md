@@ -32,6 +32,7 @@
      - Global Catalog (GC)
      - Read Only Domain Controller (RODC)
      - Replication and Failover Clustering
+     - Knowledge Consistency Checker (KCC)
    - Organizatinal Units
    - Containers
    - FSMO
@@ -127,6 +128,8 @@ Single Sign-On as implied, requires the user to log in with a single user-ID and
 
 ### Replication and Failover Clustering
 
+### Knowledge Consistency Checker (KCC)
+
 
 ## Organizatinal Units
 
@@ -181,6 +184,8 @@ These roles exist in every domain, every Domain Controller maintains these FSMO 
 
 ## Active Directory Certificate Services (AD CS)
 
+
+## Azure Active Directory
  
 # Bibliography
 
