@@ -101,10 +101,11 @@ Auditing could be used in forensic analysis and in detecting anomalous behavior.
 Active Directory stores in its databases vast amounts of information about the organization’s employees, this calls for protection. </br>
 Active Directory supports various authentication methods, group policies and practices to use against threats, these solutions should be implemented by administrators, but must be followed by the employees. Administrators need to recruit the users for the task, while maintaining the group policies as well as updating the system.
 
-# Active Directory Fundamentals
- 
- 
+
+# Active Directory Fundamentals 
 ## Domain
+Domain refers to a collection of logical objects (users/computers/printers), each object has a unique identity, and a set of privileges that are administrated to follow the rules posed by the administrator. The domain can be viewed as a security boundary for the objects inside it, using different policies to maintain the organization’s security.
+Domains differ from one to another by the domain identifiers (name, IP, physical hardware).
 
 ## Domain Trees
 
