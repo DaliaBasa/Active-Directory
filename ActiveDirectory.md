@@ -4,7 +4,7 @@
 
 
 # Introduction
-- Windows Server Fundamentals
+- Windows Server Features (some)
    - Dynamic Host Configuration Protocol (DHCP)
    - Domain Name System (DNS)
    - Preboot Execution Environment (PXE)
