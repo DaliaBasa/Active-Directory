@@ -163,6 +163,7 @@ When a change is made to an object in a directory partition, the value of the ch
 If the domain’s Domain Controller is offline, it will be impossible for the users to authenticate themselves and access any of the domain's resources. Everything that require Active Directory authentication will be inaccessible.
 
 ### Global Catalog (GC)
+Global Catalog 
 
 ### Read Only Domain Controller (RODC)
 
