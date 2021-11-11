@@ -26,14 +26,14 @@
     - Multiple Forest
    - Trusts
    - Forest Trusts
-   - Domain Controller
+   - Domain Controller (DC)
      - Global Catalog (GC)
      - Read Only Domain Controller (RODC)
      - Replication and Failover Clustering
      - Knowledge Consistency Checker (KCC)
-   - Organizatinal Units
+   - Organizatinal Units (OU)
    - Containers
-   - FSMO
+   - Flexible Single Master Operation (FSMO)
      - Forest Level
        - Schema Operations Master
        - Domain Naming Master
@@ -155,7 +155,7 @@ Forests can be linked in either one-way trust or two-way trust, but they are bou
 *Example: if forest A and forest B are connected, and forest B is connected to forest C, forest A could not access forest C. The only way for forest A to access forest C and overcome the non-transitive trust is to make a trust between them.*
 
 
-## Domain Controller
+## Domain Controller (DC)
 
 ### Global Catalog (GC)
 
