@@ -112,6 +112,8 @@ A domain tree is a collection of domains, this can be viewed as a parent-child r
 *Example: poletek.com is the forest domain name, the domain tree name is  ronen.poletek.com and the fully qualified domain name is matanel.ronen.poletek* 
 
 ## Forests
+Active Directory forest represents the complete Active Directory instance, it has at least one domain and the collection of the domain trees, much like other directory services it is built in a hierarchical structure. All the domains/domain trees inside the forest are connected in a two-way transitive trust, hence data flows in both directions. </br>
+Forests can contain non-contiguous domain names unless the domain names are in a domain tree.
 
 
 ### Forest Structure
