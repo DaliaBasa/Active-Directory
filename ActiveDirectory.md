@@ -156,6 +156,11 @@ Forests can be linked in either one-way trust or two-way trust, but they are bou
 
 
 ## Domain Controller (DC)
+Unlike the components mentioned before, Domain Controller is a physical component. It’s a computer that runs Windows Server operating system and has Active Directory Domain Services installed. </br>
+A Domain Controller is authoritative for the domain to which the server is joined. It contains the Active Directory database for the domain namespace, the configuration, and the Flexible Single Master Operation roles (at least the domain level ones). There can be any number of Domain Controllers in a domain for different reasons (organization size, replication).
+Domain Controllers authenticate all users and computers in a domain, which is a primary security function in a network infrastructure. It's critical to ensure the optimal number and placements of Domain Controllers in any Active Directory structure. 
+When a change is made to an object in a directory partition, the value of the changed attribute or attributes is updated on all Domain Controllers that store a replica of the same directory partition. Domain Controllers communicate data updates automatically through Active Directory replication. Their communication about updates is always specific to a single directory partition at a time. It's important to understand that when changes occur on a source Domain Controller, it notifies its destination replication partner, prompting the destination Domain Controller to request the changes from the source Domain Controller. The source Domain Controller either responds to the change request with a replication operation or places the request in a queue if requests are already pending. Each Domain Controller has a queue of pending replication operations that are processed one at a time.
+If the domain’s Domain Controller is offline, it will be impossible for the users to authenticate themselves and access any of the domain's resources. Everything that require Active Directory authentication will be inaccessible.
 
 ### Global Catalog (GC)
 
