@@ -25,7 +25,7 @@
     - Single Forest
     - Multiple Forest
    - Trusts
-   - Forest Trusts
+     - Forest Trusts
    - Domain Controller (DC)
      - Global Catalog (GC)
      - Read Only Domain Controller (RODC)
@@ -148,7 +148,7 @@ These relationships can be either transitive or non-transitive:
 - Non-transitive trusts, even if there is trust between all the domains, but they are non-transitive, then they could only access their nearest trust points. </br> 
 *Example: if domain A trusts domain B, and domain B trusts domain C. User from domain A could only access domain B.*
 
-## Forest Trusts
+### Forest Trusts
 An Active Directory Forest is the security and administrative boundary for objects and entities. Due to some business need, if we want to establish a bridge between two AD Forests, we need to configure Forest Trust between those forests. Forest Trusts are created between Forest Root Domains and are valid for all Domains within the entire Forest.
 
 Forests can be linked in either one-way trust or two-way trust, but they are bound to be non-transitive. </br> 
