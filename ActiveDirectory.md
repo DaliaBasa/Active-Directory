@@ -21,7 +21,7 @@
   - Domain
   - Domain Trees
   - Forests
-    - Forest Structure
+    - Forest Design
     - Single Forest
     - Multiple Forest
    - Trusts
@@ -111,18 +111,24 @@ This is an important aspect to different organization that don’t have the reso
 A domain tree is a collection of domains, this can be viewed as a parent-child relationship whereas the domain tree is the parent, and the domain is the child. Just like a family, domains inside the domain tree share a contiguous namespace, but there can be only one parent domain in a domain tree. </br>
 *Example: CongoRainforest.com is the forest domain name, the domain tree name is Mahogany.ActiveDirectory.com and the fully qualified domain name is Fruit.Mahogany.ActiveDirectory.com* 
 
-
 ## Forests
 Active Directory forest represents the complete Active Directory instance, it has at least one domain and the collection of the domain trees, much like other directory services it is built in a hierarchical structure. All the domains/domain trees inside the forest are connected in a two-way transitive trust, hence data flows in both directions. </br>
 Forests can contain non-contiguous domain names unless the domain names are in a domain tree.
 
-
-### Forest Structure
+### Forests Design
+One of the most important aspects in a system is designing it in an efficient way, this applies to Active Directory as well. A good forest design could only be achieved after identifying the needs for the organization. </br>
+Some documentations divide the Active Directory forest into 3 kinds of models: organizational forest model, resource forest model, restricted access forest model. </br>
+I will divide the structure into two types of forest implementations, a single or a multiple forest structure. 
 
 ### Single Forest
+A single Active Directory forest could be considered as a more simpler solution, it is the default mode. Most business models if not all could fit into this model, it’s significantly cheaper to maintain only one forest. </br>
+Most documentation states that restricting yourself to one forest is the key to success.
 
 ### Multiple Forest
-
+The multi-forest model is a must in some organizations, this adds to the already complexed and thought topology. Managing multiple forests require more administrators (I.T) as well as more physical hardware. There are several reasons as to why you should use the multi-forest model: </br>
+- Organization acquisitions usually require some security boundaries </br>
+- Isolation needed due to constant forest schema changes or due to vast organizations with multiple forests that share only common resources whilst keeping the other resources isolated in a different forest. </br>
+- Many organizations are under strict regulations that require isolation between some departments. </br>
 
 ## Trusts
 
