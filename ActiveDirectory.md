@@ -131,8 +131,28 @@ The multi-forest model is a must in some organizations, this adds to the already
 - Many organizations are under strict regulations that require isolation between some departments. </br>
 
 ## Trusts
+Active Directory domains rarely exist in isolation. Many Active Directory deployments in customer sites consist of two or more domains that represent boundaries between different geographical, managerial, organizational, or administrative layouts. *For example, when company "A" acquires company "B", it quickly becomes necessary for preexisting domains to start trusting each other.* Communication between disparate domains, especially secure communication that involves authentication and authorization, requires that some stateful knowledge is shared between the peer domains for them to trust one another. Some of this knowledge is sensitive, forming the cryptographic basis of trust mechanisms used in protocols such as Kerberos and Netlogon RPC. Other state is public knowledge, such as the NetBIOS name of a peer domain, or which security identifiers are owned by the peer domain. Information like this plays a crucial role when performing name lookups, which are essential for authorization, locating user accounts, or simply displaying information in some type of user interface.
+
+Trusted Domain Object (TDO): A collection of properties that define a trust relationship with another domain, such as direction (outbound, inbound, or both), trust attributes, name, and security identifier of the other domain.
+**A trust relationship is a logical relationship between two domains/forests which allows authentication.** By default, a secure channel is used to check security information, including security identifiers of users and groups.
+
+This secure channel can be extended to other Active Directory domains by creating trust relationships between multiple domains or multiple forests. There are different trust relationships:
+- One-way trusts relationships are valid in one direction.
+- Two-way trusts relationships are valid in both directions.
+- Explicit trust is a trust that's created manually by the system administrator.
+- External trust is a trust between domains that belong to different forests.
+
+These relationships can be either transitive or non-transitive:
+- Transitive trusts, if there is trust between the domains a user can access these trust paths. </br>
+*Example: if domain A trusts domain B, and domain B trusts domain C, when transitivity is enabled, users of domain A can access both domain B and C.*
+- Non-transitive trusts, even if there is trust between all the domains, but they are non-transitive, then they could only access their nearest trust points. </br> 
+*Example: if domain A trusts domain B, and domain B trusts domain C. User from domain A could only access domain B.*
 
 ## Forest Trusts
+An Active Directory Forest is the security and administrative boundary for objects and entities. Due to some business need, if we want to establish a bridge between two AD Forests, we need to configure Forest Trust between those forests. Forest Trusts are created between Forest Root Domains and are valid for all Domains within the entire Forest.
+
+Forests can be linked in either one-way trust or two-way trust, but they are bound to be non-transitive. </br> 
+*Example: if forest A and forest B are connected, and forest B is connected to forest C, forest A could not access forest C. The only way for forest A to access forest C and overcome the non-transitive trust is to make a trust between them.*
 
 
 ## Domain Controller
