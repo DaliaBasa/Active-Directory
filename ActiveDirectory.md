@@ -108,8 +108,9 @@ Microsoft is well known for its backward compatibility, *for instance, Windows 1
 This is an important aspect to different organization that don’t have the resources or the need for new features. With that being said, Microsoft ends their support for legacy servers/Active Directory as years pass.
 
 ## Domain Trees
-A domain tree is a collection of domains, this can be viewed as a parent-child relationship whereas the domain tree is the parent, and the domain is the child. Just like a family, domains inside the domain tree share a contiguous namespace, but there can be only one parent domain in a domain tree.</br>
-*Example: poletek.com is the forest domain name, the domain tree name is  ronen.poletek.com and the fully qualified domain name is matanel.ronen.poletek* 
+A domain tree is a collection of domains, this can be viewed as a parent-child relationship whereas the domain tree is the parent, and the domain is the child. Just like a family, domains inside the domain tree share a contiguous namespace, but there can be only one parent domain in a domain tree. </br>
+*Example: CongoRainforest.com is the forest domain name, the domain tree name is Mahogany.ActiveDirectory.com and the fully qualified domain name is Fruit.Mahogany.ActiveDirectory.com* 
+
 
 ## Forests
 Active Directory forest represents the complete Active Directory instance, it has at least one domain and the collection of the domain trees, much like other directory services it is built in a hierarchical structure. All the domains/domain trees inside the forest are connected in a two-way transitive trust, hence data flows in both directions. </br>
