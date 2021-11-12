@@ -135,7 +135,7 @@ The multi-forest model is a must in some organizations, this adds to the already
 - Many organizations are under strict regulations that require isolation between some departments. </br>
 
 ## Security Identifiers (SID) and Globally Unique Identifiers (GUID)
-Every time we create and object in Active Directory it is assigned with a security identifier and a globally unique identifier.
+Every time we create and object in Active Directory it is assigned with a security identifier (SID) and a globally unique identifier (GUID).
 
 ### Security Identifiers (SID)
 A security identifier is a value given to an object which is a unique value within its enterprise and is stored in the ObjectSID property. A security identifier is given to a user account or a group account by an authority. The security identifier authority never issues the same SID, nor use SIDs from deleted objects within the enterprise. There are commonly used security identifiers that are used across all Active Directory systems, these are generic users/groups. </br>
