@@ -134,7 +134,15 @@ The multi-forest model is a must in some organizations, this adds to the already
 - Isolation needed due to constant forest schema changes or due to vast organizations with multiple forests that share only common resources whilst keeping the other resources isolated in a different forest. </br>
 - Many organizations are under strict regulations that require isolation between some departments. </br>
 
-## Security Identifiers (SID) and Globally Unique Identifiers (GUID)
+## Security Identifiers (SID) and Globally Unique Identifiers (GUID)\
+Every time we create and object in Active Directory it is assigned with a security identifier and a globally unique identifier.
+
+### Security Identifiers (SID)
+A security identifier is a value given to an object which is a unique value within its enterprise, a security identifier is given to a user account, group, or process by an authority. The security identifier authority never issues the same SID, nor use SIDs from deleted objects within the enterprise. With that being said there are commonly used security identifiers that are used across all Active Directory systems, these are generic users/groups. </br>
+*Example: a group is deleted by the administrator, the security identifiers attached to the group gets deleted as well and would not be used again by the system.* </br>
+The operating system refers to objects in the security context by using their security identifiers, every time a user signs in, the system creates a token for the user, that token includes the security identifier for that user and allows or prevents him from actions based on the policies attached to the user.
+
+### Globally Unique Identifiers (GUID)
 
 
 ## Trusts
@@ -163,7 +171,7 @@ Forests can be linked in either one-way trust or two-way trust, but they are bou
 
 
 ## Domain Controller (DC)
-Unlike the components mentioned before, Domain Controller is a physical component. It’s a computer that runs Windows Server operating system and has Active Directory Domain Services installed. </br>
+Unlike the components mentioned before, Domain Controller is a physical component. It’s a computer that runs Windows Server operating system and has Active Directory Domain Services installed, a Domain Controller could be viewed as a database and it can hold nearly 2 billion objects. </br>
 A Domain Controller is authoritative for the domain to which the server is joined. It contains the Active Directory database for the domain namespace, the configuration, and the Flexible Single Master Operation roles (at least the domain level ones). There can be any number of Domain Controllers in a domain for different reasons (organization size, replication).
 Domain Controllers authenticate all users and computers in a domain, which is a primary security function in a network infrastructure. It's critical to ensure the optimal number and placements of Domain Controllers in any Active Directory structure. 
 When a change is made to an object in a directory partition, the value of the changed attribute or attributes is updated on all Domain Controllers that store a replica of the same directory partition. Domain Controllers communicate data updates automatically through Active Directory replication. Their communication about updates is always specific to a single directory partition at a time. It's important to understand that when changes occur on a source Domain Controller, it notifies its destination replication partner, prompting the destination Domain Controller to request the changes from the source Domain Controller. The source Domain Controller either responds to the change request with a replication operation or places the request in a queue if requests are already pending. Each Domain Controller has a queue of pending replication operations that are processed one at a time.
