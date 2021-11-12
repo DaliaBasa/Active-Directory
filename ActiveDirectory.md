@@ -17,13 +17,14 @@
   - Replication
   - Auditing
   - Security
-- Active Directory Fundamentals
+- Active Directory Domain Services
   - Domain
   - Domain Trees
   - Forests
     - Forest Design
     - Single Forest
     - Multiple Forest
+   - Security Identifiers (SID) and Globally Unique Identifiers (GUID)
    - Trusts
      - Forest Trusts
    - Domain Controller (DC)
@@ -32,7 +33,9 @@
      - Replication and Failover Clustering
      - Knowledge Consistency Checker (KCC)
    - Organizatinal Units (OU)
-   - Containers
+   - Active Directory Objects
+     - Container
+     - Leaf
    - Flexible Single Master Operation (FSMO)
      - Forest Level
        - Schema Operations Master
@@ -131,6 +134,9 @@ The multi-forest model is a must in some organizations, this adds to the already
 - Isolation needed due to constant forest schema changes or due to vast organizations with multiple forests that share only common resources whilst keeping the other resources isolated in a different forest. </br>
 - Many organizations are under strict regulations that require isolation between some departments. </br>
 
+## Security Identifiers (SID) and Globally Unique Identifiers (GUID)
+
+
 ## Trusts
 Active Directory domains rarely exist in isolation. Many Active Directory deployments in customer sites consist of two or more domains that represent boundaries between different geographical, managerial, organizational, or administrative layouts. *For example, when company "A" acquires company "B", it quickly becomes necessary for preexisting domains to start trusting each other.* Communication between disparate domains, especially secure communication that involves authentication and authorization, requires that some stateful knowledge is shared between the peer domains for them to trust one another. Some of this knowledge is sensitive, forming the cryptographic basis of trust mechanisms used in protocols such as Kerberos and Netlogon RPC. Other state is public knowledge, such as the NetBIOS name of a peer domain, or which security identifiers are owned by the peer domain. Information like this plays a crucial role when performing name lookups, which are essential for authorization, locating user accounts, or simply displaying information in some type of user interface.
 
@@ -175,7 +181,11 @@ Global Catalog
 
 ## Organizatinal Units
 
-## Containers
+## Active Directory Objects
+
+### Container
+
+### Leaf
 
 
 ## Flexible Single Master Operation (FSMO)
