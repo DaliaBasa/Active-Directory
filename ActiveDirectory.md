@@ -21,9 +21,14 @@
   - Domain
   - Domain Trees
   - Forests
-    - Forest Design
+  - Forest Design/Models
     - Single Forest
     - Multiple Forest
+    - Organizational Forest Model
+    - Resource Forest Model
+    - Restricted Forest Model
+    - Single Domain Model
+    - Regional Domain Model
    - Security Identifiers (SID) and Globally Unique Identifiers (GUID)
    - Trusts
      - Forest Trusts
@@ -119,7 +124,7 @@ A domain tree is a collection of domains, this can be viewed as a parent-child r
 Active Directory forest represents the complete Active Directory instance, it has at least one domain and the collection of the domain trees, much like other directory services it is built in a hierarchical structure. All the domains/domain trees inside the forest are connected in a two-way transitive trust, hence data flows in both directions. </br>
 Forests can contain non-contiguous domain names unless the domain names are in a domain tree.
 
-### Forests Design
+## Forests Design
 One of the most important aspects in a system is designing it in an efficient way, this applies to Active Directory as well. A good forest design could only be achieved after identifying the needs for the organization. </br>
 
 ### Single Forest
