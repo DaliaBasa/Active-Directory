@@ -121,8 +121,6 @@ Forests can contain non-contiguous domain names unless the domain names are in a
 
 ### Forests Design
 One of the most important aspects in a system is designing it in an efficient way, this applies to Active Directory as well. A good forest design could only be achieved after identifying the needs for the organization. </br>
-Some documentations divide the Active Directory forest into 3 kinds of models: organizational forest model, resource forest model, restricted access forest model. </br>
-I will divide the structure into two types of forest implementations, a single or a multiple forest structure. 
 
 ### Single Forest
 A single Active Directory forest could be considered as a more simpler solution, it is the default mode. Most business models if not all could fit into this model, it’s significantly cheaper to maintain only one forest. </br>
@@ -133,6 +131,20 @@ The multi-forest model is a must in some organizations, this adds to the already
 - Organization acquisitions usually require some security boundaries </br>
 - Isolation needed due to constant forest schema changes or due to vast organizations with multiple forests that share only common resources whilst keeping the other resources isolated in a different forest. </br>
 - Many organizations are under strict regulations that require isolation between some departments. </br>
+
+### Organizational Forest Model
+An organizational forest model focuses on having control over the forest autonomy and isolation. To access resources in other forests, trust relationships between the forests must be established first.
+
+### Resource Forest Model
+The resource forest model is used to separate the users from the sources. The resource forests contain only administrative user accounts for maintenance besides the resources. The trust relationships are one way, so that users can get resources from the resource forests.
+
+### Restricted Access Forest Model
+The restricted access forest model consists of an organizational forest, and a restricted access forest with classified data. There are no trusts between the forests, and so if users want to access the classified data, they must have a user in that forest. This helps in reducing the risk of compromising important data.
+Organizations use that structure when working on classified government projects, new hardware, etc.
+
+### Single Domain Model
+
+### Regional Domain Model
 
 ## Security Identifiers (SID) and Globally Unique Identifiers (GUID)
 Every time we create and object in Active Directory it is assigned with a security identifier (SID) and a globally unique identifier (GUID).
