@@ -40,10 +40,8 @@
      - Read Only Domain Controller (RODC)
      - Replication and Failover Clustering
      - Knowledge Consistency Checker (KCC)
-   - Organizatinal Units (OU)
-   - Active Directory Objects
-     - Container
-     - Leaf
+   - Organizatinal Unit (OU), Container, Leaf
+   - Organizational Unit (OU), Container Models
    - Flexible Single Master Operation (FSMO)
      - Forest Level
        - Schema Operations Master
@@ -237,20 +235,19 @@ Read only domain controller has a read only database, which holds a copy of obje
 
 *A good rule of thumb is considering a location insecure if it’s accessible to anyone other than IT. If a janitor can pull out a computer’s power cord to power a vacuum cleaner, the computer isn’t in a secure location. If a location needs a domain controller but isn’t secure, then read only domain controller is the best option.*
 
-
 ### Replication and Failover Clustering
 
 ### Knowledge Consistency Checker (KCC)
 
 
-## Organizatinal Units
+## Organizatinal Unit (OU), Container, Leaf
+### Organizational Unit (OU)
+An organizational unit is a logical solution to organizing objects within the domain. Administrators can create new organizational unit, and organizational units within organizational units.
+Organizational units apply group policies on the objects inside, once an object is assigned to an organizational unit, it inherits the group policies that are applied to it.
 
-## Active Directory Objects
+*A good guideline is to not modify/remove any of the default organizational units.*
 
-### Container
-
-### Leaf
-
+## Organizational Unit, Container Models
 
 ## Flexible Single Master Operation (FSMO)
 
