@@ -21,14 +21,15 @@
   - Domain
   - Domain Trees
   - Forests
+  - Domain Design/Models
+    - Single Domain Model
+    - Regional Domain Model
   - Forest Design/Models
     - Single Forest
     - Multiple Forest
     - Organizational Forest Model
     - Resource Forest Model
     - Restricted Forest Model
-    - Single Domain Model
-    - Regional Domain Model
    - Security Identifiers (SID) and Globally Unique Identifiers (GUID)
    - Trusts
      - Forest Trusts
@@ -124,7 +125,18 @@ A domain tree is a collection of domains, this can be viewed as a parent-child r
 Active Directory forest represents the complete Active Directory instance, it has at least one domain and the collection of the domain trees, much like other directory services it is built in a hierarchical structure. All the domains/domain trees inside the forest are connected in a two-way transitive trust, hence data flows in both directions. </br>
 Forests can contain non-contiguous domain names unless the domain names are in a domain tree.
 
-## Forests Design
+## Domain Design/Models
+There are some general concepts or models as to building a “healthy” forest structure, the following general designs are meant to give a basic overview of 2 different domain designs that could be used in different organizations.
+
+### Single Domain Model
+A single domain model consists of a single domain in a single forest, it’s the easiest to administer implementation of Active Directory and it contains all the objects in the forest. All data is replicated between all domain controllers, this means that all the domain controllers can be global catalog. Users can authenticate through every domain controller, irrelevant of their geographical location. Implementing this model also results in more administrative overhead.
+
+### Regional Domain Model
+The regional domain model consists of a forest root domain and multiple domains, this model is more complex compared to the single domain model and is used when not all domain controllers could be connected to the rest of the domain through fast WAN links. </br>
+Data inside the domain is only replicated within the domain controllers in that domain, this allows a reduced traffic over the WAN links, the model is mainly applicable to large numbers of users that are in different geographical locations. </br>
+This model does not provide isolation, to achieve isolation you must create separate forests.
+
+## Forests Design/Models
 One of the most important aspects in a system is designing it in an efficient way, this applies to Active Directory as well. A good forest design could only be achieved after identifying the needs for the organization. </br>
 
 ### Single Forest
@@ -147,13 +159,6 @@ The resource forest model is used to separate the users from the sources. The re
 The restricted access forest model consists of an organizational forest, and a restricted access forest with classified data. There are no trusts between the forests, and so if users want to access the classified data, they must have a user in that forest. This helps in reducing the risk of compromising important data.
 Organizations use that structure when working on classified government projects, new hardware, etc.
 
-### Single Domain Model
-A single domain model consists of a single domain in a single forest, it’s the easiest to administer implementation of Active Directory and it contains all the objects in the forest. All data is replicated between all domain controllers, this means that all the domain controllers can be global catalog. Users can authenticate through every domain controller, irrelevant of their geographical location. Implementing this model also results in more administrative overhead.
-
-### Regional Domain Model
-The regional domain model consists of a forest root domain and multiple domains, this model is more complex compared to the single domain model and is used when not all domain controllers could be connected to the rest of the domain through fast WAN links. </br>
-Data inside the domain is only replicated within the domain controllers in that domain, this allows a reduced traffic over the WAN links, the model is mainly applicable to large numbers of users that are in different geographical locations. </br>
-This model does not provide isolation, to achieve isolation you must create separate forests.
 
 ## Security Identifiers (SID) and Globally Unique Identifiers (GUID)
 Every time we create and object in Active Directory it is assigned with a security identifier (SID) and a globally unique identifier (GUID).
