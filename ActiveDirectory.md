@@ -63,8 +63,8 @@
  
 - Bibliography
 
-# Windows Server Features
-A brief explanation of some of the systems that could be installed on a Windows Server.
+# Windows Server
+A brief explanation of some of the systems that were used in the making of this repository along with other features.
 
 ### Dynamic Host Configuration Protocol (DHCP)
 
