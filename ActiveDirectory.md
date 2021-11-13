@@ -128,11 +128,11 @@ Forests can contain non-contiguous domain names unless the domain names are in a
 One of the most important aspects in a system is designing it in an efficient way, this applies to Active Directory as well. A good forest design could only be achieved after identifying the needs for the organization. </br>
 
 ### Single Forest
-A single Active Directory forest could be considered as a more simpler solution, it is the default mode. Most business models if not all could fit into this model, it’s significantly cheaper to maintain only one forest. </br>
+A single Active Directory forest consists of only one forest, therefore it could be considered as a more simpler solution, it is the default mode. Most business models if not all could fit into this model, it’s significantly cheaper to maintain only one forest. </br>
 Most documentation states that restricting yourself to one forest is the key to success.
 
 ### Multiple Forest
-The multi-forest model is a must in some organizations, this adds to the already complexed and thought topology. Managing multiple forests require more administrators (I.T) as well as more physical hardware. There are several reasons as to why you should use the multi-forest model: </br>
+The multi-forest model consists of at least 2 forests and is a must in some organizations, this adds to the already complexed and thought topology. Managing multiple forests require more administrators (I.T) as well as more physical hardware. There are several reasons as to why you should use the multi-forest model: </br>
 - Organization acquisitions usually require some security boundaries </br>
 - Isolation needed due to constant forest schema changes or due to vast organizations with multiple forests that share only common resources whilst keeping the other resources isolated in a different forest. </br>
 - Many organizations are under strict regulations that require isolation between some departments. </br>
@@ -148,8 +148,12 @@ The restricted access forest model consists of an organizational forest, and a r
 Organizations use that structure when working on classified government projects, new hardware, etc.
 
 ### Single Domain Model
+A single domain model consists of a single domain in a single forest, it’s the easiest to administer implementation of Active Directory and it contains all the objects in the forest. All data is replicated between all domain controllers, this means that all the domain controllers can be global catalog. Users can authenticate through every domain controller, irrelevant of their geographical location. Implementing this model also results in more administrative overhead.
 
 ### Regional Domain Model
+The regional domain model consists of a forest root domain and multiple domains, this model is more complex compared to the single domain model and is used when not all domain controllers could be connected to the rest of the domain through fast WAN links. </br>
+Data inside the domain is only replicated within the domain controllers in that domain, this allows a reduced traffic over the WAN links, the model is mainly applicable to large numbers of users that are in different geographical locations. </br>
+This model does not provide isolation, to achieve isolation you must create separate forests.
 
 ## Security Identifiers (SID) and Globally Unique Identifiers (GUID)
 Every time we create and object in Active Directory it is assigned with a security identifier (SID) and a globally unique identifier (GUID).
