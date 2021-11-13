@@ -247,6 +247,8 @@ Organizational units apply group policies on the objects inside, once an object 
 
 *A good guideline is to not modify/remove any of the default organizational units.*
 
+### Container
+
 ## Organizational Unit, Container Models
 
 ## Flexible Single Master Operation (FSMO)
