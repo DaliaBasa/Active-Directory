@@ -41,7 +41,7 @@
      - Replication and Failover Clustering
      - Knowledge Consistency Checker (KCC)
    - Organizatinal Unit (OU), Container, Leaf
-   - Organizational Unit (OU), Container Models
+   - Organizational Unit (OU) and Container Models
    - Flexible Single Master Operation (FSMO)
      - Forest Level
        - Schema Operations Master
@@ -256,7 +256,13 @@ The “User” Container holds the default security groups, as well as default u
 Leaf objects are end points objects, and as so they are not able of containing other objects, or in other words, having child objects.
 *Example: a user is a leaf object.*
 
-## Organizational Unit, Container Models
+## Organizational Unit and Container Models
+### The Container Model
+The container model could suit a small organization without any complex security requirements and few IT resources. This could be viewed as the default model since computers are automatically added by Active Directory to the “Computers” container in the domain controller.
+
+As mentioned before a container cannot apply any group policies, hence this model should not be considered as a solution in any organizations that don’t lack IT or are very small. A growing organization should not use this model, as it’s only applicable to small organizations.
+
+This model is considered less secure due to the lack of group policies as well as somewhat hard to manage, due to all the users are placed in the same ‘category’ (container).
 
 ## Flexible Single Master Operation (FSMO)
 
