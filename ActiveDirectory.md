@@ -248,6 +248,13 @@ Organizational units apply group policies on the objects inside, once an object 
 *A good guideline is to not modify/remove any of the default organizational units.*
 
 ### Container
+A container can contain objects just like an organizational unit, the main difference between the two is that organizational unit can apply group policies to the objects within the organizational unit, whilst a container can only delegate administrative control.
+Administrators cannot create any new containers beside the containers that were predefined by the domain controller.
+The “User” Container holds the default security groups, as well as default users, new users can be added to the container.
+
+### Leaf Objects/Nodes
+Leaf objects are end points objects, and as so they are not able of containing other objects, or in other words, having child objects.
+*Example: a user is a leaf object.*
 
 ## Organizational Unit, Container Models
 
