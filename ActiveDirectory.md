@@ -257,12 +257,22 @@ Leaf objects are end points objects, and as so they are not able of containing o
 *Example: a user is a leaf object.*
 
 ## Organizational Unit and Container Models
+The following will show several models that could suit some organizations, this is only but a guideline, as any organization could implement a model that better suits the requirements and complexity of that organization. Although there is no limit to the number of organizational units that could be created, it’s a good practice to keep the schema as simple as possible both vertically and horizontally.
+Some documentation recommends against having more than 10 levels in organization, due to the amount of complexity it involves in maintaining such structure.
+
 ### The Container Model
 The container model could suit a small organization without any complex security requirements and few IT resources. This could be viewed as the default model since computers are automatically added by Active Directory to the “Computers” container in the domain controller.
 
 As mentioned before a container cannot apply any group policies, hence this model should not be considered as a solution in any organizations that don’t lack IT or are very small. A growing organization should not use this model, as it’s only applicable to small organizations.
 
 This model is considered less secure due to the lack of group policies as well as somewhat hard to manage, due to all the users are placed in the same ‘category’ (container).
+
+### The Geographical Model
+T
+
+### The Object-based Model
+
+###
 
 ## Flexible Single Master Operation (FSMO)
 
