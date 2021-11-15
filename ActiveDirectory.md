@@ -76,7 +76,7 @@ A brief explanation of some of the systems that were used in the making of this 
 
 
 ### Domain Name System (DNS)
-Domain Name System could be viewed as the phonebook of the Internet. It was built on the assumption that users have a better time remembering names rather than numbers. 
+Domain Name System could be viewed as the phonebook of the Internet. It was built on the assumption that users are better in remembering names rather than numbers. 
 Domain Name System translates host names to IP addresses and vice versa. Domain Name System could be deployed on a domain controller on a Windows Server network, as well as a standalone computer.
 
 ### Hyper V
