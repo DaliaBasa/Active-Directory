@@ -46,6 +46,7 @@
      - The Geographical Model
      - The Object-Based Model
      - The Division/Department Model
+     - Hybrid Models
    - Flexible Single Master Operation (FSMO)
      - Forest Level
        - Schema Operations Master
@@ -287,6 +288,13 @@ This model is less complex and better distributed than other models, but it’s 
 ### The Function Model
 The function model could be implemented in small organizations with the idea of an organizational unit design based on job functions, this allow for objects to be grouped together based on the tasks they share. The organizational units could be configured to different tasks such as ‘Email Servers’, ‘Printers’, ‘Users’.
 This model helps administrators in maintaining the different tasks in the organization, its design makes it possible to implement only in smaller organizations because of high complexity.
+
+### Hybrid Models
+As with many solutions it’s not always ‘black and white’ and organizations would have the need to implement a hybrid, or a mixed solution made taken from different models.
+
+One hybrid model is the combination of both location and departments.
+The model is made from a location as the level 1 organizational unit, while the child organizational units are the departments within the organizational unit.
+This model allows for better administrative control, with more room for changes and less complexity, each level 1 organizational unit is a different office branch administrated on local autonomy by the administrators.
 
 
 ## Flexible Single Master Operation (FSMO)
