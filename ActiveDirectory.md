@@ -48,13 +48,13 @@
      - The Division/Department Model
      - Hybrid Models
    - Flexible Single Master Operation (FSMO)
-     - Forest Level
-       - Schema Operations Master
-       - Domain Naming Master
      - Domain Level
        - Primary Domain Controller (PDC)
        - Relative Identifier (RID)
        - Infrastructure Master
+     - Forest Level
+       - Schema Operations Master
+       - Domain Naming Master
      - Failover		
 - Domain Name System (DNS)
 - Group Policy
@@ -307,7 +307,17 @@ The multi-master model allows every domain controller to make organization-wide 
 Microsoft’s introduced a model to solve this problematic matter by resolving to the domain controller in which changes made last while discarding changes in other domain controllers, this method is called last writer wins. But this method was not enough for times when conflicts were over complex for the model.
 
 Microsoft’s solution to conflicts occurring in the last writer wins model is the single-master model which consists of 5 different roles that will be explained thoroughly.
-The single-master model made solely to prevent conflicts in the Active Directory caused by multiple domain controllers making changes altogether. In this model changes are sent to a domain controller that holds the primary domain controller (PDC) role, and is responsible for processing all the updates in the domain. 
+The single-master model made solely to prevent conflicts in the Active Directory caused by multiple domain controllers making changes altogether. In this model changes are sent to a domain controller that holds the primary domain controller (PDC) role and is responsible for processing all the updates in the domain. 
+The flexible single master operation roles are installed in the first domain controller in the domain, administrators can move the roles inside the domain or the forest according to their schema.
+
+## Domain Level Roles
+This roles exist in every domain.
+
+### Primary Domain Controller (PDC)
+
+### Relative Identifier (RID)
+
+### Infrastructure Master
 
 ## Forest Level Roles
 This roles are unique to each forest, hence only one of each in a forest
@@ -316,14 +326,6 @@ This roles are unique to each forest, hence only one of each in a forest
 
 ### Domain Naming Master
 
-## Domain Level Roles
-This roles exist in every domain, every Domain Controller maintains these FSMO roles.
-
-### Primary Domain Controller (PDC)
-
-### Relative Identifier (RID)
-
-### Infrastructure Master
 
 ### Failover		
 
