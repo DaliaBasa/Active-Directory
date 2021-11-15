@@ -319,11 +319,12 @@ The primary domain controller is also responsible for managing password changes,
 
 ### Relative Identifier (RID) Master
 The relative identifier is responsible for creating and maintaining pools of security identifiers (SID). The security identifiers are created using the relative identifier value, once used it will never be used again even if the object was deleted. </br>
-The relative identifier stores blocks of relative identifier values for each domain controller in the domain, once domain controllers use more than 50% of their assigned relative identifiers values they will request another block. </br>
+The relative identifier stores blocks of relative identifier values for each domain controller in the domain, once domain controllers use more than 50% of their assigned relative identifiers values, they will request another block. </br>
 In the case of a relative identifier malfunction, it might go unnoticed until it will become impossible to move or create new objects inside the domain.
 
-
 ### Infrastructure Master
+The infrastructure master is responsible for replicating an object’s security identifier and its distinguished name value change in a cross-domain object reference. When objects are moved, they are assigned new values, and need to be updated, ensuring that happens is the infrastructure master responsibility. </br>
+The infrastructure master should not be held on a global catalog domain controller, since it will stop updating object information as a result of it lacking references to objects that are outside of the domain.
 
 ## Forest Level Roles
 This roles are unique to each forest, hence only one of each in a forest
