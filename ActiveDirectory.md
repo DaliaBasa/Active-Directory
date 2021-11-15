@@ -268,7 +268,9 @@ As mentioned before a container cannot apply any group policies, hence this mode
 This model is considered less secure due to the lack of group policies as well as somewhat hard to manage, due to all the users are placed in the same ‘category’ (container).
 
 ### The Geographical Model
-T
+The geographical model is an organizational unit model based on the organization having more than one location, another office branch. The idea is to delegate administrative control based on the locations. 
+This model is repetitive, the first level is the location while the following child organizational units are usually ‘Users’ and ‘Computers’, each location’s administrators manage its organizational units. The model has limitations as a result of having only 2 child organizational units, consists of users and computers, each user has different administrative boundaries.
+This model could be considered harder to control for this exact reason.
 
 ### The Object-based Model
 
