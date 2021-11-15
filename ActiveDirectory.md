@@ -269,12 +269,16 @@ This model is considered less secure due to the lack of group policies as well a
 
 ### The Geographical Model
 The geographical model is an organizational unit model based on the organization having more than one location, another office branch. The idea is to delegate administrative control based on the locations. 
-This model is repetitive, the first level is the location while the following child organizational units are usually ‘Users’ and ‘Computers’, each location’s administrators manage its organizational units. The model has limitations as a result of having only 2 child organizational units, consists of users and computers, each user has different administrative boundaries.
-This model could be considered harder to control for this exact reason.
+This model is repetitive, the first level is the location while the following child organizational units are usually ‘Users’ and ‘Computers’, each location’s administrators manage its organizational units. The model has limitations as a result of having only 2 child organizational units, consists of users and computers, each user has different administrative boundaries. </br>
+This model could be considered harder to control and a more limiting solution for this exact reason.
 
-### The Object-based Model
+### The Object-Based Model
+The object-based model is an organizational unit model based on having the ‘Users’ and ‘Computers’ organizational units as the level 1 organizational units, and the level 2 organizational units either as locations or roles and responsibilities.
+This model could be considered easier to manage considering it starting from the largest group to a smaller one which could be used for a having a healthy group policy inheritance, however this if not done right the structure could lead to an over complex organizational unit design hard to maintain and difficult to change.
 
-###
+### The Division/Department Model
+The department model is an organizational unit model, it consists of having each department, regardless of location, as the level 1 organizational unit. While the level 2 organizational units consists of ‘Users’ and ‘Computers’.
+This model is less complex and better distributed than other models, but it’s also harder to apply organization wide settings, since the whole structure is based on many organizational units. Having this model requires making a common organizational unit as well to share printers and some files between all.
 
 ## Flexible Single Master Operation (FSMO)
 
