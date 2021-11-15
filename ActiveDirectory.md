@@ -88,8 +88,16 @@ Domain Name System could be viewed as the phonebook of the Internet. It was buil
 DNS translates host names to IP addresses and vice versa. DNS could be deployed on a domain controller on a Windows Server network, as well as a standalone computer.
 
 ### Hyper V
+Hyper-V is Microsoft’s virtualization platform that could be implemented into Windows Server, as well as Windows 10. Hyper-V allows running multiple operating systems, Hyper-V also allows creating virtual devices such as switches, network virtualization, and virtual machine encrypted networks. </br>
+Virtualization can be very resourceful as it allows running old applications on older operating systems, test software, upgrades, and new configurations, run different operating systems and the list continues.
+
+*Nested virtualization allows Hyper-V to run inside of a virtual machine operating system, this feature requires prerequisites.*
 
 ### Internet Information Services (IIS)
+
+### Internet Protocol Address Management (IPAM)
+IP address management allows to manage both DHCP and DNS servers in a centralized way, an IPAM server can manage up to 150 DHCP servers ,500 DNS servers, 6000 different DHCP scopes and 150 DNS zones. All of these servers and configurations can be managed from a single console thanks to IPAM. </br>
+Deploying IPAM is only possible on a computer inside the Active Directory forest, and it is possible to have more than one in a forest. IPAM cannot be deployed on a domain controller or a server that already hosts DHCP or DNS. IPAM uses a process called ‘Server Discovery’ which locates domain controllers, DNS servers, and DHCP servers.
 
 ### Remote Access
 
@@ -359,9 +367,9 @@ The domain naming master role holder is the domain controller responsible for ma
 
 ## Managing Active Directory Objects
 
-## Managing Users
+### Managing Users
 
-## Managing Computers
+### Managing Computers
 
 
 ## Active Directory Lightweight Directory Services (AD LDS)
