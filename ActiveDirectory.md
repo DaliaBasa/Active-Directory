@@ -301,7 +301,13 @@ This model allows for better administrative control, with more room for changes 
 
 
 ## Flexible Single Master Operation (FSMO)
+Many directory services are based on the Lightweight Directory Access Protocol (LDAP) and as such they implement a multi-master replication, Active Directory is one of them.
 
+The multi-master model allows every domain controller to make organization-wide changes., when more than one domain controller makes changes simultaneously, conflicts can occur. </br>
+Microsoft’s introduced a model to solve this problematic matter by resolving to the domain controller in which changes made last while discarding changes in other domain controllers, this method is called last writer wins. But this method was not enough for times when conflicts were over complex for the model.
+
+Microsoft’s solution to conflicts occurring in the last writer wins model is the single-master model which consists of 5 different roles that will be explained thoroughly.
+The single-master model made solely to prevent conflicts in the Active Directory caused by multiple domain controllers making changes altogether. In this model changes are sent to a domain controller that holds the primary domain controller (PDC) role, and is responsible for processing all the updates in the domain. 
 
 ## Forest Level Roles
 This roles are unique to each forest, hence only one of each in a forest
