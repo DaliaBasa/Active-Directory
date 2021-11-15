@@ -334,7 +334,7 @@ This roles are unique to each forest, hence only one of each in a forest
 ### Domain Naming Master
 
 
-### Failover		
+### Flexible Single Master Operation (FSMO) Failover		
 
 
 ## Domain Name System (DNS)
