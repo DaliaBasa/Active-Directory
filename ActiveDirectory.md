@@ -125,6 +125,7 @@ As stated before, this repository will introduce Active Directory through it’s
 ## Domain
 Domain refers to a collection of logical objects (users/computers/printers), each object has a unique identity, and a set of privileges that are administrated to follow the rules posed by the administrator. The domain can be viewed as a security boundary for the objects inside it, using different policies to maintain the organization’s security.
 Domains differ from one to another by the domain identifiers (name, IP, physical hardware). </br>
+Each domain holds the domain level flexible single master operation.
 Microsoft is well known for its backward compatibility, *for instance, Windows 10 still doesn’t allow for users to make a folder named “CON”.*  Active Directory supports backward compatibility as well, it’s called functional levels and allows for administrators to add domains with the same functional level as the forest, but a newer Windows Server edition. </br>
 
 *Example: a forest functional level is 2016, the administrators have not yet upgraded to the newest functional level. In order for the administrators to add a domain, it must be at the same functional level as the forest, hence they could install a Windows Server 2022 and the Active Directory would support the functional level of Active Directory 2016.* 
@@ -225,7 +226,7 @@ Forests can be linked in either one-way trust or two-way trust, but they are bou
 
 ## Domain Controller (DC)
 Unlike the components mentioned before, Domain Controller is a physical component. It’s a computer that runs Windows Server operating system and has Active Directory Domain Services installed, a Domain Controller could be viewed as a database and it can hold nearly 2 billion objects. </br>
-A Domain Controller is authoritative for the domain to which the server is joined. It contains the Active Directory database for the domain namespace, the configuration, and the Flexible Single Master Operation roles (at least the domain level ones). There can be any number of Domain Controllers in a domain for different reasons (organization size, replication).
+A Domain Controller is authoritative for the domain to which the server is joined. It contains the Active Directory database for the domain namespace, the configuration, and the Flexible Single Master Operation roles. There can be any number of Domain Controllers in a domain for different reasons (organization size, replication).
 Domain Controllers authenticate all users and computers in a domain, which is a primary security function in a network infrastructure. It's critical to ensure the optimal number and placements of Domain Controllers in any Active Directory structure. 
 When a change is made to an object in a directory partition, the value of the changed attribute or attributes is updated on all Domain Controllers that store a replica of the same directory partition. Domain Controllers communicate data updates automatically through Active Directory replication. Their communication about updates is always specific to a single directory partition at a time. It's important to understand that when changes occur on a source Domain Controller, it notifies its destination replication partner, prompting the destination Domain Controller to request the changes from the source Domain Controller. The source Domain Controller either responds to the change request with a replication operation or places the request in a queue if requests are already pending. Each Domain Controller has a queue of pending replication operations that are processed one at a time.
 If the domain’s Domain Controller is offline, it will be impossible for the users to authenticate themselves and access any of the domain's resources. Everything that require Active Directory authentication will be inaccessible.
@@ -301,8 +302,9 @@ This model allows for better administrative control, with more room for changes 
 
 ## Flexible Single Master Operation (FSMO)
 
+
 ## Forest Level Roles
-This roles are unique to each forest, hence only one of each in the forest
+This roles are unique to each forest, hence only one of each in a forest
 
 ### Schema Operations Master
 
