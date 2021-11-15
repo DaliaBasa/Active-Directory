@@ -335,7 +335,7 @@ Once a change is made it will be replicated throughout the forest to every domai
 If the domain controller holding the schema master role is unavailable, it won’t be possible to make any changes to the schema, having said that changes in the forest don’t occur too often.
 
 ### Domain Naming Master
-
+The domain naming master role holder is the domain controller responsible for making changes domain controller changes (add or remove) in the forest. To make domain controller changes, the domain naming master needs be contracted through the remote procedure call (RPC) connection, if it fails it won’t be possible to make changes.
 
 ### Flexible Single Master Operation (FSMO) Failover		
 
