@@ -73,11 +73,19 @@
 A brief explanation of some of the systems that were used in the making of this repository along with other features.
 
 ### Dynamic Host Configuration Protocol (DHCP)
+Dynamic host configuration protocol that provides an IP address, subnet mask, default gateway and other properties (scope) to a host. A DHCP server could be deployed on a domain controller on a Windows Server network, or a standalone computer. </br>
+*DHCP can assign IPv6 as well as IPv4, but the use of IPv6 is less common.*
 
+DHCP assigns IP addresses automatically, this comes very helpful in vast organizations, each client (computer) requires a unique IP and assigning it manually could be impossible to maintain and manage. Active Directory Domain Services connects clients to domain controllers through the network using IPs and forth on to the WAN, hence a DHCP is a must in any growing (or big) organizations.
+
+DHCP manages the entire process, it stores a pool of IP addresses and leases them to clients. Occasionally, the DHCP re-assigns IP addresses to the clients. DHCP allows reservations, this comes handy in the Active Directory environment because of the many servers, reservations ensures that clients/servers always receive the same specific IP address.
+Once an IP is assigned through DHCP server, the client assigned with the IP is the only client that can be assigned with that IP for the whole duration of the lease.
+
+*Example: a WI-FI coffee shop, would have to change the default schedule time for re-leasing IP addresses or otherwise no customers would be able to connect to the WI-FI after the whole pool has been used by ongoing customers, the IT administrators might schedule the re-leasing to every couple of hours or so, due to the fast-changing clients. In an office the schedule would occur less frequently.*
 
 ### Domain Name System (DNS)
 Domain Name System could be viewed as the phonebook of the Internet. It was built on the assumption that users are better in remembering names rather than numbers. 
-Domain Name System translates host names to IP addresses and vice versa. Domain Name System could be deployed on a domain controller on a Windows Server network, as well as a standalone computer.
+DNS translates host names to IP addresses and vice versa. DNS could be deployed on a domain controller on a Windows Server network, as well as a standalone computer.
 
 ### Hyper V
 
@@ -337,7 +345,7 @@ If the domain controller holding the schema master role is unavailable, it wonâ€
 ### Domain Naming Master
 The domain naming master role holder is the domain controller responsible for making changes domain controller changes (add or remove) in the forest. To make domain controller changes, the domain naming master needs be contracted through the remote procedure call (RPC) connection, if it fails it wonâ€™t be possible to make changes.
 
-### Flexible Single Master Operation (FSMO) Failover		
+## Flexible Single Master Operation (FSMO) Failover
 
 
 ## Domain Name System (DNS)
