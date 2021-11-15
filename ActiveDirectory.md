@@ -327,9 +327,12 @@ The infrastructure master is responsible for replicating an object’s security 
 The infrastructure master should not be held on a global catalog domain controller, since it will stop updating object information as a result of it lacking references to objects that are outside of the domain.
 
 ## Forest Level Roles
-This roles are unique to each forest, hence only one of each in a forest
+This roles are unique to each forest, thus there is only one of each in a forest.
 
 ### Schema Operations Master
+The domain controller that holds the schema master role, is the only domain controller that can make any schema changes in the forest, to make the forest changes it’s also required to have a user account with a ‘Schema Admins’ group privileges. </br>
+Once a change is made it will be replicated throughout the forest to every domain controller. </br>
+If the domain controller holding the schema master role is unavailable, it won’t be possible to make any changes to the schema, having said that changes in the forest don’t occur too often.
 
 ### Domain Naming Master
 
