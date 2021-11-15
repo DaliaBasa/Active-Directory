@@ -130,15 +130,15 @@ Microsoft is well known for its backward compatibility, *for instance, Windows 1
 
 *Example: a forest functional level is 2016, the administrators have not yet upgraded to the newest functional level. In order for the administrators to add a domain, it must be at the same functional level as the forest, hence they could install a Windows Server 2022 and the Active Directory would support the functional level of Active Directory 2016.* 
 
-This is an important aspect to different organization that don’t have the resources or the need for new features. With that being said, Microsoft ends their support for legacy servers/Active Directory as years pass.
+This is an important aspect to different organizations that don’t have the resources or the need for new features. With that being said, Microsoft ends their support for legacy servers/Active Directory as years pass.
 
 ## Domain Trees
-A domain tree is a collection of domains, this can be viewed as a parent-child relationship whereas the domain tree is the parent, and the domain is the child. Just like a family, domains inside the domain tree share a contiguous namespace, but there can be only one parent domain in a domain tree. </br>
+A domain tree is a collection of domains, this can be viewed as a parent-child relationship whereas the domain tree is the parent, and the domain is the child, domain trees share a two way trust with their child domain. Domains inside the domain tree are connected with a two way trust between them. Just like a family, domains inside the domain tree share a contiguous namespace, but there can be only one parent domain in a domain tree. </br>
 
 *Example: CongoRainforest.com is the forest domain name, the domain tree name is Mahogany.ActiveDirectory.com and the fully qualified domain name is Fruit.Mahogany.ActiveDirectory.com* 
 
 ## Forests
-Active Directory forest represents the complete Active Directory instance, it has at least one domain and the collection of the domain trees, much like other directory services it is built in a hierarchical structure. All the domains/domain trees inside the forest are connected in a two-way transitive trust, hence data flows in both directions. </br>
+Active Directory forest represents the complete Active Directory instance, it has at least one domain and the collection of the domain trees, much like other directory services it is built in a hierarchical structure. Domain trees inside the forest are connected in a two-way transitive trust, hence data flows in both directions. </br>
 Forests can contain non-contiguous domain names unless the domain names are in a domain tree.
 
 ## Domain Design/Models
@@ -313,9 +313,15 @@ The flexible single master operation roles are installed in the first domain con
 ## Domain Level Roles
 This roles exist in every domain.
 
-### Primary Domain Controller (PDC)
+### Primary Domain Controller (PDC) Emulator
+The primary domain controller emulator is responsible for time synchronization, among other roles. Time synchronization is crucial in Active Directory so clients could authenticate. The Kerberos authentication protocol includes timestamp information if there is time difference between the client clock and the primary domain controller emulator of more than 5 minutes authentication will fail and so devices and users won’t be able to authenticate and will receive authentication errors.
+The primary domain controller is also responsible for managing password changes, group policy objects and as mentioned before authentication requests.
 
-### Relative Identifier (RID)
+### Relative Identifier (RID) Master
+The relative identifier is responsible for creating and maintaining pools of security identifiers (SID). The security identifiers are created using the relative identifier value, once used it will never be used again even if the object was deleted. </br>
+The relative identifier stores blocks of relative identifier values for each domain controller in the domain, once domain controllers use more than 50% of their assigned relative identifiers values they will request another block. </br>
+In the case of a relative identifier malfunction, it might go unnoticed until it will become impossible to move or create new objects inside the domain.
+
 
 ### Infrastructure Master
 
