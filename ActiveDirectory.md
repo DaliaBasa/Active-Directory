@@ -42,6 +42,10 @@
      - Knowledge Consistency Checker (KCC)
    - Organizatinal Unit (OU), Container, Leaf
    - Organizational Unit (OU) and Container Models
+     - The Container Model
+     - The Geographical Model
+     - The Object-Based Model
+     - The Division/Department Model
    - Flexible Single Master Operation (FSMO)
      - Forest Level
        - Schema Operations Master
@@ -279,6 +283,11 @@ This model could be considered easier to manage considering it starting from the
 ### The Division/Department Model
 The department model is an organizational unit model, it consists of having each department, regardless of location, as the level 1 organizational unit. While the level 2 organizational units consists of ‘Users’ and ‘Computers’.
 This model is less complex and better distributed than other models, but it’s also harder to apply organization wide settings, since the whole structure is based on many organizational units. Having this model requires making a common organizational unit as well to share printers and some files between all.
+
+### The Function Model
+The function model could be implemented in small organizations with the idea of an organizational unit design based on job functions, this allow for objects to be grouped together based on the tasks they share. The organizational units could be configured to different tasks such as ‘Email Servers’, ‘Printers’, ‘Users’.
+This model helps administrators in maintaining the different tasks in the organization, its design makes it possible to implement only in smaller organizations because of high complexity.
+
 
 ## Flexible Single Master Operation (FSMO)
 
