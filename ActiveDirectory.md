@@ -302,14 +302,14 @@ This model allows for better administrative control, with more room for changes 
 ## Flexible Single Master Operation (FSMO)
 
 ## Forest Level Roles
-These roles are unique to each forest, hence only one of each in the forest
+This roles are unique to each forest, hence only one of each in the forest
 
 ### Schema Operations Master
 
 ### Domain Naming Master
 
 ## Domain Level Roles
-These roles exist in every domain, every Domain Controller maintains these FSMO roles.
+This roles exist in every domain, every Domain Controller maintains these FSMO roles.
 
 ### Primary Domain Controller (PDC)
 
