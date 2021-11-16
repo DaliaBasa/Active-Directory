@@ -14,3 +14,9 @@ https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019
 ## Choosing the memory size for the OS
 
 <img src="Pictures/Second.png" width="400">
+
+## Creating a virtual hard drive
+
+<img src="Pictures/Third.png" width="400">
+
+
