@@ -49,4 +49,4 @@ The network settings could be configured as the following:
 ### 'System' tab
 It's advised to add more than one proccessor for a better experience.
 
-<img src="Pictures/System.png" width="600">
+<img src="Pictures/System1.png" width="600">
