@@ -31,7 +31,7 @@ Dynamic hard disk is preferred as it allows for a maximum sized disk without ass
 
 ## Placing the VDI file and choosing a maximum size for the disk
 
-<img src="Pictures/Sixth.png" width="400">
+<img src="Pictures/Sixth.png" width="1000">
 
 # Updating the virtual machine's settings
 
