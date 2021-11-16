@@ -33,3 +33,6 @@ Dynamic hard disk is preferred as it allows for a maximum sized disk without ass
 
 <img src="Pictures/Sixth.png" width="400">
 
+# Updating the virtual machine's settings
+
+<img src="Pictures/Settingsone.png" width="400">
