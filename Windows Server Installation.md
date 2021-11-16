@@ -37,11 +37,11 @@ Dynamic hard disk is preferred as it allows for a maximum sized disk without ass
 
 Open the 'Storage' tab and click on the empty storage device (has a disk-shaped icon). Then, click on the disk-shaped icon on the right side and click 'Choose a disk file...' Insert the Windows Server ISO file.
 
-<img src="Pictures/Settingsone.png" width="400">
+<img src="Pictures/Settingsone.png" width="700">
 
 The network settings could be configured as the following:
 
-<img src="Pictures/Network1.png" width="400">
+<img src="Pictures/Network1.png" width="600">
 
-<img src="Pictures/Network2.png" width="400">
+<img src="Pictures/Network2.png" width="600">
 
