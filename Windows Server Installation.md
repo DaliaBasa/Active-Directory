@@ -56,8 +56,13 @@ It's advised to add more than one proccessor for a both smoother and faster expe
 
 # Windows Server Installation
 
+This is the first screen you should get when trying to install Windows Server
+
 <img src="Pictures/WindowsServer1.png" width="600">
+
+The ‘Windows Server 2019 Standard Evaluation (Desktop Experience)’ edition is the GUI version for the standard edition, it’s suitable for implementing a small Active Directory architecture, this is the version I will use. The ‘Datacenter Evaluation’ edition is used for highly virtualized and cloud-based environments.
 
 <img src="Pictures/WindowsServer2.png" width="600">
 
 <img src="Pictures/WindowsServer3.png" width="600">
+
