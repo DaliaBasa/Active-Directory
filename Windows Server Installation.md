@@ -19,4 +19,12 @@ https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019
 
 <img src="Pictures/Third.png" width="400">
 
+## Choosing the hard disk type
+VDI is the default disk format in Oracle VM Box, it supports Windows Server 2019 amongst other OSs. 
+
+<img src="Pictures/Fourth.png" width="400">
+
+## Choosing either a dynamic or a fixed size hard disk
+
+<img src="Pictures/Fifth.png" width="400">
 
