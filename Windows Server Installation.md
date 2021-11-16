@@ -25,6 +25,11 @@ VDI is the default disk format in Oracle VM Box, it supports Windows Server 2019
 <img src="Pictures/Fourth.png" width="400">
 
 ## Choosing either a dynamic or a fixed size hard disk
+Dynamic hard disk is preferred as it allows for a maximum sized disk without assigning non required space.
+
+<img src="Pictures/Fifth.png" width="400">
+
+## Placing the VDI file and choosing a 
 
 <img src="Pictures/Fifth.png" width="400">
 
