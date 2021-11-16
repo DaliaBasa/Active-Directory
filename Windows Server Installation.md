@@ -41,12 +41,19 @@ Open the 'Storage' tab and click on the empty storage device (has a disk-shaped 
 
 ### 'Network' tab
 The network settings could be configured as the following:
+The first network adapter will be set as the 'WAN' link in a ‘Bridged Adapter’ method. This places the Windows Server on the same broadcast domain as the host, while having a unique IP.
 
 <img src="Pictures/Network1.png" width="600">
+
+The second network adapter will be used for the internal network, connecting the clients to the domain controller (Windows Server OS), I will name it as ‘LAN’ and it will be configured as an internal network.
 
 <img src="Pictures/Network2.png" width="600">
 
 ### 'System' tab
-It's advised to add more than one proccessor for a better experience.
+It's advised to add more than one proccessor for a both smoother and faster experience.
 
 <img src="Pictures/System1.png" width="600">
+
+# Windows Server Installation
+
+<img src="Pictures/WindowsServer1.png" width="600">
