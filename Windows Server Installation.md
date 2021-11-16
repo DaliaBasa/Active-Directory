@@ -5,6 +5,8 @@ https://www.virtualbox.org/
 I have downloaded Windows Server 2019 from Microsoft’s ‘Evaluation Center’, it’s a free product used for testing.
 https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019
 
-The first step is deploying the Windows Server on Oracle VM Box
+
+
+## The first step is deploying the Windows Server on Oracle VM Box
 
 <img src="Pictures/First.png" width="1000">
