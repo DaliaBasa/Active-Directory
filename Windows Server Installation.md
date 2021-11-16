@@ -10,3 +10,7 @@ https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019
 ## The first step is deploying the Windows Server on Oracle VM Box
 
 <img src="Pictures/First.png" width="1000">
+
+## Choosing the memory size for the OS
+
+<img src="Pictures/Second.png" width="1000">
