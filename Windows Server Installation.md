@@ -29,7 +29,7 @@ Dynamic hard disk is preferred as it allows for a maximum sized disk without ass
 
 <img src="Pictures/Fifth.png" width="400">
 
-## Placing the VDI file and choosing a 
+## Placing the VDI file and choosing a maximum size for the disk
 
-<img src="Pictures/Fifth.png" width="400">
+<img src="Pictures/Sixth.png" width="400">
 
