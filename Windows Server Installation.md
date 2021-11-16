@@ -57,3 +57,7 @@ It's advised to add more than one proccessor for a both smoother and faster expe
 # Windows Server Installation
 
 <img src="Pictures/WindowsServer1.png" width="600">
+
+<img src="Pictures/WindowsServer2.png" width="600">
+
+<img src="Pictures/WindowsServer3.png" width="600">
