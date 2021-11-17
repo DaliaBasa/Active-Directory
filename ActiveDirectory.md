@@ -167,8 +167,10 @@ A domain tree is a collection of domains, this can be viewed as a parent-child r
 <img src="PicturesAD/DomainTree1.png" width="600">
 
 ## Forest
-Active Directory forest represents the complete Active Directory instance, it has at least one domain and the collection of the domain trees, much like other directory services it is built in a hierarchical structure. Domain trees inside the forest are connected in a two-way transitive trust, hence data flows in both directions. </br>
+Active Directory forest represents the complete Active Directory instance, it has at least one domain and the collection of the domain trees, much like other directory services it is built in a hierarchical structure. Domain trees inside the forest are connected in a two-way transitive trust to the forest root domain, hence data flows in both directions. </br>
 Forests can contain non-contiguous domain names unless the domain names are in a domain tree.
+
+<img src="PicturesAD/forest.png" width="600">
 
 ## Domain Design/Models
 There are some general concepts or models as to building a “healthy” forest structure, the following general designs are meant to give a basic overview of 2 different domain designs that could be used in different organizations.
