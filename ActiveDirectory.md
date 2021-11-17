@@ -139,7 +139,7 @@ Active Directory supports various authentication methods, group policies and pra
 As stated before, this repository will introduce Active Directory through it’s fullest products which is Active Directory Domain Services
 
 ## Domain
-Domain refers to a collection of logical objects (users/computers/printers), each object has a unique identity, and a set of privileges that are administrated to follow the rules posed by the administrator. The domain can be viewed as a security boundary for the objects inside it, using different policies to maintain the organization’s security.
+Domain refers to a collection of both logical and physical objects (users/computers/printers), each object has a unique identity, and a set of privileges that are administrated to follow the rules posed by the administrator. The domain can be viewed as a security boundary for the objects inside it, using different policies to maintain the organization’s security.
 Domains differ from one to another by the domain identifiers (name, IP, physical hardware). </br>
 Each domain holds the domain level flexible single master operation.
 Microsoft is well known for its backward compatibility, *for instance, Windows 10 still doesn’t allow for users to make a folder named “CON”.*  Active Directory supports backward compatibility as well, it’s called functional levels and allows for administrators to add domains with the same functional level as the forest, but a newer Windows Server edition. </br>
