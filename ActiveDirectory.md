@@ -148,6 +148,8 @@ Microsoft is well known for its backward compatibility, *for instance, Windows 1
 
 This is an important aspect to different organizations that don’t have the resources or the need for new features. With that being said, Microsoft ends their support for legacy servers/Active Directory as years pass.
 
+<img src="PicturesAD/Domain.png" width="800">
+
 ## Domain Trees
 A domain tree is a collection of domains, this can be viewed as a parent-child relationship whereas the domain tree is the parent, and the domain is the child, domain trees share a two way trust with their child domain. Domains inside the domain tree are connected with a two way trust between them. Just like a family, domains inside the domain tree share a contiguous namespace, but there can be only one parent domain in a domain tree. </br>
 
