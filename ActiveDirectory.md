@@ -179,7 +179,7 @@ There are some general concepts or models as to building a “healthy” forest 
 A single domain model consists of a single domain in a single forest, it’s the easiest to administer implementation of Active Directory and it contains all the objects in the forest. All data is replicated between all domain controllers, this means that all the domain controllers can be global catalog. Users can authenticate through every domain controller, irrelevant of their geographical location. Implementing this model also results in more administrative overhead.
 
 
-<img src="PicturesAD/singledomain.png" width="1000">
+<img src="PicturesAD/singledomain.png" width="400">
 
 *Picture source: https://www.oreilly.com/library/view/mastering-active-directory/9781787289352/bf0444df-7c6e-4f09-bc46-bd5e01c065e0.xhtml*
 
@@ -188,7 +188,7 @@ The regional domain model consists of a forest root domain and multiple domains,
 Data inside the domain is only replicated within the domain controllers in that domain, this allows a reduced traffic over the WAN links, the model is mainly applicable to large numbers of users that are in different geographical locations. </br>
 This model does not provide isolation, to achieve isolation you must create separate forests.
 
-<img src="PicturesAD/regionaldomain.png" width="1000">
+<img src="PicturesAD/regionaldomain.png" width="400">
 
 *Picture source: https://www.serverbrain.org/infrastructure-design-2003/using-multiple-domains.html*
 
@@ -209,20 +209,20 @@ The multi-forest model consists of at least 2 forests and is a must in some orga
 ### Organizational Forest Model
 An organizational forest model focuses on having control over the forest autonomy and isolation. To access resources in other forests, trust relationships between the forests must be established first.
 
-<img src="PicturesAD/organizationalmodel.png" width="1000">
+<img src="PicturesAD/organizationalforest.png" width="400">
 Picture Source: Microsoft Docs
 
 ### Resource Forest Model
 The resource forest model is used to separate the users from the sources. The resource forests contain only administrative user accounts for maintenance besides the resources. The trust relationships are one way, so that users can get resources from the resource forests.
 
-<img src="PicturesAD/resourcemodel.png" width="1000">
+<img src="PicturesAD/resourcemodel.png" width="400">
 Picture Source: Microsoft Docs
 
 ### Restricted Access Forest Model
 The restricted access forest model consists of an organizational forest, and a restricted access forest with classified data. There are no trusts between the forests, and so if users want to access the classified data, they must have a user in that forest. This helps in reducing the risk of compromising important data.
 Organizations use that structure when working on classified government projects, new hardware, etc.
 
-<img src="PicturesAD/restrictedmodel.png" width="1000">
+<img src="PicturesAD/restrictedmodel.png" width="400">
 Picture Source: Microsoft Docs
 
 ## Security Identifiers (SID) and Globally Unique Identifiers (GUID)
