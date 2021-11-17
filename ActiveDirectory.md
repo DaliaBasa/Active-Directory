@@ -140,7 +140,7 @@ As stated before, this repository will introduce Active Directory through it’s
 
 ## Domain
 Domain refers to a collection of both logical and physical objects (users/computers/printers), each object has a unique identity, and a set of privileges that are administrated to follow the rules posed by the administrator. The domain can be viewed as a security boundary for the objects inside it, using different policies to maintain the organization’s security.
-Domains differ from one to another by the domain identifiers (name, IP, physical hardware). </br>
+Domains differ from one to another by the domain identifiers (name, IP, physical hardware). Every domain has a different given name, names are configured by the administrators. </br>
 Each domain holds the domain level flexible single master operation.
 Microsoft is well known for its backward compatibility, *for instance, Windows 10 still doesn’t allow for users to make a folder named “CON”.*  Active Directory supports backward compatibility as well, it’s called functional levels and allows for administrators to add domains with the same functional level as the forest, but a newer Windows Server edition. </br>
 
@@ -149,6 +149,10 @@ Microsoft is well known for its backward compatibility, *for instance, Windows 1
 This is an important aspect to different organizations that don’t have the resources or the need for new features. With that being said, Microsoft ends their support for legacy servers/Active Directory as years pass.
 
 <img src="PicturesAD/Domain2.png" width="600">
+
+### Fully Qualified Domain Names
+A fully qualified domain name comprised of 
+
 
 ## Domain Trees
 A domain tree is a collection of domains, this can be viewed as a parent-child relationship whereas the domain tree is the parent, and the domain is the child, domain trees share a two way trust with their child domain. Domains inside the domain tree are connected with a two way trust between them. Just like a family, domains inside the domain tree share a contiguous namespace, but there can be only one parent domain in a domain tree. </br>
