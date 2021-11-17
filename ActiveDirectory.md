@@ -170,13 +170,17 @@ A domain tree is a collection of domains, this can be viewed as a parent-child r
 Active Directory forest represents the complete Active Directory instance, it has at least one domain and the collection of the domain trees, much like other directory services it is built in a hierarchical structure. Domain trees inside the forest are connected in a two-way transitive trust to the forest root domain, hence data flows in both directions. </br>
 Forests can contain non-contiguous domain names unless the domain names are in a domain tree.
 
-<img src="PicturesAD/forest.png" width="600">
+<img src="PicturesAD/forest.png" width="1000">
 
 ## Domain Design/Models
 There are some general concepts or models as to building a “healthy” forest structure, the following general designs are meant to give a basic overview of 2 different domain designs that could be used in different organizations.
 
 ### Single Domain Model
 A single domain model consists of a single domain in a single forest, it’s the easiest to administer implementation of Active Directory and it contains all the objects in the forest. All data is replicated between all domain controllers, this means that all the domain controllers can be global catalog. Users can authenticate through every domain controller, irrelevant of their geographical location. Implementing this model also results in more administrative overhead.
+
+
+<img src="PicturesAD/singledomain.png" width="1000">
+*source: https://www.oreilly.com/library/view/mastering-active-directory/9781787289352/bf0444df-7c6e-4f09-bc46-bd5e01c065e0.xhtml*
 
 ### Regional Domain Model
 The regional domain model consists of a forest root domain and multiple domains, this model is more complex compared to the single domain model and is used when not all domain controllers could be connected to the rest of the domain through fast WAN links. </br>
