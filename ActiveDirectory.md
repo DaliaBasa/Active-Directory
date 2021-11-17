@@ -180,12 +180,18 @@ A single domain model consists of a single domain in a single forest, it’s the
 
 
 <img src="PicturesAD/singledomain.png" width="1000">
+
 *source: https://www.oreilly.com/library/view/mastering-active-directory/9781787289352/bf0444df-7c6e-4f09-bc46-bd5e01c065e0.xhtml*
 
 ### Regional Domain Model
 The regional domain model consists of a forest root domain and multiple domains, this model is more complex compared to the single domain model and is used when not all domain controllers could be connected to the rest of the domain through fast WAN links. </br>
 Data inside the domain is only replicated within the domain controllers in that domain, this allows a reduced traffic over the WAN links, the model is mainly applicable to large numbers of users that are in different geographical locations. </br>
 This model does not provide isolation, to achieve isolation you must create separate forests.
+
+<img src="PicturesAD/regionaldomain.png" width="1000">
+
+*source: https://www.serverbrain.org/infrastructure-design-2003/using-multiple-domains.html*
+
 
 ## Forests Design/Models
 One of the most important aspects in a system is designing it in an efficient way, this applies to Active Directory as well. A good forest design could only be achieved after identifying the needs for the organization. </br>
