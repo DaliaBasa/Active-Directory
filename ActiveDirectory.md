@@ -324,22 +324,32 @@ As mentioned before a container cannot apply any group policies, hence this mode
 
 This model is considered less secure due to the lack of group policies as well as somewhat hard to manage, due to all the users are placed in the same ‘category’ (container).
 
+<img src="PicturesAD/containermodel.png" width="800">
+
 ### The Geographical Model
 The geographical model is an organizational unit model based on the organization having more than one location, another office branch. The idea is to delegate administrative control based on the locations. 
 This model is repetitive, the first level is the location while the following child organizational units are usually ‘Users’ and ‘Computers’, each location’s administrators manage its organizational units. The model has limitations as a result of having only 2 child organizational units, consists of users and computers, each user has different administrative boundaries. </br>
 This model could be considered harder to control and a more limiting solution for this exact reason.
 
+<img src="PicturesAD/geomodel.png" width="800">
+
 ### The Object-Based Model
 The object-based model is an organizational unit model based on having the ‘Users’ and ‘Computers’ organizational units as the level 1 organizational units, and the level 2 organizational units either as locations or roles and responsibilities.
 This model could be considered easier to manage considering it starting from the largest group to a smaller one which could be used for a having a healthy group policy inheritance, however this if not done right the structure could lead to an over complex organizational unit design hard to maintain and difficult to change.
+
+<img src="PicturesAD/objectmodel.png" width="800">
 
 ### The Division/Department Model
 The department model is an organizational unit model, it consists of having each department, regardless of location, as the level 1 organizational unit. While the level 2 organizational units consists of ‘Users’ and ‘Computers’.
 This model is less complex and better distributed than other models, but it’s also harder to apply organization wide settings, since the whole structure is based on many organizational units. Having this model requires making a common organizational unit as well to share printers and some files between all.
 
+<img src="PicturesAD/departmentmodel.png" width="800">
+
 ### The Function Model
 The function model could be implemented in small organizations with the idea of an organizational unit design based on job functions, this allow for objects to be grouped together based on the tasks they share. The organizational units could be configured to different tasks such as ‘Email Servers’, ‘Printers’, ‘Users’.
 This model helps administrators in maintaining the different tasks in the organization, its design makes it possible to implement only in smaller organizations because of high complexity.
+
+<img src="PicturesAD/functionmodel.png" width="800">
 
 ### Hybrid Models
 As with many solutions it’s not always ‘black and white’ and organizations would have the need to implement a hybrid, or a mixed solution made taken from different models.
@@ -348,6 +358,7 @@ One hybrid model is the combination of both location and departments.
 The model is made from a location as the level 1 organizational unit, while the child organizational units are the departments within the organizational unit.
 This model allows for better administrative control, with more room for changes and less complexity, each level 1 organizational unit is a different office branch administrated on local autonomy by the administrators.
 
+<img src="PicturesAD/hybridmodel.png" width="600">
 
 ## Flexible Single Master Operation (FSMO)
 Many directory services are based on the Lightweight Directory Access Protocol (LDAP) and as such they implement a multi-master replication, Active Directory is one of them.
