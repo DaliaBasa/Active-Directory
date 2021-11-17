@@ -150,8 +150,11 @@ This is an important aspect to different organizations that don’t have the res
 
 <img src="PicturesAD/Domain2.png" width="600">
 
-### Fully Qualified Domain Names
-A fully qualified domain name comprised of 
+### Domain Names
+A domain name is comprised of different parts, I will use the domain name from the example above, fruit.mahogany.congorainforest.com.
+The first part of the domain name holds the Top Level Domain (TLD), in the example given, it’s represented by *.com*. The next part is the forest domain name, **congorainforest**.com, following the forest domain name comes the domain tree name (if a domain tree exists If not, the domain name will follow the forest name, in our example there is a domain tree) **mahogany**.congorainforest.com. Proceeding the domain tree name, comes the domain name which is **fruit**.mahogany.congorainforest.com.
+
+A **fully qualified domain name (FQDN)** refers to the domain name of a specific location in the forest.
 
 
 ## Domain Trees
