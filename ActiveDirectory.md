@@ -181,7 +181,7 @@ A single domain model consists of a single domain in a single forest, it’s the
 
 <img src="PicturesAD/singledomain.png" width="1000">
 
-*source: https://www.oreilly.com/library/view/mastering-active-directory/9781787289352/bf0444df-7c6e-4f09-bc46-bd5e01c065e0.xhtml*
+*Picture source: https://www.oreilly.com/library/view/mastering-active-directory/9781787289352/bf0444df-7c6e-4f09-bc46-bd5e01c065e0.xhtml*
 
 ### Regional Domain Model
 The regional domain model consists of a forest root domain and multiple domains, this model is more complex compared to the single domain model and is used when not all domain controllers could be connected to the rest of the domain through fast WAN links. </br>
@@ -190,7 +190,7 @@ This model does not provide isolation, to achieve isolation you must create sepa
 
 <img src="PicturesAD/regionaldomain.png" width="1000">
 
-*source: https://www.serverbrain.org/infrastructure-design-2003/using-multiple-domains.html*
+*Picture source: https://www.serverbrain.org/infrastructure-design-2003/using-multiple-domains.html*
 
 
 ## Forests Design/Models
@@ -209,13 +209,21 @@ The multi-forest model consists of at least 2 forests and is a must in some orga
 ### Organizational Forest Model
 An organizational forest model focuses on having control over the forest autonomy and isolation. To access resources in other forests, trust relationships between the forests must be established first.
 
+<img src="PicturesAD/organizationalmodel.png" width="1000">
+Picture Source: Microsoft Docs
+
 ### Resource Forest Model
 The resource forest model is used to separate the users from the sources. The resource forests contain only administrative user accounts for maintenance besides the resources. The trust relationships are one way, so that users can get resources from the resource forests.
+
+<img src="PicturesAD/resourcemodel.png" width="1000">
+Picture Source: Microsoft Docs
 
 ### Restricted Access Forest Model
 The restricted access forest model consists of an organizational forest, and a restricted access forest with classified data. There are no trusts between the forests, and so if users want to access the classified data, they must have a user in that forest. This helps in reducing the risk of compromising important data.
 Organizations use that structure when working on classified government projects, new hardware, etc.
 
+<img src="PicturesAD/restrictedmodel.png" width="1000">
+Picture Source: Microsoft Docs
 
 ## Security Identifiers (SID) and Globally Unique Identifiers (GUID)
 Every time we create and object in Active Directory it is assigned with a security identifier (SID) and a globally unique identifier (GUID).
