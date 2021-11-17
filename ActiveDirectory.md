@@ -157,7 +157,9 @@ A fully qualified domain name comprised of
 ## Domain Trees
 A domain tree is a collection of domains, this can be viewed as a parent-child relationship whereas the domain tree is the parent, and the domain is the child, domain trees share a two way trust with their child domain. Domains inside the domain tree are connected with a two way trust between them. Just like a family, domains inside the domain tree share a contiguous namespace, but there can be only one parent domain in a domain tree. </br>
 
-*Example: congorainforest.com is the forest domain name, the domain tree name is mahogany.congorainforest.com and the fully qualified child domain name of the mahogany.congorainforest.com is fruit.mahogany.congorainforest.com* 
+*Example: congorainforest.com is the forest domain name, the domain tree name is mahogany.congorainforest.com and the child's fully qualified domain name of the mahogany.congorainforest.com domain tree is fruit.mahogany.congorainforest.com* 
+
+<img src="PicturesAD/TreeDomain.png" width="600">
 
 ## Forests
 Active Directory forest represents the complete Active Directory instance, it has at least one domain and the collection of the domain trees, much like other directory services it is built in a hierarchical structure. Domain trees inside the forest are connected in a two-way transitive trust, hence data flows in both directions. </br>
