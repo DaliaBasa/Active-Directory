@@ -94,12 +94,19 @@ Virtualization can be very resourceful as it allows running old applications on 
 *Nested virtualization allows Hyper-V to run inside of a virtual machine operating system, this feature requires prerequisites.*
 
 ### Internet Information Services (IIS)
+Microsoft’s Internet Information Services is a GUI web server, in some documentation it’s also called Windows Web Server. Some organizations use IIS for both their intranet services as well as their public ones, it’s possible to manage up to 10,000 sites from a single Windows Server OS that has IIS deployed on. </br>
+IIS helps in configuring both basic and advanced configurations such as: setting up new websites, virtual directories, configuring TLS certificates.
 
 ### Internet Protocol Address Management (IPAM)
 IP address management allows to manage both DHCP and DNS servers in a centralized way, an IPAM server can manage up to 150 DHCP servers ,500 DNS servers, 6000 different DHCP scopes and 150 DNS zones. All of these servers and configurations can be managed from a single console thanks to IPAM. </br>
 Deploying IPAM is only possible on a computer inside the Active Directory forest, and it is possible to have more than one in a forest. IPAM cannot be deployed on a domain controller or a server that already hosts DHCP or DNS. IPAM uses a process called ‘Server Discovery’ which locates domain controllers, DNS servers, and DHCP servers.
 
 ### Remote Access
+Remote Access is the role name for the following topics: Remote Access Service (RAS), Routing, and Web Application Proxy (WAP). Some of the uses of these technologies are remote access, site-to-site connectivity, Network Address Translation (NAT), and Virtual Private Network (VPN).
+
+RAS allows for users to connect to the RAS server through the WAN, but access resources as if they were logged from the LAN. </br>
+Routing is used to move network traffic between different broadcast domains on the LAN, routing supports NAT, which allows transferring requests to specific locations. </br>
+WAP allows to users outside of the LAN to access web applications, for WAP to work, it requires Active Directory Federation Services (AD FS). WAP gives the ability to authenticate identities before granting access to web applications.
 
 ### Preboot Execution Environment (PXE)
 
