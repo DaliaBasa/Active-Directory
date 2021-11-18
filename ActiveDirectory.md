@@ -109,7 +109,9 @@ Routing is used to move network traffic between different broadcast domains on t
 WAP allows to users outside of the LAN to access web applications, for WAP to work, it requires Active Directory Federation Services (AD FS). WAP gives the ability to authenticate identities before granting access to web applications.
 
 ### Preboot Execution Environment (PXE)
-
+PXE environment is the process of having devices boot from network, rather from the computer’s hard disk, PXE isn’t common in organizations. </br>
+PXE could use a DHCP server to boot, this could be done in the DHCP configurations. </br>
+Booting from the network could be problematic, if there are issues in the inner network, then you might not be able to use your computer, it also causes network traffic over the LAN network.
 
 # Lightweight Directory Access Protocol (LDAP)
 
