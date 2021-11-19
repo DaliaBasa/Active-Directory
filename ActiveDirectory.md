@@ -193,6 +193,7 @@ A single domain model consists of a single domain in a single forest, it’s the
 
 *Picture source: https://www.oreilly.com/library/view/mastering-active-directory/9781787289352/bf0444df-7c6e-4f09-bc46-bd5e01c065e0.xhtml*
 
+##
 ### Regional Domain Model
 The regional domain model consists of a forest root domain and multiple domains, this model is more complex compared to the single domain model and is used when not all domain controllers could be connected to the rest of the domain through fast WAN links. </br>
 Data inside the domain is only replicated within the domain controllers in that domain, this allows a reduced traffic over the WAN links, the model is mainly applicable to large numbers of users that are in different geographical locations. </br>
@@ -216,18 +217,21 @@ The multi-forest model consists of at least 2 forests and is a must in some orga
 - Isolation needed due to constant forest schema changes or due to vast organizations with multiple forests that share only common resources whilst keeping the other resources isolated in a different forest. </br>
 - Many organizations are under strict regulations that require isolation between some departments. </br>
 
+##
 ### Organizational Forest Model
 An organizational forest model focuses on having control over the forest autonomy and isolation. To access resources in other forests, trust relationships between the forests must be established first.
 
 <img src="PicturesAD/organizationalforest.png" width="400">
 Picture Source: Microsoft Docs
 
+##
 ### Resource Forest Model
 The resource forest model is used to separate the users from the sources. The resource forests contain only administrative user accounts for maintenance besides the resources. The trust relationships are one way, so that users can get resources from the resource forests.
 
 <img src="PicturesAD/resourcemodel.png" width="400">
 Picture Source: Microsoft Docs
 
+##
 ### Restricted Access Forest Model
 The restricted access forest model consists of an organizational forest, and a restricted access forest with classified data. There are no trusts between the forests, and so if users want to access the classified data, they must have a user in that forest. This helps in reducing the risk of compromising important data.
 Organizations use that structure when working on classified government projects, new hardware, etc.
@@ -336,6 +340,7 @@ This model is considered less secure due to the lack of group policies as well a
 
 <img src="PicturesAD/containermodel.png" width="800">
 
+##
 ### The Geographical Model
 The geographical model is an organizational unit model based on the organization having more than one location, another office branch. The idea is to delegate administrative control based on the locations. 
 This model is repetitive, the first level is the location while the following child organizational units are usually ‘Users’ and ‘Computers’, each location’s administrators manage its organizational units. The model has limitations as a result of having only 2 child organizational units, consists of users and computers, each user has different administrative boundaries. </br>
@@ -343,24 +348,28 @@ This model could be considered harder to control and a more limiting solution fo
 
 <img src="PicturesAD/geomodel.png" width="800">
 
+##
 ### The Object-Based Model
 The object-based model is an organizational unit model based on having the ‘Users’ and ‘Computers’ organizational units as the level 1 organizational units, and the level 2 organizational units either as locations or roles and responsibilities.
 This model could be considered easier to manage considering it starting from the largest group to a smaller one which could be used for a having a healthy group policy inheritance, however this if not done right the structure could lead to an over complex organizational unit design hard to maintain and difficult to change.
 
 <img src="PicturesAD/objectmodel.png" width="800">
 
+##
 ### The Division/Department Model
 The department model is an organizational unit model, it consists of having each department, regardless of location, as the level 1 organizational unit. While the level 2 organizational units consists of ‘Users’ and ‘Computers’.
 This model is less complex and better distributed than other models, but it’s also harder to apply organization wide settings, since the whole structure is based on many organizational units. Having this model requires making a common organizational unit as well to share printers and some files between all.
 
 <img src="PicturesAD/departmentmodel.png" width="800">
 
+##
 ### The Function Model
 The function model could be implemented in small organizations with the idea of an organizational unit design based on job functions, this allow for objects to be grouped together based on the tasks they share. The organizational units could be configured to different tasks such as ‘Email Servers’, ‘Printers’, ‘Users’.
 This model helps administrators in maintaining the different tasks in the organization, its design makes it possible to implement only in smaller organizations because of high complexity.
 
 <img src="PicturesAD/functionmodel.png" width="800">
 
+##
 ### Hybrid Models
 As with many solutions it’s not always ‘black and white’ and organizations would have the need to implement a hybrid, or a mixed solution made taken from different models.
 
@@ -380,7 +389,8 @@ Microsoft’s solution to conflicts occurring in the last writer wins model is t
 The single-master model made solely to prevent conflicts in the Active Directory caused by multiple domain controllers making changes altogether. In this model changes are sent to a domain controller that holds the primary domain controller (PDC) role and is responsible for processing all the updates in the domain. 
 The flexible single master operation roles are installed in the first domain controller in the domain, administrators can move the roles inside the domain or the forest according to their schema.
 
-## Domain Level Roles
+##
+### Domain Level Roles
 This roles exist in every domain.
 
 ### Primary Domain Controller (PDC) Emulator
@@ -396,7 +406,8 @@ In the case of a relative identifier malfunction, it might go unnoticed until it
 The infrastructure master is responsible for replicating an object’s security identifier and its distinguished name value change in a cross-domain object reference. When objects are moved, they are assigned new values, and need to be updated, ensuring that happens is the infrastructure master responsibility. </br>
 The infrastructure master should not be held on a global catalog domain controller, since it will stop updating object information as a result of it lacking references to objects that are outside of the domain.
 
-## Forest Level Roles
+##
+### Forest Level Roles
 This roles are unique to each forest, thus there is only one of each in a forest.
 
 ### Schema Operations Master
@@ -407,7 +418,8 @@ If the domain controller holding the schema master role is unavailable, it won�
 ### Domain Naming Master
 The domain naming master role holder is the domain controller responsible for making changes domain controller changes (add or remove) in the forest. To make domain controller changes, the domain naming master needs be contracted through the remote procedure call (RPC) connection, if it fails it won’t be possible to make changes.
 
-## Flexible Single Master Operation (FSMO) Failover
+##
+### Flexible Single Master Operation (FSMO) Failover
 
 ## Miscellaneous
 - **Distinguished Name (DN)** - A string that uniquely identifies an object in Active Directory, a distinguished name can be made from the following: </br>
