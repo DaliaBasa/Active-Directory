@@ -56,6 +56,7 @@
        - Schema Operations Master
        - Domain Naming Master
      - Failover		
+- Miscellaneous
 - Domain Name System (DNS)
 - Group Policy
 - Active Directory Planning
@@ -408,6 +409,18 @@ The domain naming master role holder is the domain controller responsible for ma
 
 ## Flexible Single Master Operation (FSMO) Failover
 
+## Miscellaneous
+- **Distinguished Name (DN)** - A string that uniquely identifies an object in Active Directory, a distinguished name can be made from the following: </br>
+  - **Common Name** – The name that refers to objects and containers, used for searches. </br>
+  - **Domain Component (DC)** – The parts of the domain name, the Top Level Domain (TLD), domain name. </br>
+  - **OrganizationName (O)** – The name of the organization. </br>
+  - **OrganizationalUnitName (OU)** – The name of the organizational unit. </br>
+- **Directory Services Restore Mode (DSRM)** – DSRM allows to perform authoritative restore of deleted objects from the Active Directory database, if the deleted objects aren’t authoritatively restored, they will be deleted when the domain controllers synchronize.
+- **Line of Business (LOB)** - a general term which refers to a product or a set of related products that serve a particular customer transaction or business need. One of the sets of critical computer applications perceived as vital to running an enterprise. </br>
+- **Namespace (NS)** - Unique naming based on hierarchy and logic. </br>
+- **Network Basic Input/Output System (NetBIOS)** – NetBIOS allows applications on separate computers to communicate and establish session to access common shared resources over the LAN, NetBIOS names are used to identify network devices.  
+- **Security Account Manager (SAM)** - Windows stores and manages the local user and group accounts in a database file called Security Account Manager (SAM). It authenticates local user logons. This allows a domain-joined computer to make local logon.
+
 
 ## Domain Name System (DNS)
 
@@ -426,7 +439,13 @@ The domain naming master role holder is the domain controller responsible for ma
 
 
 # Active Directory Lightweight Directory Services (AD LDS)
+Active Directory Lightweight Directory Services is a more compact version of Active Directory Services (AD DS), managing Active Directory isn’t easy at the very least, it requires high maintenance, and it provides many features that aren’t needed in some organizations. </br>
 
+Active Directory Lightweight Directory Services provides an environment for testing, and research with much less effort needed in order to redeploy or make multiple instances at once. It has the capabilities needed for testing Active Directory Domain Services, but without the maintenance and effort required to have one. </br>
+
+AD LDS can run on a client (Windows 10 for example) or a server, this makes deploying an AD LDS much more convenience, for all organizations. AD LDS works like an application, for that reason it cannot manage any workstations or servers, it doesn’t support group policies, domains, or trusts. </br>
+
+AD LDS can help in creating an isolated environment for applications or services that are required in unsecure environments. It can also be used as an additional dataset for applications.
 
 # Active Directory Federation Services (AD FS)
 
