@@ -309,7 +309,13 @@ Read only domain controller has a read only database, which holds a copy of obje
 ### Replication and Failover Clustering
 
 ### Knowledge Consistency Checker (KCC)
+The Knowledge Consistency Checker is a process responsible for generating and maintaining the replication topology, it’s an automatic process that works in every domain controller. </br>
+Every 15 minutes the knowledge consistency checker adjusts the topology if needed, given any changes in the domain controllers (domain controllers removed/added). The knowledge consistency checker makes intra-site replications and inter-site replications. The knowledge consistency checker selects a single knowledge consistency checker (domain controller) in a remote site to hold the Inter-site Topology Generator (ISTG) role, this role is responsible to select the bridgehead servers for replication.
 
+### Bridgehead servers
+The knowledge consistency checker selects one domain controller for inter-site replication, or in other words it selects a bridgehead server. The bridgehead server is responsible for sending and receiving replications with other domains. Every domain controller can be a bridgehead server, but there can be only one active in any given time in a domain. The knowledge consistency checker selects the domain controller with the lowest Globally Unique Identifier (GUID) for the domain bridgehead server, but it could be configured by administrators as well.
+
+*A general-principle is to have the most reliable domain controller as the bridgehead server, I think it should be the same domain controller that holds the PDC.* 
 
 ## Organizatinal Unit (OU), Container, Leaf
 ### Organizational Unit (OU)
@@ -395,7 +401,8 @@ This roles exist in every domain.
 
 ### Primary Domain Controller (PDC) Emulator
 The primary domain controller emulator is responsible for time synchronization, among other roles. Time synchronization is crucial in Active Directory so clients could authenticate. The Kerberos authentication protocol includes timestamp information if there is time difference between the client clock and the primary domain controller emulator of more than 5 minutes authentication will fail and so devices and users won’t be able to authenticate and will receive authentication errors.
-The primary domain controller is also responsible for managing password changes, group policy objects and as mentioned before authentication requests.
+The primary domain controller is also responsible for trusts, group policy objects and as mentioned before authentication requests. </br>
+If the PDC emulator fails, users won’t be able to authenticate and therefore the normal routine will cease.
 
 ### Relative Identifier (RID) Master
 The relative identifier is responsible for creating and maintaining pools of security identifiers (SID). The security identifiers are created using the relative identifier value, once used it will never be used again even if the object was deleted. </br>
