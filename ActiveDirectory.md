@@ -457,7 +457,7 @@ Active Directory Lightweight Directory Services provides an environment for test
 
 AD LDS can run on a client (Windows 10 for example) or a server, this makes deploying an AD LDS much more convenience, for all organizations. AD LDS works like an application, for that reason it cannot manage any workstations or servers, it doesn’t support group policies, domains, or trusts. </br>
 
-AD LDS can help in creating an isolated environment for applications or services that are required in unsecure environments. It can also be used as an additional dataset for applications.
+AD LDS can help in creating an isolated environment for applications or services that are required in unsecure environments, with the use of Active Directory Federation Services (AD FS). It can also be used as an additional dataset for applications.
 
 # Active Directory Federation Services (AD FS)
 
