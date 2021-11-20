@@ -38,8 +38,6 @@
    - Domain Controller (DC)
      - Global Catalog (GC)
      - Read Only Domain Controller (RODC)
-     - Replication and Failover Clustering
-     - Knowledge Consistency Checker (KCC)
    - Organizatinal Unit (OU), Container, Leaf
    - Organizational Unit (OU) and Container Models
      - The Container Model
@@ -47,6 +45,10 @@
      - The Object-Based Model
      - The Division/Department Model
      - Hybrid Models
+   - Replication
+     - Sites
+     - Knowledge Consistency Checker (KCC)
+   - Failover Clustering
    - Flexible Single Master Operation (FSMO)
      - Domain Level
        - Primary Domain Controller (PDC)
@@ -306,17 +308,6 @@ Read only domain controller has a read only database, which holds a copy of obje
 
 *A good rule of thumb is considering a location insecure if it’s accessible to anyone other than IT. If a janitor can pull out a computer’s power cord to power a vacuum cleaner, the computer isn’t in a secure location. If a location needs a domain controller but isn’t secure, then read only domain controller is the best option.*
 
-### Replication and Failover Clustering
-
-### Knowledge Consistency Checker (KCC)
-The Knowledge Consistency Checker is a process responsible for generating and maintaining the replication topology, it’s an automatic process that works in every domain controller. </br>
-Every 15 minutes the knowledge consistency checker adjusts the topology if needed, given any changes in the domain controllers (domain controllers removed/added). The knowledge consistency checker makes intra-site replications and inter-site replications. The knowledge consistency checker selects a single knowledge consistency checker (domain controller) in a remote site to hold the Inter-site Topology Generator (ISTG) role, this role is responsible to select the bridgehead servers for replication.
-
-### Bridgehead servers
-The knowledge consistency checker selects one domain controller for inter-site replication, or in other words it selects a bridgehead server. The bridgehead server is responsible for sending and receiving replications with other domains. Every domain controller can be a bridgehead server, but there can be only one active in any given time in a domain. The knowledge consistency checker selects the domain controller with the lowest Globally Unique Identifier (GUID) for the domain bridgehead server, but it could be configured by administrators as well.
-
-*A general-principle is to have the most reliable domain controller as the bridgehead server, I think it should be the same domain controller that holds the PDC.* 
-
 ## Organizatinal Unit (OU), Container, Leaf
 ### Organizational Unit (OU)
 An organizational unit is a logical solution to organizing objects within the domain. Administrators can create new organizational unit, and organizational units within organizational units.
@@ -384,6 +375,32 @@ The model is made from a location as the level 1 organizational unit, while the 
 This model allows for better administrative control, with more room for changes and less complexity, each level 1 organizational unit is a different office branch administrated on local autonomy by the administrators.
 
 <img src="PicturesAD/hybridmodel.png" width="600">
+
+## Replication
+Replication allows Active Directory infrastructure to work well it must have replication. Domain controllers must be provided with changes in the infrastructure. The syncing between domain controllers relies on different technologies such as RPC, DNS, LDAP, SMTP, and Kerberos. </br>
+The domain controllers that receives, sends, and stores replication between domains are global catalog domain controllers. </br>
+For replication to occur, domain controllers must be connected one to another through a network, it can be done either through the WAN (inter-site replication) or the LAN (intra-site replication). </br>
+Replication is transferred on the network, and therefore it takes bandwidth. This must be taken to consideration, as replication through slow links can consume a large part of the bandwidth. To reduce or eliminate replication from happening during work hours it is possible to schedule the replication to certain hours or changing the schedule to occur less often.
+
+### Site
+A site refers to a geographical location, unlike a domain that represents a logical boundary.
+
+*Example: The forest structure can be a single domain but spread among different locations, a single domain but multiple sites, they are inter-connected through the WAN.*
+
+A site link is the physical connection between the sites, or in other words the WAN and the devices.
+
+
+### Knowledge Consistency Checker (KCC)
+The Knowledge Consistency Checker is a process responsible for generating and maintaining the replication topology, it’s an automatic process that works in every domain controller. </br>
+Every 15 minutes the knowledge consistency checker adjusts the topology if needed, given any changes in the domain controllers (domain controllers removed/added). The knowledge consistency checker makes intra-site replications and inter-site replications. The knowledge consistency checker selects a single knowledge consistency checker (domain controller) in a remote site to hold the Inter-site Topology Generator (ISTG) role, this role is responsible to select the bridgehead servers for replication.
+
+### Bridgehead servers
+The knowledge consistency checker selects one domain controller for inter-site replication, or in other words it selects a bridgehead server. The bridgehead server is responsible for sending and receiving replications with other domains. Every domain controller can be a bridgehead server, but there can be only one active in any given time in a domain. The knowledge consistency checker selects the domain controller with the lowest Globally Unique Identifier (GUID) for the domain bridgehead server, but it could be configured by administrators as well.
+
+*A general-principle is to have the most reliable domain controller as the bridgehead server, I think it should be the same domain controller that holds the PDC.* 
+
+## Failover Clustering
+
 
 ## Flexible Single Master Operation (FSMO)
 Many directory services are based on the Lightweight Directory Access Protocol (LDAP) and as such they implement a multi-master replication, Active Directory is one of them.
