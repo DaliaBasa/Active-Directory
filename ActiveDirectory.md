@@ -384,10 +384,10 @@ This model allows for better administrative control, with more room for changes 
 <img src="PicturesAD/hybridmodel.png" width="600">
 
 ## Replication
-Replication allows Active Directory infrastructure to work well it must have replication. Domain controllers must be provided with changes in the infrastructure. The syncing between domain controllers relies on different technologies such as RPC, DNS, LDAP, SMTP, and Kerberos. </br>
+Replication allows Active Directory infrastructure to work well. Domain controllers must be provided with changes in the infrastructure. The syncing between domain controllers relies on different technologies such as RPC, DNS, LDAP, SMTP, and Kerberos. </br>
 The domain controllers that receives, sends, and stores replication between domains are global catalog domain controllers. </br>
 For replication to occur, domain controllers must be connected one to another through a network, it can be done either through the WAN (inter-site replication) or the LAN (intra-site replication). </br>
-Replication is transferred on the network, and therefore it takes bandwidth. This must be taken to consideration, as replication through slow links can consume a large part of the bandwidth. To reduce or eliminate replication from happening during work hours it is possible to schedule the replication to certain hours or changing the schedule to occur less often.
+Replication is transferred on the network, and therefore it takes bandwidth. This must be taken to consideration, as replication through slow links can consume a large part of the bandwidth. To reduce or eliminate replication from happening during work hours, it's possible to schedule the replication to certain hours or changing the schedule to occur less often.
 
 ### Site
 A site refers to a geographical location, unlike a domain that represents a logical boundary. A site can contain multiple subnets as well as more than one domain.
@@ -404,7 +404,7 @@ Every 15 minutes the knowledge consistency checker adjusts the topology if neede
 ### Bridgehead servers
 The knowledge consistency checker selects one domain controller for inter-site replication, or in other words it selects a bridgehead server. The bridgehead server is responsible for sending and receiving replications with other domains. Every domain controller can be a bridgehead server, but there can be only one active in any given time in a domain. The knowledge consistency checker selects the domain controller with the lowest Globally Unique Identifier (GUID) for the domain bridgehead server, but it could be configured by administrators as well.
 
-*A general-principle is to have the most reliable domain controller as the bridgehead server, I think it should be the same domain controller that holds the PDC.* 
+*A general-principle is to have the most reliable domain controller as the bridgehead server, I think it should be the same domain controller that holds the Primary Domain Controller (PDC).* 
 
 ## Failover Clustering
 
