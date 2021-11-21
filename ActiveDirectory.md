@@ -16,6 +16,7 @@
 - Directory Services
 - Active Directory Features
   - Single Sign-On (SSO)
+  - Microsoft Passport
   - Replication
   - Auditing
   - Security
@@ -59,7 +60,6 @@
        - Domain Naming Master
      - Failover		
 - Miscellaneous
-- Microsoft Passport
 - Group Policy
 - Active Directory Planning
 - Managing Active Directory Objects
@@ -133,6 +133,13 @@ This repository will focus on AD DS as it’s the most common product of Active 
 ## Single Sign-On (SSO)
 There are many applications that require authentications from the user, sometimes different authentication methods. This can be both time consuming for user and I.T and a security problem, a common security problem is having users writing down their passwords on notes around the office due to one too many passwords to remember for each application. </br>
 Single Sign-On as implied, requires the user to log in with a single user-ID and password for the whole session, Active Directory will provide the credentials needed for any further logins. Hence, the user won’t need to keep typing his credentials to get access.
+
+## Microsoft Passport
+Microsoft Passport allows a better single sign on authentication. Microsoft Passport service could be implemented on Active Directory to allow users a more private and secure log ins. Microsoft Passport uses different methods to reduce reliance on passwords, this is done through multi-factor authentication, one-time passwords, and complex policies. 
+Microsoft Passport requires the users to first prove their identity and create a gesture they will use upon entering the system, logging in. This gesture could be a pin, or biometric identification of some sort.
+
+### Trusted Platform Module (TPM)
+TPM provides a hardware-based, computer chip, that securely stores artifacts used for authentication, it could be passwords, RSA keys, and other sensitive information.
 
 ## Replication
 Active Directory could be implemented in small/centered organizations as well as vast organizations with many sites. The more complex organizations require multiple Domain Controllers, therefore it’s important for the Domain Controllers to maintain updated data throughout the sites. Active Directory maps the IP addresses of each site, this is done using the Subnet Mask. </br>
