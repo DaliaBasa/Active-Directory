@@ -138,6 +138,8 @@ Single Sign-On as implied, requires the user to log in with a single user-ID and
 Microsoft Passport allows a better single sign on authentication. Microsoft Passport service could be implemented on Active Directory to allow users a more private and secure log ins. Microsoft Passport uses different methods to reduce reliance on passwords, this is done through multi-factor authentication, one-time passwords, and complex policies. 
 Microsoft Passport requires the users to first prove their identity and create a gesture they will use upon entering the system, logging in. This gesture could be a pin, or biometric identification of some sort.
 
+Source: https://techcommunity.microsoft.com/t5/image/serverpage/image-id/45719i9A14C684BBB3FAAD
+
 ### Trusted Platform Module (TPM)
 TPM provides a hardware-based, computer chip, that securely stores artifacts used for authentication, it could be passwords, RSA keys, and other sensitive information.
 
@@ -502,4 +504,5 @@ AD LDS can help in creating an isolated environment for applications or services
 # Azure Active Directory
  
 # Bibliography
-
+https://trustedcomputinggroup.org/resource/trusted-platform-module-tpm-summary/
+https://sourcedaddy.com/windows-10/microsoft-passport.html
