@@ -421,7 +421,7 @@ The flexible single master operation roles are installed in the first domain con
 
 ##
 ### Domain Level Roles
-This roles exist in every domain.
+These roles exist in every domain.
 
 ### Primary Domain Controller (PDC) Emulator
 The primary domain controller emulator is responsible for time synchronization, among other roles. Time synchronization is crucial in Active Directory so clients could authenticate. The Kerberos authentication protocol includes timestamp information if there is time difference between the client clock and the primary domain controller emulator of more than 5 minutes authentication will fail and so devices and users won’t be able to authenticate and will receive authentication errors.
@@ -439,7 +439,7 @@ The infrastructure master should not be held on a global catalog domain controll
 
 ##
 ### Forest Level Roles
-This roles are unique to each forest, thus there is only one of each in a forest.
+These roles are unique to each forest, thus there is only one of each in a forest.
 
 ### Schema Operations Master
 The domain controller that holds the schema master role, is the only domain controller that can make any schema changes in the forest, to make the forest changes it’s also required to have a user account with a ‘Schema Admins’ group privileges. </br>
