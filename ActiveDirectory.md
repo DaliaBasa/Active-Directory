@@ -59,7 +59,7 @@
        - Domain Naming Master
      - Failover		
 - Miscellaneous
-- Domain Name System (DNS)
+- Microsoft Passport
 - Group Policy
 - Active Directory Planning
 - Managing Active Directory Objects
@@ -383,7 +383,7 @@ For replication to occur, domain controllers must be connected one to another th
 Replication is transferred on the network, and therefore it takes bandwidth. This must be taken to consideration, as replication through slow links can consume a large part of the bandwidth. To reduce or eliminate replication from happening during work hours it is possible to schedule the replication to certain hours or changing the schedule to occur less often.
 
 ### Site
-A site refers to a geographical location, unlike a domain that represents a logical boundary.
+A site refers to a geographical location, unlike a domain that represents a logical boundary. A site can contain multiple subnets as well as more than one domain.
 
 *Example: The forest structure can be a single domain but spread among different locations, a single domain but multiple sites, they are inter-connected through the WAN.*
 
