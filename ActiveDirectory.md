@@ -138,6 +138,8 @@ Single Sign-On as implied, requires the user to log in with a single user-ID and
 Microsoft Passport allows a better single sign on authentication. Microsoft Passport service could be implemented on Active Directory to allow users a more private and secure log ins. Microsoft Passport uses different methods to reduce reliance on passwords, this is done through multi-factor authentication, one-time passwords, and complex policies. 
 Microsoft Passport requires the users to first prove their identity and create a gesture they will use upon entering the system, logging in. This gesture could be a pin, or biometric identification of some sort.
 
+<img src="PicturesAD/microsoftpassport.jpg" width="800">
+
 Source: https://techcommunity.microsoft.com/t5/image/serverpage/image-id/45719i9A14C684BBB3FAAD
 
 ### Trusted Platform Module (TPM)
