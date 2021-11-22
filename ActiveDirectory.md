@@ -48,6 +48,8 @@
      - Hybrid Models
    - Replication
      - Sites
+     - Intra-Site Replications
+     - Inter-Site Replications
      - Knowledge Consistency Checker (KCC)
    - Failover Clustering
    - Flexible Single Master Operation (FSMO)
@@ -488,9 +490,6 @@ The domain naming master role holder is the domain controller responsible for ma
 - **Namespace (NS)** - Unique naming based on hierarchy and logic. </br>
 - **Network Basic Input/Output System (NetBIOS)** – NetBIOS allows applications on separate computers to communicate and establish session to access common shared resources over the LAN, NetBIOS names are used to identify network devices.  
 - **Security Account Manager (SAM)** - Windows stores and manages the local user and group accounts in a database file called Security Account Manager (SAM). It authenticates local user logons. This allows a domain-joined computer to make local logon.
-
-
-## Domain Name System (DNS)
 
 
 ## Group Policy
