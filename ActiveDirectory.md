@@ -398,7 +398,8 @@ A site refers to a geographical location, unlike a domain that represents a logi
 
 *Example: The forest structure can be a single domain but spread among different locations, a single domain but multiple sites, they are inter-connected through the WAN.*
 
-A site link is the physical connection between the sites, or in other words the WAN and the devices.
+A **site link** is the physical connection between the sites, or in other words the WAN and the devices. </br>
+**Site link bridges** contain multiple site links, they allow replication through other sites rather than a direct link, this is important, because some direct links might be unreliable or with a low bandwidth.
 
 ### Intra-Site Replications
 Intra-site replications could be also referred to as LAN. Domain controllers from the same site are aware of updates in up to 15 seconds and are replicating within a minute. In a site with more than 3 domain controllers, replications are done in a ring topology, this ensures updates aren’t replicating indefinitely transferring the same data, each domain controller needs to either advertise or listen to a domain controller. A common method is to allow packets to travel in one direction, it’s called a unidirectional ring network. While a bidirectional ring network allows for data to move in either direction.
@@ -409,8 +410,12 @@ Ring topology annihilates conflicts that could happen while replicating, on the 
 
 ### Inter-Site Replications
 Inter-site replications are replications that transfers to multiple sites. The data is being transferred over the WAN to the remote sites, different geographical locations. </br>
-Inter-site replications require much more resources as well as a good network topology, this is due to the many factors that impacts the site link, such as low available bandwidth, latency, WAN-links reliability, and network devices along the way. Each site ‘appoints’ a bridgehead that is required to both advertise and listen to updates from other sites. </br>
-Replications between sites occurs every 3 hours by default, but this could be changed by administrators to meet the organizations requirements.
+Inter-site replications require much more resources as well as a good network topology, this is due to the many factors that impacts the site link, such as low available bandwidth, latency, WAN-links reliability, and network devices along the way. </br>
+Each site ‘appoints’ a bridgehead that is required to both advertise and listen to updates from other sites.
+Replications between sites occurs every 3 hours by default, but this could be changed by administrators to meet the organizations requirements. As stated, an inter-site replication has different factors that impact the site link, and therefore the topology. </br>
+Inter-site replication chooses the site link with the lowest cost value to be the first preference for a replication, it can also choose to replicate through another site rather than a direct link.
+
+*Example: There are 3 sites, New York, Las Vegas, and Tel Aviv. The site link between New York and Las Vegas has a high site link cost, while the New York and Tel Aviv site link cost is much lower, therefore the system might prefer to replicate through Tel Aviv to Las Vegas if the overall site link cost is still lower than the direct link between New York and Las Vegas.*
 
 ### Site Link Cost
 A site link cost is a score system for replicating over the WAN, the system prefers the site link with the lowest cost as the destination for the replication. A site link cost consists of 3 factors: bandwidth, latency, and reliability. Every site gets a default cost of 100.  This system prefers a better connection over a closer geographical location.
