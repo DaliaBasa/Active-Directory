@@ -407,6 +407,16 @@ Ring topology annihilates conflicts that could happen while replicating, on the 
 
 <img src="PicturesAD/ringtopology.jpg" width="400">
 
+### Inter-Site Replications
+Inter-site replications are replications that transfers to multiple sites. The data is being transferred over the WAN to the remote sites, different geographical locations. </br>
+Inter-site replications require much more resources as well as a good network topology, this is due to the many factors that impacts the site link, such as low available bandwidth, latency, WAN-links reliability, and network devices along the way. Each site ‘appoints’ a bridgehead that is required to both advertise and listen to updates from other sites. </br>
+Replications between sites occurs every 3 hours by default, but this could be changed by administrators to meet the organizations requirements.
+
+### Site Link Cost
+A site link cost is a score system for replicating over the WAN, the system prefers the site link with the lowest cost as the destination for the replication. A site link cost consists of 3 factors: bandwidth, latency, and reliability. Every site gets a default cost of 100.  This system prefers a better connection over a closer geographical location.
+
+<img src="PicturesAD/sitelinkcost.png" width="1000">
+
 ### Knowledge Consistency Checker (KCC)
 The Knowledge Consistency Checker is a process responsible for generating and maintaining the replication topology, it’s an automatic process that works in every domain controller. </br>
 Every 15 minutes the knowledge consistency checker adjusts the topology if needed, given any changes in the domain controllers (domain controllers removed/added). The knowledge consistency checker makes intra-site replications and inter-site replications. The knowledge consistency checker selects a single knowledge consistency checker (domain controller) in a remote site to hold the Inter-site Topology Generator (ISTG) role, this role is responsible to select the bridgehead servers for replication.
