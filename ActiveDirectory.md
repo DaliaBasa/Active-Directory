@@ -400,6 +400,12 @@ A site refers to a geographical location, unlike a domain that represents a logi
 
 A site link is the physical connection between the sites, or in other words the WAN and the devices.
 
+### Intra-Site Replications
+Intra-site replications could be also referred to as LAN. Domain controllers from the same site are aware of updates in up to 15 seconds and are replicating within a minute. In a site with more than 3 domain controllers, replications are done in a ring topology, this ensures updates aren’t replicating indefinitely transferring the same data, each domain controller needs to either advertise or listen to a domain controller. A common method is to allow packets to travel in one direction, it’s called a unidirectional ring network. While a bidirectional ring network allows for data to move in either direction.
+
+Ring topology annihilates conflicts that could happen while replicating, on the other hand if a domain controller ceases from working, it affects the entire topology.
+
+<img src="PicturesAD/ringtopology.jpg" width="400">
 
 ### Knowledge Consistency Checker (KCC)
 The Knowledge Consistency Checker is a process responsible for generating and maintaining the replication topology, it’s an automatic process that works in every domain controller. </br>
