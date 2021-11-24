@@ -521,7 +521,19 @@ AD LDS can help in creating an isolated environment for applications or services
 
 
 # Active Directory Certificate Services (AD CS)
+Active Directory Certificate Services is a Microsoft solution that implements Public Key Infrastructure (PKI). This allows for certificates to be distributed throughout the forest structure. The certificates are issued by the Certification Authority (CA) and are also managed by it.
 
+Public key infrastructure uses the asymmetric cryptographic method to encrypt data. It consists of a public key and a private key, the public keys are dispersed with everyone, while a private key is exclusive and isn’t shared with anyone. A public key is used to encrypt a message, that can only be decrypted with a private key, and a private key is used to encrypt a message that could only be decrypted with a public key. </br>
+On top of the public key infrastructure, a digital signature authenticates the integrity of the object. Or as the name implies, a digital signature, signs the authenticity of the object. This can be done by using the private key to encrypt the message back or using an SSL certificate. Digital certificates are issued by a certification authority, that is trusted. Certification authorities can be Private or Public, for internal infrastructure or internet-facing services respectively. </br>
+The digital certificate consists of some information that identifies the issuer and the issued object, it has an expiration date and needs to be renewed once the certificate expiration date has passed.
+
+The process eventually consists of a few steps, that I will explain briefly, through an example of sending a message between 2 points. </br>
+*The first step will be digesting the message using a hash. </br>
+After that the data will be encrypted by generating a one-time symmetric key, the symmetric key will be used the decrypt the message, only the symmetric key will be encrypted by using the destination public key, this ensures only the destination would be able to decrypt the symmetric key using his private key and encrypt the message using the symmetric key.*
+
+<img src="PicturesAD/pki.png" width="800">
+
+Active Directory Certificate Services can be used to log into the Active Directory environment, encrypt and digitally sign email messages, and to prevent access to data on computers. A certificate authority consists of one or more certificate authority servers, most organizations use apply an infrastructure that consists of a root certificate authority and certificate authority subordinates that issue certificate, this allows for a more secure, cost-efficient, and high availability structure. There are also a 1-level model and a 3-level model.
 
 # Azure Active Directory
  
