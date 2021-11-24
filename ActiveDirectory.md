@@ -529,7 +529,7 @@ The process eventually consists of a few steps, that I will explain briefly, thr
 After that the data will be encrypted by generating a one-time symmetric key, the symmetric key will be used the decrypt the message, only the symmetric key will be encrypted by using the destination public key, this ensures only the destination would be able to decrypt the symmetric key using his private key and encrypt the message using the symmetric key.*
 
 <img src="PicturesAD/pki.png" width="800">
-Source: https://www.anoopcnair.com/pki-basics-intune-pki-made-easy-with-joy-1/
+Source: https://www.anoopcnair.com/pki-basics-intune-pki-made-easy-with-joy-1/ </br>
 
 Active Directory Certificate Services can be used to log into the Active Directory environment, encrypt and digitally sign email messages, and to prevent access to data on computers. A certificate authority consists of one or more certificate authority servers, most organizations use apply an infrastructure that consists of a root certificate authority and certificate authority subordinates that issue certificate, this allows for a more secure, cost-efficient, and high availability structure. There are also a 1-level model and a 3-level model.
 
