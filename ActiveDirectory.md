@@ -119,6 +119,9 @@ PXE could use a DHCP server to boot, this could be done in the DHCP configuratio
 Booting from the network could be problematic, if there are issues in the inner network, then you might not be able to use your computer, it also causes network traffic over the LAN network.
 
 # Directory Services
+Directory services are network-based services, it organizes, and stores information about the enterprise and the users. Directory services are also a collection of processes that runs applications for the enterprise, access control, and other resources as well as resources planning. 
+
+Directory services information can be distributed among many different computers, but performing searches and maintenance is done on a single database. Directory services allows accessing information from different computers that are connected to the directory services as well as different operating systems. Directory services supports a hierarchical naming model, make searches, and replications.
 
 # Lightweight Directory Access Protocol (LDAP)
 
@@ -126,10 +129,9 @@ Booting from the network could be problematic, if there are issues in the inner 
 
 
 # Active Directory
-Active Directory is the leading directory service solution made by Microsoft. It was first introduced in Windows 2000 Server edition as an implementation of X.500 directory.
-Active Directory uses LDAP as its primary access protocol. Active Directory stores information about a variety of objects in the network such as user accounts, computer accounts, groups, and all related credential information used by Kerberos. </br>
-Active Directory can be deployed in one of five forms: Active Directory Domain Services (AD DS), Active Directory Lightweight Directory Services (AD LDS), Active Directory Federation Services (AD FS), Active Directory Rights Management Services (AD RMS), Active Directory Certificate Services (AD CS). </br>
-This repository will focus on AD DS as it’s the most common product of Active Directory.
+Directory services are network-based services, that uses a hierarchical structure that organizes, and stores information about the enterprise and the users on the network. Directory services are also a collection of processes that runs applications for the enterprise, access control, and other resources as well as resources planning. 
+
+Directory services information can be distributed among many different computers, but performing searches and maintenance is done on a single database. Directory services allows accessing information from different computers that are connected to the directory services as well as different operating systems. Directory services supports a hierarchical naming model, make searches, and replications.
 
 # Active Directory Features
 ## Single Sign-On (SSO)
