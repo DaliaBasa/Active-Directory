@@ -141,8 +141,7 @@ Microsoft Passport allows a better single sign on authentication. Microsoft Pass
 Microsoft Passport requires the users to first prove their identity and create a gesture they will use upon entering the system, logging in. This gesture could be a pin, or biometric identification of some sort.
 
 <img src="PicturesAD/microsoftpassport.jpg" width="800">
-
-Source: https://techcommunity.microsoft.com/t5/image/serverpage/image-id/45719i9A14C684BBB3FAAD
+*Source: https://techcommunity.microsoft.com/t5/image/serverpage/image-id/45719i9A14C684BBB3FAAD*
 
 ### Trusted Platform Module (TPM)
 TPM provides a hardware-based, computer chip, that securely stores artifacts used for authentication, it could be passwords, RSA keys, and other sensitive information.
@@ -205,8 +204,7 @@ A single domain model consists of a single domain in a single forest, it’s the
 
 
 <img src="PicturesAD/singledomain.png" width="400">
-
-*Picture source: https://www.oreilly.com/library/view/mastering-active-directory/9781787289352/bf0444df-7c6e-4f09-bc46-bd5e01c065e0.xhtml*
+*Source: https://www.oreilly.com/library/view/mastering-active-directory/9781787289352/bf0444df-7c6e-4f09-bc46-bd5e01c065e0.xhtml*
 
 ##
 ### Regional Domain Model
@@ -215,8 +213,7 @@ Data inside the domain is only replicated within the domain controllers in that 
 This model does not provide isolation, to achieve isolation you must create separate forests.
 
 <img src="PicturesAD/regionaldomain.png" width="400">
-
-*Picture source: https://www.serverbrain.org/infrastructure-design-2003/using-multiple-domains.html*
+*Source: https://www.serverbrain.org/infrastructure-design-2003/using-multiple-domains.html*
 
 
 ## Forests Design/Models
@@ -237,14 +234,14 @@ The multi-forest model consists of at least 2 forests and is a must in some orga
 An organizational forest model focuses on having control over the forest autonomy and isolation. To access resources in other forests, trust relationships between the forests must be established first.
 
 <img src="PicturesAD/organizationalforest.png" width="400">
-Picture Source: Microsoft Docs
+*Source: Microsoft Docs*
 
 ##
 ### Resource Forest Model
 The resource forest model is used to separate the users from the sources. The resource forests contain only administrative user accounts for maintenance besides the resources. The trust relationships are one way, so that users can get resources from the resource forests.
 
 <img src="PicturesAD/resourcemodel.png" width="400">
-Picture Source: Microsoft Docs
+*Source: Microsoft Docs*
 
 ##
 ### Restricted Access Forest Model
@@ -252,7 +249,7 @@ The restricted access forest model consists of an organizational forest, and a r
 Organizations use that structure when working on classified government projects, new hardware, etc.
 
 <img src="PicturesAD/restrictedmodel.png" width="400">
-Picture Source: Microsoft Docs
+*Source: Microsoft Docs*
 
 ## Security Identifiers (SID) and Globally Unique Identifiers (GUID)
 Every time we create and object in Active Directory it is assigned with a security identifier (SID) and a globally unique identifier (GUID).
@@ -532,6 +529,7 @@ The process eventually consists of a few steps, that I will explain briefly, thr
 After that the data will be encrypted by generating a one-time symmetric key, the symmetric key will be used the decrypt the message, only the symmetric key will be encrypted by using the destination public key, this ensures only the destination would be able to decrypt the symmetric key using his private key and encrypt the message using the symmetric key.*
 
 <img src="PicturesAD/pki.png" width="800">
+*Source: https://www.anoopcnair.com/pki-basics-intune-pki-made-easy-with-joy-1/*
 
 Active Directory Certificate Services can be used to log into the Active Directory environment, encrypt and digitally sign email messages, and to prevent access to data on computers. A certificate authority consists of one or more certificate authority servers, most organizations use apply an infrastructure that consists of a root certificate authority and certificate authority subordinates that issue certificate, this allows for a more secure, cost-efficient, and high availability structure. There are also a 1-level model and a 3-level model.
 
