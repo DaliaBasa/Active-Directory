@@ -11,9 +11,9 @@
    - IP Address Management (IPAM)
    - Remote Access
    - Preboot Execution Environment (PXE)
+- Directory Services
 - Lightweight Directory Access Protocol (LDAP)
 - Kerberos
-- Directory Services
 - Active Directory Features
   - Single Sign-On (SSO)
   - Microsoft Passport
@@ -118,11 +118,11 @@ PXE environment is the process of having devices boot from network, rather from 
 PXE could use a DHCP server to boot, this could be done in the DHCP configurations. </br>
 Booting from the network could be problematic, if there are issues in the inner network, then you might not be able to use your computer, it also causes network traffic over the LAN network.
 
+# Directory Services
+
 # Lightweight Directory Access Protocol (LDAP)
 
 # Kerberos
-
-# Directory Services
 
 
 # Active Directory
