@@ -505,7 +505,7 @@ The domain naming master role holder is the domain controller responsible for ma
 
 
 # Active Directory Lightweight Directory Services (AD LDS)
-Active Directory Lightweight Directory Services is a more compact version of Active Directory Services (AD DS), managing Active Directory isn’t easy at the very least, it requires high maintenance, and it provides many features that aren’t needed in some organizations. </br>
+Active Directory Lightweight Directory Services is an implementation of Lightweight Directory Access Protocol (LDAP), as well as a more compact version of Active Directory Services (AD DS), managing Active Directory isn’t easy at the very least, it requires high maintenance, and it provides many features that aren’t needed in some organizations. </br>
 
 Active Directory Lightweight Directory Services provides an environment for testing, and research with much less effort needed in order to redeploy or make multiple instances at once. It has the capabilities needed for testing Active Directory Domain Services, but without the maintenance and effort required to have one. </br>
 
