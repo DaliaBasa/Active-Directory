@@ -9,6 +9,7 @@
    - Hyper V
    - Internet Information Services (IIS)
    - IP Address Management (IPAM)
+   - Network Time Protocol (NTP)
    - Remote Access
    - Preboot Execution Environment (PXE)
 - Directory Services
@@ -105,6 +106,9 @@ IIS helps in configuring both basic and advanced configurations such as: setting
 ### Internet Protocol Address Management (IPAM)
 IP address management allows to manage both DHCP and DNS servers in a centralized way, an IPAM server can manage up to 150 DHCP servers ,500 DNS servers, 6000 different DHCP scopes and 150 DNS zones. All of these servers and configurations can be managed from a single console thanks to IPAM. </br>
 Deploying IPAM is only possible on a computer inside the Active Directory forest, and it is possible to have more than one in a forest. IPAM cannot be deployed on a domain controller or a server that already hosts DHCP or DNS. IPAM uses a process called ‘Server Discovery’ which locates domain controllers, DNS servers, and DHCP servers.
+
+### Internet Time Protocol (NTP)
+
 
 ### Remote Access
 Remote Access is the role name for the following topics: Remote Access Service (RAS), Routing, and Web Application Proxy (WAP). Some of the uses of these technologies are remote access, site-to-site connectivity, Network Address Translation (NAT), and Virtual Private Network (VPN).
