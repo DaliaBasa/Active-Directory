@@ -540,7 +540,7 @@ AD LDS can help in creating an isolated environment for applications or services
 
 
 # Active Directory Certificate Services (AD CS)
-Active Directory Certificate Services is a Microsoft solution that implements Public Key Infrastructure (PKI). This allows for certificates to be distributed throughout the forest structure. The certificates are issued by the Certification Authority (CA) and are also managed by it.
+Active Directory Certificate Services is a Microsoft solution that implements **Public Key Infrastructure (PKI)**. This allows for certificates to be distributed throughout the forest structure. The certificates are issued by the **Certification Authority (CA)** and are also managed by it.
 
 Public key infrastructure uses the asymmetric cryptographic method to encrypt data. It consists of a public key and a private key, the public keys are dispersed with everyone, while a private key is exclusive and isn’t shared with anyone. A public key is used to encrypt a message, that can only be decrypted with a private key, and a private key is used to encrypt a message that could only be decrypted with a public key. </br>
 On top of the public key infrastructure, a digital signature authenticates the integrity of the object. Or as the name implies, a digital signature, signs the authenticity of the object. This can be done by using the private key to encrypt the message back or using an SSL certificate. Digital certificates are issued by a certification authority, that is trusted. Certification authorities can be Private or Public, for internal infrastructure or internet-facing services respectively. </br>
@@ -559,5 +559,4 @@ Active Directory Certificate Services can be used to log into the Active Directo
 # Azure Active Directory
  
 # Bibliography
-https://trustedcomputinggroup.org/resource/trusted-platform-module-tpm-summary/
-https://sourcedaddy.com/windows-10/microsoft-passport.html
+
