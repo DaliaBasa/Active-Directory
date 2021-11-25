@@ -507,7 +507,8 @@ The domain naming master role holder is the domain controller responsible for ma
 - **Directory Services Restore Mode (DSRM)** – DSRM allows to perform authoritative restore of deleted objects from the Active Directory database, if the deleted objects aren’t authoritatively restored, they will be deleted when the domain controllers synchronize.
 - **Line of Business (LOB)** - a general term which refers to a product or a set of related products that serve a particular customer transaction or business need. One of the sets of critical computer applications perceived as vital to running an enterprise. </br>
 - **Namespace (NS)** - Unique naming based on hierarchy and logic. </br>
-- **Network Basic Input/Output System (NetBIOS)** – NetBIOS allows applications on separate computers to communicate and establish session to access common shared resources over the LAN, NetBIOS names are used to identify network devices.  
+- **Network Basic Input/Output System (NetBIOS)** – NetBIOS allows applications on separate computers to communicate and establish session to access common shared resources over the LAN, NetBIOS names are used to identify network devices.
+- **Remote Procedure Call (RPC)** - RPC is when a computer program causes a procedure to execute in a different address space, or in another computer. The procedure happens as if it were executed locally. </br>
 - **Security Account Manager (SAM)** - Windows stores and manages the local user and group accounts in a database file called Security Account Manager (SAM). It authenticates local user logons. This allows a domain-joined computer to make local logon.
 
 
