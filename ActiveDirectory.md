@@ -108,6 +108,9 @@ IP address management allows to manage both DHCP and DNS servers in a centralize
 Deploying IPAM is only possible on a computer inside the Active Directory forest, and it is possible to have more than one in a forest. IPAM cannot be deployed on a domain controller or a server that already hosts DHCP or DNS. IPAM uses a process called ‘Server Discovery’ which locates domain controllers, DNS servers, and DHCP servers.
 
 ### Network Time Protocol (NTP)
+Network Time Protocol is a protocol designed for the purpose of synchronizing clocks of computers in a network to a common time, in most cases it’s UTC. </br>
+As convenient as having all the clocks synchronized and updated with the ‘right’ time, it’s a very important aspect in organizations, it’s required for Kerberos, forensics, and time-based transactions. Regulations require synchronization to have an accuracy of 200ms (milliseconds) or better. </br>
+Network Time Protocol uses UDP to transfer data, this is due to the fast connection setup and response times UDP provides. The port number the protocol uses for listening and advertising is 123.
 
 
 ### Remote Access
