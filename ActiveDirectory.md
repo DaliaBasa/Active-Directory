@@ -123,8 +123,11 @@ Directory services are network-based services, it organizes, and stores informat
 
 Directory services information can be distributed among many different computers, but performing searches and maintenance is done on a single database. Directory services allows accessing information from different computers that are connected to the directory services as well as different operating systems. Directory services supports a hierarchical naming model, make searches, and replications.
 
+### X.500
+X.500 is a series of standards/recommendations that defines a global directory service.
+
 # Lightweight Directory Access Protocol (LDAP)
-Lightweight Directory Access Protocol (LDAP) is a protocol used to query and modify objects in Active Directory and other directory services that supports the use of LDAP. 
+Lightweight Directory Access Protocol (LDAP) is an open protocol used to query and modify objects in Active Directory and other directory services that supports the use of LDAP. 
 LDAP was supposed to be the ‘bridge’ between X.500 (international directory services standard) and Internet applications. LDAP only allows to do limited amount of operating, that are basic.
 
 LDAP session starts when a client connects the LDAP server, an LDAP server is called Directory System Agent (DSA). LDAP communicates on port 389 for both TCP and UD, and on port 636 for LDAPS, the client then may query and modify using basic operations.
@@ -133,9 +136,11 @@ LDAP session starts when a client connects the LDAP server, an LDAP server is ca
 
 
 # Active Directory
-Directory services are network-based services, that uses a hierarchical structure that organizes, and stores information about the enterprise and the users on the network. Directory services are also a collection of processes that runs applications for the enterprise, access control, and other resources as well as resources planning. 
+Active Directory is the leading directory service solution made by Microsoft. It was first introduced in Windows 2000 Server edition as an implementation of X.500 directory.
+Active Directory uses LDAP as its primary access protocol. Active Directory stores information about a variety of objects in the network such as user accounts, computer accounts, groups, and all related credential information used by Kerberos. 
 
-Directory services information can be distributed among many different computers, but performing searches and maintenance is done on a single database. Directory services allows accessing information from different computers that are connected to the directory services as well as different operating systems. Directory services supports a hierarchical naming model, make searches, and replications.
+Active Directory can be deployed in one of five forms: Active Directory Domain Services (AD DS), Active Directory Lightweight Directory Services (AD LDS), Active Directory Federation Services (AD FS), Active Directory Rights Management Services (AD RMS), Active Directory Certificate Services (AD CS).
+The repository will focus on AD DS as it’s the most common product of Active Directory.
 
 # Active Directory Features
 ## Single Sign-On (SSO)
