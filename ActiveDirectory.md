@@ -124,6 +124,10 @@ Directory services are network-based services, it organizes, and stores informat
 Directory services information can be distributed among many different computers, but performing searches and maintenance is done on a single database. Directory services allows accessing information from different computers that are connected to the directory services as well as different operating systems. Directory services supports a hierarchical naming model, make searches, and replications.
 
 # Lightweight Directory Access Protocol (LDAP)
+Lightweight Directory Access Protocol (LDAP) is a protocol used to query and modify objects in Active Directory and other directory services that supports the use of LDAP. 
+LDAP was supposed to be the ‘bridge’ between X.500 (international directory services standard) and Internet applications. LDAP only allows to do limited amount of operating, that are basic.
+
+LDAP session starts when a client connects the LDAP server, an LDAP server is called Directory System Agent (DSA). LDAP communicates on port 389 for both TCP and UD, and on port 636 for LDAPS, the client then may query and modify using basic operations.
 
 # Kerberos
 
