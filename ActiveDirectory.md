@@ -290,9 +290,13 @@ These relationships can be either transitive or non-transitive:
 
 *Example: if domain A trusts domain B, and domain B trusts domain C, when transitivity is enabled, users of domain A can access both domain B and C.*
 
+<img src="PicturesAD/trust.png" width="800">
+
 - Non-transitive trusts, even if there is trust between all the domains, but they are non-transitive, then they could only access their nearest trust points. </br> 
 
 *Example: if domain A trusts domain B, and domain B trusts domain C. User from domain A could only access domain B.*
+
+<img src="PicturesAD/notrust.png" width="800">
 
 ### Forest Trusts
 An Active Directory Forest is the security and administrative boundary for objects and entities. Due to some business need, if we want to establish a bridge between two AD Forests, we need to configure Forest Trust between those forests. Forest Trusts are created between Forest Root Domains and are valid for all Domains within the entire Forest.
