@@ -8,7 +8,7 @@
    - [Network Time Protocol (NTP)](#Network-Time-Protocol-NTP)
    - [Remote Access](#Remote-Access)
    - [Preboot Execution Environment (PXE)](#Preboot-Execution-Environment-PXE)
-- [Directory Services](#Directory Services)
+- [Directory Services](#Directory-Services)
 - [Lightweight Directory Access Protocol (LDAP)](#Lightweight-Directory-Access-Protocol-LDAP)
 - [Kerberos](#Kerberos)
 - [Active Directory Features](#Active-Directory-Features)
