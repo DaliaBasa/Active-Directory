@@ -29,7 +29,7 @@
     - [Multiple Forest](#Multiple-Forest)
     - [Organizational Forest Model](#Organizational-Forest-Model)
     - [Resource Forest Model](#Resource-Forest-Model)
-    - [Restricted Forest Model](#Restricted-Forest-Model)
+    - [Restricted Access Forest Model](#Restricted-Access-Forest-Model)
    - [Security Identifiers (SID) and Globally Unique Identifiers (GUID)](#Security-Identifiers-SID-and-Globally-Unique-Identifiers-GUID)
    - [Trusts](#Trusts]
      - [Forest Trusts](#Forest-Trusts)
