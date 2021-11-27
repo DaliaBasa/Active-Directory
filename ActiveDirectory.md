@@ -541,7 +541,19 @@ AD LDS can run on a client (Windows 10 for example) or a server, this makes depl
 AD LDS can help in creating an isolated environment for applications or services that are required in unsecure environments, with the use of Active Directory Federation Services (AD FS). It can also be used as an additional dataset for applications.
 
 # Active Directory Federation Services (AD FS)
+Active Directory Federation Services is Microsoft’s federation service, much like other federation services it’s a web service that authenticates users and provides access to applications. Active Directory Federation Services allows remote users to authenticate to applications with a Single-Sign-On (SSO), this helps both users and organizations, one organizational task could be auditing, as there is only one token for the session, it’s easier to audit and look for flaws. The Active Directory Federation Services share a trust relationship, with the application, this is called a Relying Party (RP) in which the application becomes the Service Provider. The trust between the application and the AD FS is called federation trust.
 
+AD FS uses the Identity Provider (IdP) service that stores and manages digital identities to authenticate users, and the Service Provider (SP) to allow access to applications, the service provider relies on the identity provider for the claims, the claims are used to allow or deny access. </br>
+Once a user authenticates, the user is given a claim by the Claim Provider. Claims are used for authorization, there are different claims, and each holds a value about the user, it could be the user’s Email, Common Name (CN), and group. The values are being queried from the attribute store, which is a directory or a database that contains information about user accounts.
+
+Intranet members can log in with their Windows credentials to the web application, this can be done due to the use of Integrated Windows Authentication (IWA), or New Technology Lan Manager (NTLM). It also requires for the web server to be a part of the domain. This is applicable mostly for administrative tasks.
+
+AD FS could authenticate remote users in the following way: </br>
+A user enters the target URL for the application, the user is then being redirected to the AD FS portal and is required to log in. Upon authentication by the AD FS, the user is given a security token based on the claims that the account holds. The web server reviews the request to access the application using the user’s security token.
+
+AD FS is deployed and published publicly so remote users could access the applications, for security reasons, it’s common to use Web Application Proxy, amongst other technologies and products to help keeping the environment secure, for example a firewall and Network Address Translation (NAT) for protection.
+
+<img src="PicturesAD/adfs.png" width="800">
 
 # Active Directory Rights Management Services (AD RMS)
 
