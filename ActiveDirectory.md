@@ -22,54 +22,53 @@
   - [Domain Tree](#Domain-Tree)
   - [Forest](#Forest)
   - [Domain Design/Models](#Domain-DesignModels)
-    - Single Domain Model
-    - Regional Domain Model
-  - Forest Design/Models
-    - Single Forest
-    - Multiple Forest
-    - Organizational Forest Model
-    - Resource Forest Model
-    - Restricted Forest Model
-   - Security Identifiers (SID) and Globally Unique Identifiers (GUID)
-   - Trusts
-     - Forest Trusts
-   - Domain Controller (DC)
-     - Global Catalog (GC)
-     - Read Only Domain Controller (RODC)
-   - Organizatinal Unit (OU), Container, Leaf
-   - Organizational Unit (OU) and Container Models
-     - The Container Model
-     - The Geographical Model
-     - The Object-Based Model
-     - The Division/Department Model
-     - Hybrid Models
-   - Replication
-     - Sites
-     - Intra-Site Replications
-     - Inter-Site Replications
-     - Knowledge Consistency Checker (KCC)
-   - Failover Clustering
-   - Flexible Single Master Operation (FSMO)
-     - Domain Level
-       - Primary Domain Controller (PDC)
-       - Relative Identifier (RID)
-       - Infrastructure Master
-     - Forest Level
-       - Schema Operations Master
-       - Domain Naming Master
-     - Failover		
-- Miscellaneous
-- Group Policy
-- Active Directory Planning
-- Managing Active Directory Objects
-  - Managing Users
-  - Managing Computers
-- Active Directory Lightweight Directory Services (AD LDS)
-- Active Directory Federation Services (AD FS)
-- Active Directory Rights Management Services (AD RMS)
-- Active Directory Certificate Services (AD CS)
- 
-- Bibliography
+    - [Single Domain Model](#Single-Domain-Model)
+    - [Regional Domain Model](#Regional-Domain-Model)
+  - [Forest Design/Models](#Forest-DesignModels)
+    - [Single Forest](#Single-Forest)
+    - [Multiple Forest](#Multiple-Forest)
+    - [Organizational Forest Model](#Organizational-Forest-Model)
+    - [Resource Forest Model](#Resource-Forest-Model)
+    - [Restricted Forest Model](#Restricted-Forest-Model)
+   - [Security Identifiers (SID) and Globally Unique Identifiers (GUID)](#Security-Identifiers-SID-and-Globally-Unique-Identifiers-GUID)
+   - [Trusts](#Trusts]
+     - [Forest Trusts](#Forest-Trusts)
+   - [Domain Controller (DC)](#Domain-Controller-DC)
+     - [Global Catalog (GC)](#Global-Catalog-GC)
+     - [Read Only Domain Controller (RODC)](#Read-Only-Domain-Controller-RODC)
+   - [Organizatinal Unit (OU), Container, Leaf](#Organizatinal-Unit-OU-Container-Leaf)
+   - [Organizational Unit (OU) and Container Models](#Organizational-Unit-OU-and-Container-Models)
+     - [The Container Model](#The-Container-Model)
+     - [The Geographical Model](#The-Geographical-Model)
+     - [The Object-Based Model](#The-Object-Based-Model)
+     - [The Division/Department Model](#The-DivisionDepartment-Model)
+     - [Hybrid Models](#Hybrid-Models)
+   - [Replication](#Replication)
+     - [Sites](#Sites)
+     - [Intra-Site Replications](#Intra-Site-Replications)
+     - [Inter-Site Replications](#Inter-Site-Replications)
+     - [Knowledge Consistency Checker (KCC)](#Knowledge-Consistency-Checker-KCC)
+   - [Failover Clustering](#Failover-Clustering)
+   - [Flexible Single Master Operation (FSMO)](#Flexible-Single-Master-Operation-FSMO)
+     - [Domain Level](#Domain-Level)
+       - [Primary Domain Controller (PDC)](#Primary-Domain-Controller-PDC)
+       - [Relative Identifier (RID)](#Relative-Identifier-RID)
+       - [Infrastructure Master](#Infrastructure-Master)
+     - [Forest Level](#Forest Level)
+       - [Schema Operations Master](#Schema-Operations-Master)
+       - [Domain Naming Master](#Domain-Naming-Master)
+     - [Failover](#Failover)
+- [Miscellaneous](#Miscellaneous)
+- [Group Policy](#Group-Policy)
+- [Active Directory Planning](#Active-Directory-Planning)
+- [Managing Active Directory Objects](#Managing-Active-Directory-Objects)
+  - [Managing Users](#Managing-Users)
+  - [Managing Computers](#Managing-Computers)
+- [Active Directory Lightweight Directory Services (AD LDS)](#Active-Directory-Lightweight-Directory-Services-AD-LDS)
+- [Active Directory Federation Services (AD FS)](#Active-Directory-Federation-Services-AD-FS)
+- [Active Directory Rights Management Services (AD RMS)](#Active-Directory-Rights-Management-Services-AD-RMS)
+- [Active Directory Certificate Services (AD CS)](#Active-Directory-Certificate-Services-AD-CS) 
+- [Bibliography](#Bibliography)
 
 # Windows Server
 A brief explanation of some of the systems that were used in the making of this repository along with other features.
