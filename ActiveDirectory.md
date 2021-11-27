@@ -229,7 +229,7 @@ This model does not provide isolation, to achieve isolation you must create sepa
 Source: https://www.serverbrain.org/infrastructure-design-2003/using-multiple-domains.html
 
 
-## Forests Design/Models
+## Forest Design/Models
 One of the most important aspects in a system is designing it in an efficient way, this applies to Active Directory as well. A good forest design could only be achieved after identifying the needs for the organization. </br>
 
 ### Single Forest
