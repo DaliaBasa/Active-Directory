@@ -554,6 +554,8 @@ A user enters the target URL for the application, the user is then being redirec
 AD FS is deployed and published publicly so remote users could access the applications, for security reasons, it’s common to use Web Application Proxy, amongst other technologies and products to help keeping the environment secure, for example a firewall and Network Address Translation (NAT) for protection.
 
 <img src="PicturesAD/adfs.png" width="800">
+Source: http://www.mistercloudtech.com/2015/11/25/how-to-install-and-configure-web-application-proxy-for-adfs/
+
 
 # Active Directory Rights Management Services (AD RMS)
 
