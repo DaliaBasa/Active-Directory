@@ -57,7 +57,7 @@
      - [Forest Level Roles](#Forest-Level-roles)
        - [Schema Operations Master](#Schema-Operations-Master)
        - [Domain Naming Master](#Domain-Naming-Master)
-     - [Failover](#Failover)
+     - [Flexible Single Master Operation (FSMO) Failover](#Flexible-Single-Master-Operation-FSMO-Failover)
 - [Miscellaneous](#Miscellaneous)
 - [Group Policy](#Group-Policy)
 - [Active Directory Planning](#Active-Directory-Planning)
