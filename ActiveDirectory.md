@@ -44,7 +44,7 @@
      - [The Division/Department Model](#The-DivisionDepartment-Model)
      - [Hybrid Models](#Hybrid-Models)
    - [Replication](#Replication)
-     - [Sites](#Sites)
+     - [Site](#Site)
      - [Intra-Site Replications](#Intra-Site-Replications)
      - [Inter-Site Replications](#Inter-Site-Replications)
      - [Knowledge Consistency Checker (KCC)](#Knowledge-Consistency-Checker-KCC)
