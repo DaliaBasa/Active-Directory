@@ -21,7 +21,7 @@
   - [Domain](#Domain)
   - [Domain Tree](#Domain-Tree)
   - [Forest](#Forest)
-  - [Domain Design/Models](#Domain-Design-Models)
+  - [Domain Design/Models](#Domain-DesignModels)
     - Single Domain Model
     - Regional Domain Model
   - Forest Design/Models
