@@ -1,7 +1,3 @@
-# Active-Directory
-##### The Active Directory was installed on a Microsoft Windows Server 2019 (GUI).
-
-
 # Introduction
 - Windows Server Features (some)
    - Dynamic Host Configuration Protocol (DHCP)
