@@ -1,7 +1,7 @@
 # Introduction
 - [Windows Server Features (some)](#windows-server)
    - [Dynamic Host Configuration Protocol (DHCP)](#dynamic-host-configuration-protocol-dhcp)
-   - Domain Name System (DNS)
+   - [Domain Name System (DNS)](#Domain-Name-System-dns)
    - Hyper V
    - Internet Information Services (IIS)
    - IP Address Management (IPAM)
