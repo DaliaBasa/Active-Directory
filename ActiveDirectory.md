@@ -31,7 +31,7 @@
     - [Resource Forest Model](#Resource-Forest-Model)
     - [Restricted Access Forest Model](#Restricted-Access-Forest-Model)
    - [Security Identifiers (SID) and Globally Unique Identifiers (GUID)](#Security-Identifiers-SID-and-Globally-Unique-Identifiers-GUID)
-   - [Trusts](#Trusts]
+   - [Trusts](#Trusts)
      - [Forest Trusts](#Forest-Trusts)
    - [Domain Controller (DC)](#Domain-Controller-DC)
      - [Global Catalog (GC)](#Global-Catalog-GC)
