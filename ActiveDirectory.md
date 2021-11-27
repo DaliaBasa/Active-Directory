@@ -351,7 +351,7 @@ The “User” Container holds the default security groups, as well as default u
 Leaf objects are end points objects, and as so they are not able of containing other objects, or in other words, having child objects.
 *Example: a user is a leaf object.*
 
-## Organizational Unit and Container Models
+## Organizational Unit (OU) and Container Models
 The following will show several models that could suit some organizations, this is only but a guideline, as any organization could implement a model that better suits the requirements and complexity of that organization. Although there is no limit to the number of organizational units that could be created, it’s a good practice to keep the schema as simple as possible both vertically and horizontally.
 Some documentation recommends against having more than 10 levels in organization, due to the amount of complexity it involves in maintaining such structure.
 
