@@ -1,4 +1,4 @@
-<img src="PicturesAD/activedirectory1.jpg" height="200">
+<img src="PicturesAD/activedirectory1.jpg" height="175">
 
 # Introduction
 - [Windows Server Features (some)](#windows-server)
