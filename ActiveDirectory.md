@@ -1,3 +1,5 @@
+<img src="PicturesAD/activedirectory1.jpg" height="500">
+
 # Introduction
 - [Windows Server Features (some)](#windows-server)
    - [Dynamic Host Configuration Protocol (DHCP)](#dynamic-host-configuration-protocol-dhcp)
