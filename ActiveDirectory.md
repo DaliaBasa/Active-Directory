@@ -68,8 +68,8 @@
   - [Managing Computers](#Managing-Computers)
 - [Active Directory Lightweight Directory Services (AD LDS)](#Active-Directory-Lightweight-Directory-Services-AD-LDS)
 - [Active Directory Federation Services (AD FS)](#Active-Directory-Federation-Services-AD-FS)
-- [Active Directory Rights Management Services (AD RMS)](#Active-Directory-Rights-Management-Services-AD-RMS)
 - [Active Directory Certificate Services (AD CS)](#Active-Directory-Certificate-Services-AD-CS)
+- [Active Directory Rights Management Services (AD RMS)](#Active-Directory-Rights-Management-Services-AD-RMS)
 - [Azure Active Directory](#Azure-Active-Directory)
 - [Bibliography](#Bibliography)
 
@@ -554,10 +554,6 @@ AD FS is deployed and published publicly so remote users could access the applic
 <img src="PicturesAD/adfs.png" width="800">
 Source: http://www.mistercloudtech.com/2015/11/25/how-to-install-and-configure-web-application-proxy-for-adfs/
 
-
-# Active Directory Rights Management Services (AD RMS)
-
-
 # Active Directory Certificate Services (AD CS)
 Active Directory Certificate Services is a Microsoft solution that implements **Public Key Infrastructure (PKI)**. This allows for certificates to be distributed throughout the forest structure. The certificates are issued by the **Certification Authority (CA)** and are also managed by it.
 
@@ -574,6 +570,16 @@ After that the data will be encrypted by generating a one-time symmetric key, th
 Source: https://www.anoopcnair.com/pki-basics-intune-pki-made-easy-with-joy-1/ </br>
 
 Active Directory Certificate Services can be used to log into the Active Directory environment, encrypt and digitally sign email messages, and to prevent access to data on computers. A certificate authority consists of one or more certificate authority servers, most organizations use apply an infrastructure that consists of a root certificate authority and certificate authority subordinates that issue certificate, this allows for a more secure, cost-efficient, and high availability structure. There are also a 1-level model and a 3-level model.
+
+# Active Directory Rights Management Services (AD RMS)
+Active Directory Rights Management Services (AD RMS) is an Information Rights Management (IRM) solution, it can serve as a part in fighting data leakage in organizations. Active Directory Rights Management Services is a service intended to stop data leaks to a certain degree. AD RMS could implement Dynamic Access Control (DAC) technique on certain objects with Group Policies.
+
+Dynamic Access Control (DAC) or Discretionary Access Control (DAC) is a security configuration that allows administrators to set rules. The rules can allow or restrict users from accessing objects based on different factors (words that appear in the file, claims, and group policies).
+
+AD RMS need prerequisites to be deployed and configured for it to prevent data leaks on various services. It uses features that were introduced before, such as certifications, and Internet Information Services (IIS) for several services.
+
+AD RMS allows to protect organization from data leakage in files, Emails, Intranet, and mobile. It can search for words within files, and configure rules accordingly, AD RMS can also restrict users/computers from files. Much like Active Directory Federation Services (AD FS), AD RMS uses claims to configure access control rules.
+
 
 # Azure Active Directory
 Azure is Microsoft’s cloud service; it’s considered as the leader in the cloud industry, as many organizations today are looking to move their data and infrastructure to off-premises solutions. Moving from on premise to off premise has many benefits: potential growth, cost-efficient, and less maintenance inside the organization. These are just some of the benefits organizations enjoy when moving to a cloud-based service.
