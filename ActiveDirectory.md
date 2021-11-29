@@ -74,7 +74,7 @@
 - [Bibliography](#Bibliography)
 
 # Windows Server
-A brief explanation of some of the systems that were used in the making of this repository along with other features.
+A brief explanation of some of the technologies Windows server provides, some were used in the making of an Active Directory environment I will show.
 
 ### Dynamic Host Configuration Protocol (DHCP)
 Dynamic host configuration protocol that provides an IP address, subnet mask, default gateway and other properties (scope) to a host. A DHCP server could be deployed on a domain controller on a Windows Server network, or a standalone computer. </br>
