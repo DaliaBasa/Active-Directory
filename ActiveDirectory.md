@@ -138,6 +138,9 @@ LDAP was supposed to be the ‘bridge’ between X.500 (international directory 
 LDAP session starts when a client connects the LDAP server, an LDAP server is called Directory System Agent (DSA). LDAP communicates on port 389 for both TCP and UD, and on port 636 for LDAPS, the client then may query and modify using basic operations.
 
 # Kerberos
+Active Directory uses the Kerberos protocol for its authentication protocol. The Kerberos environment is called the ‘Kerberos realm’, and it consists of 3 main parts (just like Kerberos the 3 headed dog from the Greek mythology): users/clients, trusted authority (KDC), and a server.
+
+The Kerberos realm is a logical set of objects, the boundary of the realm is the master KDC. Much like an Active Directory forest, realms can be hierarchical (parent-child relationship) or non-hierarchical, Kerberos supports authentication across realms, it’s called ‘cross-realm authentication’. To perform the cross-realm authentication, a KDC needs to hold other KDC principal entry.
 
 
 # Active Directory
