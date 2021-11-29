@@ -576,7 +576,12 @@ Source: https://www.anoopcnair.com/pki-basics-intune-pki-made-easy-with-joy-1/ <
 Active Directory Certificate Services can be used to log into the Active Directory environment, encrypt and digitally sign email messages, and to prevent access to data on computers. A certificate authority consists of one or more certificate authority servers, most organizations use apply an infrastructure that consists of a root certificate authority and certificate authority subordinates that issue certificate, this allows for a more secure, cost-efficient, and high availability structure. There are also a 1-level model and a 3-level model.
 
 # Azure Active Directory
+Azure is Microsoft’s cloud service; it’s considered as the leader in the cloud industry, as many organizations today are looking to move their data and infrastructure to off-premises solutions. Moving from on premise to off premise has many benefits: potential growth, cost-efficient, and less maintenance inside the organization. These are just some of the benefits organizations enjoy when moving to a cloud-based service.
  
+Azure Active Directory isn’t an off-premises Active Directory, it has many different features that Active Directory isn’t capable of and was developed for a different purpose. While Active Directory communicate through LDAP, Azure Active Directory communicates with REST APIs. Azure Active Directory supports the use of mobile and Linux/Unix workloads natively, without the need for a third-party solution. These are but a small part of the differences between the two.
+
+Nevertheless, Azure Active Directory shares similar concepts with Active Directory Domain Services (AD DS), some concepts have been upgraded with some new features:
+Azure Active Directory can sync identities from on-premises domain controllers to Azure Active Directory. Passwords are more secure using smart lockouts, multi-factor authentications, and password less techniques. Azure Active Directory is considered as a highly secure solution and could solve many secure problems in small branches with low administrative resources, this is because there can be low to no amount of physical hardware (domain controllers/ infrastructure servers). Infrastructure apps allow to control the network through an app, without on-premises components. 
  
 # Bibliography
 
