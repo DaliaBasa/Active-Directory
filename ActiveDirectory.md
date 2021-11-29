@@ -599,7 +599,7 @@ Azure Active Directory can sync identities from on-premises domain controllers t
 ### Books
 Mastering Active Directory - Second Edition / Dishan Francis </br>
 Mastering Windows Group Policy / Jordan Krause </br>
-InsideOUT Windows Server 2019 / Orin Thomas </br>
+Inside Out Windows Server 2019 / Orin Thomas </br>
 
 ##
 https://docs.microsoft.com/en-us/ </br>
