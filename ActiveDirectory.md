@@ -1,7 +1,7 @@
 <img src="PicturesAD/activedirectory1.jpg" height="175">
 
 # Introduction
-- [Windows Server Features (some)](#windows-server)
+- [Windows Server Features](#windows-server-features)
    - [Dynamic Host Configuration Protocol (DHCP)](#dynamic-host-configuration-protocol-dhcp)
    - [Domain Name System (DNS)](#Domain-Name-System-dns)
    - [Hyper V](#Hyper-V)
@@ -73,7 +73,7 @@
 - [Azure Active Directory](#Azure-Active-Directory)
 - [Bibliography](#Bibliography)
 
-# Windows Server
+# Windows Server Features
 A brief explanation of some of the technologies Windows server provides, some were used in the making of an Active Directory environment I will show.
 
 ### Dynamic Host Configuration Protocol (DHCP)
