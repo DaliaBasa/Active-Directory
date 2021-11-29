@@ -596,4 +596,34 @@ Nevertheless, Azure Active Directory shares similar concepts with Active Directo
 Azure Active Directory can sync identities from on-premises domain controllers to Azure Active Directory. Passwords are more secure using smart lockouts, multi-factor authentications, and password less techniques. Azure Active Directory is considered as a highly secure solution and could solve many secure problems in small branches with low administrative resources, this is because there can be low to no amount of physical hardware (domain controllers/ infrastructure servers). Infrastructure apps allow to control the network through an app, without on-premises components. 
  
 # Bibliography
+### Books
+Mastering Active Directory - Second Edition / Dishan Francis </br>
+Mastering Windows Group Policy / Jordan Krause </br>
+InsideOUT Windows Server 2019 / Orin Thomas </br>
 
+##
+https://docs.microsoft.com/en-us/ </br>
+https://www.wikipedia.org/ </br>
+https://networkencyclopedia.com </br>
+https://docs.oracle.com/ </br>
+https://www.techopedia.com </br>
+http://publib.boulder.ibm.com/tividd/td/framework/GC32-0803-00/en_US/HTML/plan20.htm </br>
+https://activedirectoryfaq.com/2019/11/ad-ds-vs-ad-lds-domain-services-vs-lightweight-directory-services/#AD-LDS </br>
+https://blog.netwrix.com/2017/02/20/active-directory-replication/ </br>
+https://ldapwiki.com/wiki/Partial%20Attribute%20Set  </br>
+https://sourcedaddy.com/windows-10/microsoft-passport.html </br>
+https://stealthbits.com/blog/what-are-fsmo-roles-active-directory/ </br>
+https://support.ntp.org/bin/view/Main/WebHome </br>
+https://techterms.com/definition/iis </br>
+https://trustedcomputinggroup.org/resource/trusted-platform-module-tpm-summary/ </br>
+https://us.informatiweb-pro.net/ </br>
+https://www.computerhope.com/jargon/r/ringtopo.htm </br>
+https://www.dnsstuff.com/windows-iis-server-tools </br>
+https://www.dummies.com/programming/networking/defining-terms-what-is-a-directory-service/ </br>
+https://www.lepide.com/blog/5-fsmo-roles-active-directory/ </br>
+https://www.ncsc.gov.ie/emailsfrom/DDoS/NetBIOS/ </br>
+https://www.okta.com/blog/2018/06/what-is-adfs/ </br>
+https://www.serverbrain.org/infrastructure-design-2003/understanding-the-ou-design-options.html </br>
+https://www.techopedia.com/definition/18887/directory-services </br>
+https://www.varonis.com/blog/azure-active-directory/ </br>
+https://www.yumpu.com/en/document/read/10008333/adam-eval1-0 </br>
