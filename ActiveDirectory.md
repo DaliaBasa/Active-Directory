@@ -429,6 +429,7 @@ Intra-site replications could be also referred to as LAN. Domain controllers fro
 Ring topology annihilates conflicts that could happen while replicating, on the other hand if a domain controller ceases from working, it affects the entire topology.
 
 <img src="PicturesAD/ringtopology.jpg" width="400">
+Source: http://etutorials.org/Microsoft+Products/microsoft+windows+xp+professional+training+kit/Chapter+5+-+Using+the+DNS+Service+and+Active+Directory+Service/Lesson+5nbspUnderstanding+Active+Directory+Structure+and+Replication/ </br>
 
 ### Inter-Site Replications
 Inter-site replications are replications that transfers to multiple sites. The data is being transferred over the WAN to the remote sites, different geographical locations. </br>
