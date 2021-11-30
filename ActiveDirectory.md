@@ -604,6 +604,7 @@ Active Directory Rights Management Services (AD RMS) is an Information Rights Ma
 Dynamic Access Control (DAC)  is a security configuration that allows administrators to set rules. The rules can allow or restrict users from accessing objects based on different factors (words that appear in the file, claims, and group policies). Dynamic Access Control can be viewed as a dynamic Discretionary Access Control.
 
 <img src="PicturesAD/adrms.jpg" width="600">
+
 Source: https://www.ekransystem.com/en/blog/mac-vs-dac
 
 AD RMS need prerequisites to be deployed and configured for it to prevent data leaks on various services. It uses features that were introduced before, such as certifications, and Internet Information Services (IIS) for several services.
