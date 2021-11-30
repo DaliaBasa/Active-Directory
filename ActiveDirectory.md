@@ -138,10 +138,33 @@ LDAP was supposed to be the ‘bridge’ between X.500 (international directory 
 LDAP session starts when a client connects the LDAP server, an LDAP server is called Directory System Agent (DSA). LDAP communicates on port 389 for both TCP and UD, and on port 636 for LDAPS, the client then may query and modify using basic operations.
 
 # Kerberos
-Active Directory uses the Kerberos protocol for its authentication protocol. The Kerberos environment is called the ‘Kerberos realm’, and it consists of 3 main parts (just like Kerberos the 3 headed dog from the Greek mythology): users/clients, trusted authority (KDC), and a server.
+Active Directory uses the Kerberos protocol for its authentication protocol, and therefore the following explanation will provide information related to Active Directory (Kerberos is implemented in other OSs, such as Red Hat, FreeBSD, and Mac OS X). The Kerberos environment is called the ‘Kerberos realm’, and it consists of 3 main parts: users/clients, trusted authority (KDC), and a server.
 
-The Kerberos realm is a logical set of objects, the boundary of the realm is the master KDC. Much like an Active Directory forest, realms can be hierarchical (parent-child relationship) or non-hierarchical, Kerberos supports authentication across realms, it’s called ‘cross-realm authentication’. To perform the cross-realm authentication, a KDC needs to hold other KDC principal entry.
+The Kerberos realm is a logical set of objects, the boundary of the realm is the master KDC. Much like an Active Directory forest, realms can be hierarchical (parent-child relationship) or non-hierarchical, Kerberos supports authentication across realms, it’s called ‘cross-realm authentication’. To perform the cross-realm authentication, a KDC needs to hold other KDC principal entry. </br>
+Kerberos uses symmetric encryption, and Key Distribution Center for authenticating. </br>
 
+Key Distribution Center (KDC) is part of the domain, it’s located on the **Domain Controller (DC)**. KDC is a process that performs **Authentication Service (AS)** and **Ticket-Granting Service (TGS)**, it also uses Domain Controllers and Global Catalogs databases for its services.
+
+Both the user and the KDC (Domain Controller) holds the required credentials of the user account. When the user logs in, the username is sent to the Authentication Service among other data, including the destination, and the IP. The Authentication Service digests a hash combined of the user’s password, ‘Salt’, and the key version number, the hash is also called the ‘Client Secret Key’ or the user’s ‘Long-Term Key’. Since both the user and the KDC can digest the user’s Long-Term Key, it’s used as the symmetric key. The user’s Long-Term Key is used to encrypt a message that includes the Ticket-Granting Service (TGS) ID, timestamp, lifetime, and the TGS session key. This message is sent to the user. </br>
+The other message that’s sent is the Ticket Granting Ticket (TGT), it includes some attributes as well as the TGS Session Key that is encrypted with the KDC’s Long-Term Key. The user cannot decrypt the TGT since he doesn’t know the KDC’s Long-Term Key. 
+
+The user sends his own timestamp along with the user ID and encrypts it with the TGS Session Key, the user also sends a message that holds information about the wanted service from the server. The TGT is sent back along with the other messages to the KDC.
+
+The TGS decrypts the messages, holding both required keys, and compares them with the TGS database. If the data is identical and the timestamp is within a 5-minute timeframe it proves it’s genuine. The TGS adds the user information to its database (cache).
+
+The TGS sends the user a message containing information and the Server Session Key for the required server, encrypted with the TGS Session Key provided before. </br>
+
+The TGS also sends the user the Server Ticket encrypted with the server’s Long-Term Key, which cannot be decrypted by the user, it’s sent to the server.  </br>
+The user sends the server his own timestamp along with the user ID and encrypts it with the Server Session Key. </br>
+
+The server decrypts the messages and compares the information and the timestamp just like the TGS did before and adds the user’s information to its database (cache). </br>
+In the end, the server sends the server ID and timestamp back to the user encrypted with the Server Session Key, which becomes the symmetric key. The user then checks the information and adds it to its database (cache). </br>
+
+<img src="PicturesAD/kerberos.png" width="500">
+
+Source: Wikipedia </br>
+
+The Kerberos realm is a logical set of objects, the boundary of the realm is the master KDC. Much like Directory Services, realms can be hierarchical (parent-child relationship) or non-hierarchical, Kerberos supports authentication across realms, it’s called ‘cross-realm authentication’. To perform the cross-realm authentication, a KDC needs to hold other KDC principal entry.
 
 # Active Directory
 Active Directory is the leading directory service solution made by Microsoft. It was first introduced in Windows 2000 Server edition as an implementation of X.500 directory.
@@ -603,6 +626,10 @@ Mastering Windows Group Policy / Jordan Krause </br>
 Inside Out Windows Server 2019 / Orin Thomas </br>
 
 ##
+https://www.youtube.com/watch?v=5N242XcKAsM
+https://www.youtube.com/channel/UCJQJ4GjTiq5lmn8czf8oo0Q
+https://www.youtube.com/c/Elithecomputerguypage/videos
+##
 https://docs.microsoft.com/en-us/ </br>
 https://www.wikipedia.org/ </br>
 https://networkencyclopedia.com </br>
@@ -628,3 +655,4 @@ https://www.serverbrain.org/infrastructure-design-2003/understanding-the-ou-desi
 https://www.techopedia.com/definition/18887/directory-services </br>
 https://www.varonis.com/blog/azure-active-directory/ </br>
 https://www.yumpu.com/en/document/read/10008333/adam-eval1-0 </br>
+https://redmondmag.com/articles/2012/02/01/understanding-the-essentials-of-the-kerberos-protocol.aspx </br>
