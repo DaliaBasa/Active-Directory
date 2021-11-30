@@ -626,10 +626,12 @@ Mastering Windows Group Policy / Jordan Krause </br>
 Inside Out Windows Server 2019 / Orin Thomas </br>
 
 ##
-https://www.youtube.com/watch?v=5N242XcKAsM
-https://www.youtube.com/channel/UCJQJ4GjTiq5lmn8czf8oo0Q
-https://www.youtube.com/c/Elithecomputerguypage/videos
+### Youtube
+https://www.youtube.com/watch?v=5N242XcKAsM </br>
+https://www.youtube.com/channel/UCJQJ4GjTiq5lmn8czf8oo0Q </br>
+https://www.youtube.com/c/Elithecomputerguypage/videos </br>
 ##
+### Websites
 https://docs.microsoft.com/en-us/ </br>
 https://www.wikipedia.org/ </br>
 https://networkencyclopedia.com </br>
