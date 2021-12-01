@@ -98,7 +98,7 @@ Virtualization can be very resourceful as it allows running old applications on 
 *Nested virtualization allows Hyper-V to run inside of a virtual machine operating system, this feature requires prerequisites.*
 
 ### Internet Information Services (IIS)
-Microsoft’s Internet Information Services is a GUI web server, in some documentation it’s also called Windows Web Server. Some organizations use IIS for both their intranet services as well as their public ones, it’s possible to manage up to 10,000 sites from a single Windows Server OS that has IIS deployed on. </br>
+Microsoft’s Internet Information Services is a GUI application for managing a web server, in some documentation it’s called Windows Web Server. Some organizations use IIS for both their intranet services as well as their public ones, it’s possible to manage up to 10,000 sites from a single Windows Server OS that has IIS deployed on. </br>
 IIS helps in configuring both basic and advanced configurations such as: setting up new websites, virtual directories, configuring TLS certificates.
 
 ### Internet Protocol Address Management (IPAM)
@@ -167,11 +167,13 @@ Source: Wikipedia </br>
 The Kerberos realm is a logical set of objects, the boundary of the realm is the master KDC. Much like Directory Services, realms can be hierarchical (parent-child relationship) or non-hierarchical, Kerberos supports authentication across realms, it’s called ‘cross-realm authentication’. To perform the cross-realm authentication, a KDC needs to hold other KDC principal entry.
 
 # Active Directory
-Active Directory is the leading directory service solution made by Microsoft. It was first introduced in Windows 2000 Server edition as an implementation of X.500 directory.
-Active Directory uses LDAP as its primary access protocol. Active Directory stores information about a variety of objects in the network such as user accounts, computer accounts, groups, and all related credential information used by Kerberos. 
+Active Directory is the leading LDAP directory service solution made by Microsoft. It was first introduced in Windows 2000 Server edition as an implementation of X.500 directory.
+Active Directory uses LDAP as its primary access protocol. Active Directory stores information about a variety of objects in the network such as user accounts, computer accounts, and groups in databases called Domain Controller (DC). Active Directory uses the Kerberos protocol for authentication. 
 
-Active Directory can be deployed in one of five forms: Active Directory Domain Services (AD DS), Active Directory Lightweight Directory Services (AD LDS), Active Directory Federation Services (AD FS), Active Directory Rights Management Services (AD RMS), Active Directory Certificate Services (AD CS).
-The repository will focus on AD DS as it’s the most common product of Active Directory.
+Active Directory Domain Services (AD DS) is the main directory services product. While Active Directory Lightweight Directory Services (AD LDS) is the lightweight version of the Active Directory Domain Services product, it can be used for other purposes (migrating). </br>
+Microsoft has introduced Azure Active Directory, which is an off-premise (cloud) directory services product, it’s different from the Active Directory Domain Services (AD DS)  product. </br>
+
+Active Directory Federation Services (AD FS), Active Directory Rights Management Services (AD RMS), and Active Directory Certificate Services (AD CS) are products that can be deployed on top of the Active Directory Domain Services, as they provide services that perform a higher secure environment.
 
 # Active Directory Features
 ## Single Sign-On (SSO)
