@@ -129,7 +129,7 @@ Directory services are network-based services, it organizes, and stores informat
 Directory services information can be distributed among many different computers, but performing searches and maintenance is done on a single database. Directory services allows accessing information from different computers that are connected to the directory services as well as different operating systems. Directory services supports a hierarchical naming model, make searches, and replications.
 
 ### X.500
-X.500 is a series of standards/recommendations that defines a global directory service.
+X.500 is a series of standards/recommendations that defines a directory service.
 
 # Lightweight Directory Access Protocol (LDAP)
 Lightweight Directory Access Protocol (LDAP) is an open protocol used to query and modify objects in Active Directory and other directory services that supports the use of LDAP. 
