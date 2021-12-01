@@ -480,7 +480,17 @@ The knowledge consistency checker selects one domain controller for inter-site r
 *A general-principle is to have the most reliable domain controller as the bridgehead server, I think it should be the same domain controller that holds the Primary Domain Controller (PDC).* 
 
 ## Failover Clustering
+Failover cluster is a name for a group of servers that share the same role (application or service) and are functioning together. This allows a higher availability as well as fault tolerance, users are presented with a continuous workflow, while administrators don’t need to make restorations or build the whole logical infrastructure from scratch.
 
+As stated before, domains can have more than one domain controller, this means that data can flow from clients to numerous domain controllers and therefore have a better load balance, and zero to low downtime if a failure occurs. This way domains are always available, and no data is lost. </br>
+There can be more than one cluster for an organization placed in more than one location, the failover cluster can be a hot failover or a cold failover.  
+
+A **hot failover** requires a high number of resources, as both the primary and the backup clusters are up collecting data. A **heartbeat** is mechanism in a hot failover, it allows servers to synchronize and detect failures. </br>
+A **cold failover** isn’t connected with the data and needs to be turned on manually in times of need. In a cold failover some data is lost, but not all. </br>
+
+<img src="PicturesAD/failover.png" width="350">
+
+Source: http://www.techiebird.com/failover-clustering-in-windows-server/
 
 ## Flexible Single Master Operation (FSMO)
 Many directory services are based on the Lightweight Directory Access Protocol (LDAP) and as such they implement a multi-master replication, Active Directory is one of them.
