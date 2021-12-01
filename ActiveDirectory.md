@@ -112,7 +112,7 @@ Network Time Protocol uses UDP to transfer data, this is due to the fast connect
 
 
 ### Remote Access
-Remote Access is the role name for the following topics: Remote Access Service (RAS), Routing, and Web Application Proxy (WAP). Some of the uses of these technologies are remote access, site-to-site connectivity, Network Address Translation (NAT), and Virtual Private Network (VPN).
+Remote Access is the name given for the following topics: Remote Access Service (RAS), Routing, and Web Application Proxy (WAP). Some of the uses of these technologies are remote access, site-to-site connectivity, Network Address Translation (NAT), and Virtual Private Network (VPN).
 
 RAS allows for users to connect to the RAS server through the WAN, but access resources as if they were logged from the LAN. </br>
 Routing is used to move network traffic between different broadcast domains on the LAN, routing supports NAT, which allows transferring requests to specific locations. </br>
