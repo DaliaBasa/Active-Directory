@@ -661,3 +661,4 @@ https://www.techopedia.com/definition/18887/directory-services </br>
 https://www.varonis.com/blog/azure-active-directory/ </br>
 https://www.yumpu.com/en/document/read/10008333/adam-eval1-0 </br>
 https://redmondmag.com/articles/2012/02/01/understanding-the-essentials-of-the-kerberos-protocol.aspx </br>
+https://livelibrary.osisoft.com/LiveLibrary/content/en/uni-int-v2/GUID-7B738081-0A4D-4409-A30C-4AA2FEF2143E </br>
