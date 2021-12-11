@@ -561,7 +561,7 @@ Group Policy is a main part of maintaining a healthy Active Directory infrastruc
 
 Group Policy allows administrators to control both users and computers environment, a Group Policy can be applied to an Organizational Unit’s computers/users or both. Group Policy can help in preventing users from gaining access to applications, install software, and block USB drives.
 
-Windows OS allows implementing **Local Group Policy** as well, this can be done from by running *GPEDIT.MSC*, running this command will open the Local Group Policy Editor. The Local Group Policy Editor allows creating Group Policies, much like Active Directory Group Policies. The main difference between the two is the fact that Local Group Policies as the name implies, can only be configured locally. This means that every workstation needs to be configured manually in order to perform security boundaries for all required users/computers. </br>
+Windows OS allows implementing **Local Group Policy** as well, this can be done from by running *GPEDIT.MSC*, running this command will open the *Local Group Policy Editor*. The Local Group Policy Editor allows creating Group Policies, much like Active Directory Group Policies. The main difference between the two is the fact that Local Group Policies as the name implies, can only be configured locally. This means that every workstation needs to be configured manually in order to perform security boundaries for all required users/computers. </br>
 A Local Group Policy can be put for a better use in creating and testing policies on a workstation, instead of creating an Active Directory environment.
 
 <img src="PicturesAD/gpedit.png" width="650">
