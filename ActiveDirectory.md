@@ -572,9 +572,11 @@ Active Directory Group Policy can be opened from the *Server Management*, then o
 
 Group Policy reads in a hierarchical way, which creates 4 levels in this order: Local, Site, Domain, and Organizational Unit (OU). This prevents conflicts, the Local Group Policy is the first to apply, if there is any other Group Policy level it will get overruled by that Group Policy, since it has the lowest level. On the other side, since Organizational Unit (OU) policy is applied last, this policy will overrule the other policy levels. The most common method is to link Group Policy to Organizational Units (OU), this allows for a better maintenance. </br>
 
-A Site level policy is determined by the different locations in the forest, each site can be given a set of policies that differ from other sites, as long as they don’t conflict with higher level policies, the Site policies would be applied. </br>
+A Site-linked policy is determined by the different locations in the forest, each site can be given a set of policies that differ from other sites, as long as they don’t conflict with higher level policies, the Site policies would be applied. </br>
 
-Domain level policy allows for administrators to apply policies across the domain, both users and workstations. Any policy that is a lower level and conflicts with a Domain policy will get overruled. Upon a conflict between the Domain policies and the Organizational Unit (OU) policies, the Organizational Unit (OU) policy will overrule the Domain policy since an Organizational Unit (OU) policy is the highest-level policy.
+Domain-linked policy allows for administrators to apply policies across the domain, both users and workstations. Any policy that is a lower level and conflicts with a Domain policy will get overruled. Upon a conflict between the Domain policies and the Organizational Unit (OU) policies, the Organizational Unit (OU) policy will overrule the Domain policy since an Organizational Unit (OU) policy is the highest-level policy.
+
+Organizational Unit (OU) – linked policy is applied last, and therefore it overrules any conflicting policies applied on any other level. This is the most common level used when linking Group Policies.
 
 # Active Directory Planning
 
