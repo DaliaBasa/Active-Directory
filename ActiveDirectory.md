@@ -555,7 +555,7 @@ The domain naming master role holder is the domain controller responsible for ma
 - **Security Account Manager (SAM)** - Windows stores and manages the local user and group accounts in a database file called Security Account Manager (SAM). It authenticates local user logons. This allows a domain-joined computer to make local logon.
 
 
-## Group Policy
+# Group Policy
 
 Group Policy is a main part of maintaining a healthy Active Directory infrastructure, it helps administrators in distributing policies across the network without the need for manually configuring policies for each user or computer. Much like Active Directory, Group Policy is hierarchical, this means that policies can be applied as an organizational-wide policies as well as departmental-wide policies.
 
@@ -570,7 +570,13 @@ Active Directory Group Policy can be opened from the *Server Management*, then o
 
 <img src="PicturesAD/tools.png" height="800">
 
-## Active Directory Planning
+Group Policy reads in a hierarchical way, which creates 4 levels in this order: Local, Site, Domain, and Organizational Unit (OU). This prevents conflicts, the Local Group Policy is the first to apply, if there is any other Group Policy level it will get overruled by that Group Policy, since it has the lowest level. On the other side, since Organizational Unit (OU) policy is applied last, this policy will overrule the other policy levels. The most common method is to link Group Policy to Organizational Units (OU), this allows for a better maintenance. </br>
+
+A Site level policy is determined by the different locations in the forest, each site can be given a set of policies that differ from other sites, as long as they don’t conflict with higher level policies, the Site policies would be applied. </br>
+
+Domain level policy allows for administrators to apply policies across the domain, both users and workstations. Any policy that is a lower level and conflicts with a Domain policy will get overruled. Upon a conflict between the Domain policies and the Organizational Unit (OU) policies, the Organizational Unit (OU) policy will overrule the Domain policy since an Organizational Unit (OU) policy is the highest-level policy.
+
+# Active Directory Planning
 
 
 
