@@ -557,15 +557,20 @@ The domain naming master role holder is the domain controller responsible for ma
 
 ## Group Policy
 
+Group Policy is a main part of maintaining a healthy Active Directory infrastructure, it helps administrators in distributing policies across the network without the need for manually configuring policies for each user or computer. Much like Active Directory, Group Policy is hierarchical, this means that policies can be applied as an organizational-wide policies as well as departmental-wide policies.
+
+Group Policy allows administrators to control both users and computers environment, a Group Policy can be applied to an Organizational Unit’s computers/users or both. Group Policy can help in preventing users from gaining access to applications, install software, and block USB drives.
+
+Windows OS allows implementing **Local Group Policy** as well, this can be done from by running *GPEDIT.MSC*, running this command will open the Local Group Policy Editor. The Local Group Policy Editor allows creating Group Policies, much like Active Directory Group Policies. The main difference between the two is the fact that Local Group Policies as the name implies, can only be configured locally. This means that every workstation needs to be configured manually in order to perform security boundaries for all required users/computers. </br>
+A Local Group Policy can be put for a better use in creating and testing policies on a workstation, instead of creating an Active Directory environment.
+
+<img src="PicturesAD/gpedit.png" width="800">
+
+Active Directory Group Policy can be opened from the *Server Management*, then onto the *Tools* bar, and you’ll need to scroll down to *Group Policy Management*. This will open the *Group Policy Management Console (GPMC)*.
+
 
 ## Active Directory Planning
 
-
-## Managing Active Directory Objects
-
-### Managing Users
-
-### Managing Computers
 
 
 # Active Directory Lightweight Directory Services (AD LDS)
