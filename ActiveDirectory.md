@@ -38,7 +38,7 @@
    - [Domain Controller (DC)](#Domain-Controller-DC)
      - [Global Catalog (GC)](#Global-Catalog-GC)
      - [Read Only Domain Controller (RODC)](#Read-Only-Domain-Controller-RODC)
-   - [Organizatinal Unit (OU), Container, Leaf](#Organizatinal-Unit-OU-Container-Leaf)
+   - [Organizational Unit (OU), Container, Leaf](#Organizatinal-Unit-OU-Container-Leaf)
    - [Organizational Unit (OU) and Container Models](#Organizational-Unit-OU-and-Container-Models)
      - [The Container Model](#The-Container-Model)
      - [The Geographical Model](#The-Geographical-Model)
