@@ -4,7 +4,7 @@
 - [Windows Server Features](#windows-server-features)
    - [Dynamic Host Configuration Protocol (DHCP)](#dynamic-host-configuration-protocol-dhcp)
    - [Domain Name System (DNS)](#Domain-Name-System-dns)
-   - [Hyper V](#Hyper-V)
+   - [Hyper-V](#Hyper-V)
    - [Internet Information Services (IIS)](#Internet-Information-Services-IIS)
    - [IP Address Management (IPAM)](#Internet-Protocol-Address-Management-IPAM)
    - [Network Time Protocol (NTP)](#Network-Time-Protocol-NTP)
