@@ -74,36 +74,36 @@
 - [Bibliography](#Bibliography)
 
 # Windows Server Features
-A brief explanation of some of the technologies Windows server provides, some were used in the making of an Active Directory environment I will show.
+A brief explanation of some of the technologies Windows Server provides, some were used in the making of an Active Directory environment I will show.
 
 ### Dynamic Host Configuration Protocol (DHCP)
-A Dynamic Host Configuration Protocol (DHCP) server provides an IP address, subnet mask, default gateway and other properties (scope) to a host. A DHCP server could be deployed on a Domain Controller (DC) inside an Active Directory (AD) environment on a Windows Server OS (Operating System), or a standalone computer. </br>
+A Dynamic Host Configuration Protocol (DHCP) server provides an IP address, subnet mask, default gateway and other properties (scope) to a host. A DHCP Server could be deployed on a Domain Controller (DC) inside an Active Directory (AD) environment on a Windows Server OS (Operating System), or a standalone computer. </br>
 *DHCP can assign IPv6 as well as IPv4, but the use of IPv6 is less common.*
 
 DHCP assigns IP addresses automatically, this comes very helpful in vast organizations, each client (computer) requires a unique IP. Configuring and assigning IP addresses manually could be impossible to maintain and manage and would consume astronomical resources from the organization. Active Directory Domain Services (AD DS) requires clients to be connected to the network, hence a DHCP in most Active Directory environments.
 
 DHCP manages the entire process, it stores a pool of IP addresses and leases them to clients. Occasionally, the DHCP re-assigns IP addresses to the clients. DHCP allows reservations, this comes handy in the Active Directory environment because of the many servers, reservations ensures that clients/servers always receive the same specific IP address.
-Once an IP is assigned by the DHCP server, the client assigned with the IP is the only client that can be assigned with that IP for the duration of the lease.
+Once an IP is assigned by the DHCP Server, the client assigned with the IP is the only client that can be assigned with that IP for the duration of the lease.
 
 *Example: a WI-FI coffee shop, would have to change the default schedule time for re-leasing IP addresses or otherwise no customers would be able to connect to the WI-FI after the whole pool has been used by ongoing customers, the IT administrators might schedule the re-leasing to every couple of hours or so, due to the fast-changing clients. In an office the schedule would occur less frequently.*
 
 ### Domain Name System (DNS)
-Domain Name System could be viewed as the phonebook of the Internet. It was built on the assumption that users are better in remembering names rather than numbers. 
-DNS translates host names to IP addresses and vice versa. DNS could be deployed on a domain controller on a Windows Server network, as well as a standalone computer.
+Domain Name System (DNS) could be viewed as the phonebook of the Internet. It was built on the assumption that users/people are better in remembering names rather than numbers. 
+DNS translates host names to IP addresses and vice versa. A DNS Server can be deployed on a domain controller on a Windows Server OS (Operating System), as well as a standalone computer.
 
-### Hyper V
-Hyper-V is Microsoft’s virtualization platform that could be implemented into Windows Server, as well as Windows 10. Hyper-V allows running multiple operating systems, Hyper-V also allows creating virtual devices such as switches, network virtualization, and virtual machine encrypted networks. </br>
-Virtualization can be very resourceful as it allows running old applications on older operating systems, test software, upgrades, and new configurations, run different operating systems and the list continues.
+### Hyper-V
+Hyper-V is Microsoft’s virtualization platform that could be implemented into Windows Server, as well as Windows 10. Hyper-V allows running multiple virtual operating systems on a single workstation, Hyper-V also allows creating virtual devices such as switches, network virtualization, and virtual machine encrypted networks. </br>
+Virtualization can be very resourceful as it allows running old applications on older operating systems, test software, upgrades and new configurations, and run different operating systems.
 
-*Nested virtualization allows Hyper-V to run inside of a virtual machine operating system, this feature requires prerequisites.*
+*Nested virtualization allows Hyper-V to run inside of a virtual machine operating system, this feature requires hardware prerequisites.*
 
 ### Internet Information Services (IIS)
-Microsoft’s Internet Information Services is a GUI application for managing a web server, in some documentation it’s called Windows Web Server. Some organizations use IIS for both their intranet services as well as their public ones, it’s possible to manage up to 10,000 sites from a single Windows Server OS that has IIS deployed on. </br>
-IIS helps in configuring both basic and advanced configurations such as: setting up new websites, virtual directories, configuring TLS certificates.
+Microsoft’s Internet Information Services (IIS) is a GUI application for managing a web server, in some documentation it’s called '*Windows Web Server*'. Some organizations use IIS for both their intranet services as well as their public ones, it’s possible to manage up to 10,000 sites from a single Windows Server OS (Operating System) that has IIS deployed on. </br>
+IIS helps in configuring both basic and advanced configurations such as: setting up new websites, virtual directories, and configuring TLS certificates.
 
 ### Internet Protocol Address Management (IPAM)
-IP address management allows to manage both DHCP and DNS servers in a centralized way, an IPAM server can manage up to 150 DHCP servers ,500 DNS servers, 6000 different DHCP scopes and 150 DNS zones. All of these servers and configurations can be managed from a single console thanks to IPAM. </br>
-Deploying IPAM is only possible on a computer inside the Active Directory forest, and it is possible to have more than one in a forest. IPAM cannot be deployed on a domain controller or a server that already hosts DHCP or DNS. IPAM uses a process called ‘Server Discovery’ which locates domain controllers, DNS servers, and DHCP servers.
+Internet Protocol Address Management (IPAM) allows to manage both DHCP and DNS Servers in a centralized way, an IPAM Server can manage up to 150 DHCP Servers ,500 DNS Servers, 6000 different DHCP scopes and 150 DNS zones. All of these servers and configurations can be managed from a single console thanks to IPAM. </br>
+Deploying IPAM is only possible on a computer inside the Active Directory forest, and it is possible to have more than one in a forest. IPAM cannot be deployed on a domain controller or a server that already hosts DHCP or DNS. IPAM uses a process called ‘*Server Discovery*’ which locates domain controllers, DNS servers, and DHCP servers. This feature comes in handy in large networks as it eliminates manual labor.
 
 ### Network Time Protocol (NTP)
 Network Time Protocol is a protocol designed for the purpose of synchronizing clocks of computers in a network to a common time, in most cases it’s UTC. </br>
