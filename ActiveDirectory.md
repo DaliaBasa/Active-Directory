@@ -77,13 +77,13 @@
 A brief explanation of some of the technologies Windows server provides, some were used in the making of an Active Directory environment I will show.
 
 ### Dynamic Host Configuration Protocol (DHCP)
-Dynamic host configuration protocol that provides an IP address, subnet mask, default gateway and other properties (scope) to a host. A DHCP server could be deployed on a domain controller on a Windows Server network, or a standalone computer. </br>
+A Dynamic Host Configuration Protocol (DHCP) server provides an IP address, subnet mask, default gateway and other properties (scope) to a host. A DHCP server could be deployed on a Domain Controller (DC) inside an Active Directory (AD) environment on a Windows Server OS (Operating System), or a standalone computer. </br>
 *DHCP can assign IPv6 as well as IPv4, but the use of IPv6 is less common.*
 
-DHCP assigns IP addresses automatically, this comes very helpful in vast organizations, each client (computer) requires a unique IP and assigning it manually could be impossible to maintain and manage. Active Directory Domain Services connects clients to domain controllers through the network using IPs and forth on to the WAN, hence a DHCP is a must in any growing (or big) organizations.
+DHCP assigns IP addresses automatically, this comes very helpful in vast organizations, each client (computer) requires a unique IP. Configuring and assigning IP addresses manually could be impossible to maintain and manage, and would consume astronomical resources from the organization. Active Directory Domain Services (AD DS) requires clients to be connected to the network ,hence a DHCP in most Active Directory environments.
 
 DHCP manages the entire process, it stores a pool of IP addresses and leases them to clients. Occasionally, the DHCP re-assigns IP addresses to the clients. DHCP allows reservations, this comes handy in the Active Directory environment because of the many servers, reservations ensures that clients/servers always receive the same specific IP address.
-Once an IP is assigned through DHCP server, the client assigned with the IP is the only client that can be assigned with that IP for the whole duration of the lease.
+Once an IP is assigned by the DHCP server, the client assigned with the IP is the only client that can be assigned with that IP for the duration of the lease.
 
 *Example: a WI-FI coffee shop, would have to change the default schedule time for re-leasing IP addresses or otherwise no customers would be able to connect to the WI-FI after the whole pool has been used by ongoing customers, the IT administrators might schedule the re-leasing to every couple of hours or so, due to the fast-changing clients. In an office the schedule would occur less frequently.*
 
@@ -209,7 +209,8 @@ As stated before, this repository will introduce Active Directory through it’s
 ## Domain
 Domain refers to a collection of both logical and physical objects (users/computers/printers), each object has a unique identity, and a set of privileges that are administrated to follow the rules posed by the administrator. The domain can be viewed as a security boundary for the objects inside it, using different policies to maintain the organization’s security.
 Domains differ from one to another by the domain identifiers (name, IP, physical hardware). Every domain has a different given name, names are configured by the administrators. </br>
-Each domain holds the domain level flexible single master operation.
+Each domain holds the domain level Flexible Single Master Operation (FSMO) roles, and assigns the roles to the Domain Controllers within the domain
+
 Microsoft is well known for its backward compatibility, *for instance, Windows 10 still doesn’t allow for users to make a folder named “CON”.*  Active Directory supports backward compatibility as well, it’s called functional levels and allows for administrators to add domains with the same functional level as the forest, but a newer Windows Server edition. </br>
 
 *Example: a forest functional level is 2016, the administrators have not yet upgraded to the newest functional level. In order for the administrators to add a domain, it must be at the same functional level as the forest, hence they could install a Windows Server 2022 and the Active Directory would support the functional level of Active Directory 2016.* 
