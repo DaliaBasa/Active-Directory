@@ -16,7 +16,7 @@
 - [Active Directory Features](#Active-Directory-Features)
   - [Single Sign-On (SSO)](#Single-Sign-On-SSO)
   - [Microsoft Passport](#Microsoft-Passport)
-  - [Replication](#Replication)
+  - [Replications](#Replications)
   - [Auditing](#Auditing)
   - [Security](#Security)
 - [Active Directory Domain Services](#Active-Directory-Domain-Services)
@@ -189,7 +189,7 @@ Source: https://techcommunity.microsoft.com/t5/image/serverpage/image-id/45719i9
 ### Trusted Platform Module (TPM)
 TPM provides a hardware-based, computer chip, that securely stores artifacts used for authentication, it could be passwords, RSA keys, and other sensitive information.
 
-## Replication
+## Replications
 Active Directory could be implemented in small/centered organizations as well as vast organizations with many sites. The more complex organizations require multiple Domain Controllers, therefore it’s important for the Domain Controllers to maintain updated data throughout the sites. Active Directory maps the IP addresses of each site, this is done using the Subnet Mask. </br>
 The replication is managed by the Knowledge Consistency Checker (KCC), a process that runs on the Domain Controllers and generates replication topology for the Active Directory forest. </br>
 Identifying the organization’s needs and making an effective topology is crucial for the network’s performance.
